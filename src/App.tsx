@@ -6,13 +6,14 @@ import { Provider as ReduxProvider } from "react-redux";
 import configureStore from "./store/store";
 
 //pages
-import Homepage from './pages/homepage/Homepage'
+import { Homepage, Clients } from './pages'
 
 const App: React.FunctionComponent = (): JSX.Element => {
   return (
     <div className="app">
       <ReduxProvider store={configureStore}>
         <Homepage />
+        <Clients />
         {/* <Router>
             <MainLayout>
               <Suspense fallback={<Loader />}>

@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import loadingSlice from "./loadingSlice";
+import loadingSlice from "./loading/loadingSlice";
 
 
 export default combineReducers({

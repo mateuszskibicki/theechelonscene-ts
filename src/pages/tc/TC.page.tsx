@@ -1,18 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { loadingStart, loadingStop } from '../../store/reducers/loadingSlice'
+import { loadingStart, loadingStop } from '../../store/reducers/loading/loadingSlice'
 
-export interface IProps {
+interface IProps {
     loading: { loading: boolean };
     loadingStart: any
     loadingStop: any
 }
 
-const Homepage: React.FC<any> = ({ loading, loadingStart, loadingStop }: IProps): JSX.Element => {
+const TCpage: React.FC<any> = ({ loading, loadingStart, loadingStop }: IProps): JSX.Element => {
     console.log(loading, loadingStart, loadingStop)
     return (
         <div>
-            <h1>homepage</h1>
+            <h1>TCpage</h1>
             <button onClick={() => loadingStart()}>aa</button>
             <button onClick={() => loadingStop()}>aa</button>
         </div>
@@ -23,4 +23,4 @@ const mapStateToProps = ({ loading }: { loading: boolean }) => loading;
 
 const mapDispatchToProps = { loadingStart, loadingStop };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Homepage)
+export const TC = connect(mapStateToProps, mapDispatchToProps)(TCpage)
