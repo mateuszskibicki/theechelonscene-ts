@@ -1,1 +1,1 @@
-export * from './getTc.actions';
+export * from './getTc';

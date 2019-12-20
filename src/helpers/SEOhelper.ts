@@ -4,29 +4,7 @@ import {
   UrlHelper
 } from "prismic-helpers-sanitize";
 
-export interface ISEO {
-  title: string | null;
-  description: string | null;
-  keywords: string | null;
-  item_prop_name: string | null;
-  item_prop_description: string | null;
-  twitter_site: string | null;
-  twitter_title: string | null;
-  twitter_description: string | null;
-  twitter_creator: string | null;
-  og_title: string | null;
-  og_type: string | null;
-  og_url: string | null;
-  og_description: string | null;
-  article_section: string | null;
-  article_tag: string | null;
-  fb_admins: string | null;
-  item_prop_image: string | null;
-  twitter_image: string | null;
-  og_image: string | null;
-  article_published_time: string | null;
-  article_modified_time: string | null;
-}
+import { ISEO } from "../types";
 
 //SEO HELPER
 export const SEOhelper = (response: any): ISEO | null => {
@@ -43,8 +21,6 @@ export const SEOhelper = (response: any): ISEO | null => {
     title: TextHelper(seoData.seo_title),
     description: TextHelper(seoData.seo_description),
     keywords: TextHelper(seoData.seo_keywords),
-    // geo_region: TextHelper(seoData.seo_geo_region),
-    // robots: TextHelper(seoData.seo_robots),
     item_prop_name: TextHelper(seoData.seo_item_prop_name),
     item_prop_description: TextHelper(seoData.seo_item_prop_description),
     twitter_site: TextHelper(seoData.seo_twitter_site),

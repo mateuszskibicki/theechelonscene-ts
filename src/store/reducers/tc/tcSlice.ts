@@ -8,7 +8,7 @@ const initialState: LoadingState = {
 };
 
 export const tcSlice = createSlice({
-  name: "todos",
+  name: "tc",
   initialState,
   reducers: {
     getTC(state, action) {

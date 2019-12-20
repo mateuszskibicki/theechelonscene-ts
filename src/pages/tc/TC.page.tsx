@@ -1,24 +1,18 @@
 import React, { useEffect } from "react";
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { fetchTCsData } from "../../store/actions";
 
-interface IProps {
-  loading: { loading: boolean };
-  tc: { content: any };
-  fetchTCsData: Function;
-}
+export const TC: React.FC<any> = (): JSX.Element => {
+  // get state
+  const { loading, tc } = useSelector((state: any) => state);
+  const dispatch = useDispatch();
 
-const TCpage: React.FC<any> = ({
-  loading,
-  tc,
-  fetchTCsData
-}: IProps): JSX.Element => {
   // fetch data
   useEffect(() => {
     if (!tc.content) {
-      fetchTCsData();
+      dispatch(fetchTCsData());
     }
-  }, []);
+  }, [fetchTCsData, tc.content]);
 
   return (
     <div>
@@ -26,15 +20,3 @@ const TCpage: React.FC<any> = ({
     </div>
   );
 };
-
-const mapStateToProps = ({
-  loading,
-  tc
-}: {
-  loading: boolean;
-  tc: { content: any };
-}) => ({ loading, tc });
-
-const mapDispatchToProps = { fetchTCsData };
-
-export const TC = connect(mapStateToProps, mapDispatchToProps)(TCpage);

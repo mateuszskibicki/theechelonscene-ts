@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar } from "./Navbar";
+import HeadSEO from "./SEOhead";
 import { Footer } from "./Footer";
 
 interface IProps {
@@ -12,6 +13,7 @@ export const MainLayout: React.FunctionComponent<any> = ({
   return (
     <>
       <Navbar />
+      <HeadSEO />
       {children && children}
       <Footer />
     </>

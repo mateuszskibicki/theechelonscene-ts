@@ -15,7 +15,7 @@ export const tcPageHelper = (data: any): any | null => {
   };
 
   return {
-    ...content,
+    content,
     SEO: SEOhelper(payload)
   };
 };
