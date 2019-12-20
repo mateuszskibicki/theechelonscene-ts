@@ -1,0 +1,53 @@
+.navbar-mobile {
+  &__button {
+    position: fixed;
+    right: 16px;
+    top: 16px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.01);
+    border-radius: 100%;
+    border: none;
+    outline: none;
+
+    &:checked,
+    &:not(:hover),
+    &:visited,
+    &:active,
+    &:hover {
+      outline: none;
+    }
+  }
+
+  &__main {
+    background: #000;
+    position: fixed;
+    z-index: 10;
+    left: -100%;
+    top: 0;
+    width: 60%;
+    min-height: 100vh;
+    transition: 0.4s;
+    text-align: center;
+
+    &.visible {
+      left: 0%;
+    }
+  }
+}
+
+// @include media-sm {
+//   width: 75%;
+// }
+// @include media-md {
+//   width: 50%;
+// }
+// @include media-lg {
+//   width: 40%;
+// }
+// @include media-xl {
+//   width: 30%;
+// }

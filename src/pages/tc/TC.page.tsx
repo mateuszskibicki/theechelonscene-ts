@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Helmet from "react-helmet";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchTCsData } from "../../store/actions";
 
@@ -16,6 +17,9 @@ export const TC: React.FC<any> = (): JSX.Element => {
 
   return (
     <div>
+      <Helmet>
+        <meta property="og:type" content="website" />
+      </Helmet>
       <h1>TCpage</h1>
     </div>
   );

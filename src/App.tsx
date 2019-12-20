@@ -1,4 +1,4 @@
-// import "./scss/styles.scss";
+import "./scss/styles.scss";
 import React from "react";
 import { Provider as ReduxProvider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
