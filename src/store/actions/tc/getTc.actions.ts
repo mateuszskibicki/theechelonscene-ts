@@ -1,25 +1,25 @@
-import Prismic from "prismic-javascript";
-import { loadingStart, loadingStop } from '../../reducers/loading'
 import { Dispatch } from "redux";
-// helpers
-// import {
-//   articlesListHelper,
-//   allArticlesPageSEOHelper
-// } from "../../../helpers/articles/ArticlesHelpers";
-//types
+import { prismicConnection } from "../prismic-connection/prismicConnection";
+import { loadingStart, loadingStop } from "../../reducers/loading";
+import { getTC } from "../../reducers/tc";
+import { tcPageHelper } from "./../../../helpers/tc/tcPageHelper";
 
-// interface IgetAllArticles {
-//   page: string;
-//   category: string | null;
-//   searchText: string | null;
-//   SEO: ISEO | null;
-// }
+// Get T&Cs from Prismic.
+export const fetchTCsData = () => async (dispatch: Dispatch): Promise<void> => {
+  try {
+    // Start loading
+    dispatch(loadingStart());
 
-// Get afticles data by page/tag/search_text/category from prismic CMS
-export const getTCs = () => async (dispatch: Dispatch): Promise<void> => {
-    try {
-        // Start loading
-        dispatch(loadingStart());
-        dispatch(loadingStop());
-    } catch (err) { }
-}
+    // Prismic connection
+    const prismicApi = await prismicConnection();
+
+    // Grab data
+    const data = await prismicApi.getSingle("tcs-page");
+
+    // Push data to redux
+    dispatch(getTC(tcPageHelper(data)));
+
+    // Stop loading
+    dispatch(loadingStop());
+  } catch (err) {}
+};

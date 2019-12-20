@@ -1,26 +1,40 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { loadingStart, loadingStop } from '../../store/reducers/loading/loadingSlice'
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { fetchTCsData } from "../../store/actions";
 
 interface IProps {
-    loading: { loading: boolean };
-    loadingStart: any
-    loadingStop: any
+  loading: { loading: boolean };
+  tc: { content: any };
+  fetchTCsData: Function;
 }
 
-const TCpage: React.FC<any> = ({ loading, loadingStart, loadingStop }: IProps): JSX.Element => {
-    console.log(loading, loadingStart, loadingStop)
-    return (
-        <div>
-            <h1>TCpage</h1>
-            <button onClick={() => loadingStart()}>aa</button>
-            <button onClick={() => loadingStop()}>aa</button>
-        </div>
-    )
-}
+const TCpage: React.FC<any> = ({
+  loading,
+  tc,
+  fetchTCsData
+}: IProps): JSX.Element => {
+  // fetch data
+  useEffect(() => {
+    if (!tc.content) {
+      fetchTCsData();
+    }
+  }, []);
 
-const mapStateToProps = ({ loading }: { loading: boolean }) => loading;
+  return (
+    <div>
+      <h1>TCpage</h1>
+    </div>
+  );
+};
 
-const mapDispatchToProps = { loadingStart, loadingStop };
+const mapStateToProps = ({
+  loading,
+  tc
+}: {
+  loading: boolean;
+  tc: { content: any };
+}) => ({ loading, tc });
 
-export const TC = connect(mapStateToProps, mapDispatchToProps)(TCpage)
+const mapDispatchToProps = { fetchTCsData };
+
+export const TC = connect(mapStateToProps, mapDispatchToProps)(TCpage);
