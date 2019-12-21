@@ -11,7 +11,7 @@ export const FooterLink: React.FC<IProps> = ({
   name
 }: IProps): JSX.Element => {
   return (
-    <Link className="small white-smoke mb-1 d-block" to={url}>
+    <Link className="footer__link white-smoke mb-1 d-block" to={url}>
       {name}
     </Link>
   );

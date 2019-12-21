@@ -3,23 +3,23 @@ import { FooterLink } from "./FooterLink";
 
 export const Footer: React.FC = (): JSX.Element => {
   return (
-    <div className="footer py-3">
+    <div className="footer py-4">
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-8 mb-3">
-            <p className="small mb-1 text-center d-md-none white-smoke">
+            <p className="footer__name mb-1 text-center d-md-none white-smoke">
               Copyright © 2018 The Echelon Scene
             </p>
-            <p className="small mb-1 d-none d-md-block white-smoke">
+            <p className="footer__name mb-1 d-none d-md-block white-smoke">
               Copyright © 2018 The Echelon Scene
             </p>
           </div>
           <div className="col-12 col-md-4 ml-auto">
             <div className="row d-flex flex-row justify-content-around">
-              <span className="mb-1 small white-smoke">link</span>
-              <span className="mb-1 small white-smoke">link</span>
-              <span className="mb-1 small white-smoke">link</span>
-              <span className="mb-1 small white-smoke">link</span>
+              <FooterLink url="/" name="Link" />
+              <FooterLink url="/" name="Link" />
+              <FooterLink url="/" name="Link" />
+              <FooterLink url="/" name="Link" />
             </div>
           </div>
           <div className="col-6 col-sm-4 mt-3 text-center">

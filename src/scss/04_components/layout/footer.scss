@@ -1,4 +1,14 @@
 .footer {
   background-color: $black-dark;
   color: $white-primary;
+  &__name,
+  &__link {
+    font-size: 14px;
+    transition: 0.3s;
+    &:hover {
+      color: $white-primary;
+      text-decoration: none;
+      transform: scale(1.05);
+    }
+  }
 }

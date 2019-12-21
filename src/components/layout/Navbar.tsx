@@ -30,8 +30,8 @@ export const Navbar: React.FC = (): JSX.Element => {
       <div
         className={
           visible
-            ? "navbar-mobile__main navbar-mobile__main--visible"
-            : "navbar-mobile__main"
+            ? "navbar-mobile__main shadow-xl navbar-mobile__main--visible"
+            : "navbar-mobile__main shadow-xl"
         }
       >
         <ul className="navbar-nav mr-auto">
@@ -70,12 +70,6 @@ export const Navbar: React.FC = (): JSX.Element => {
             name="Location"
             onClick={onClickURL}
             active={active === "Location"}
-          />
-          <NavbarLink
-            url="/tc"
-            name="Terms and conditions"
-            onClick={onClickURL}
-            active={active === "Terms and conditions"}
           />
           <NavbarLink
             url="/faq"
