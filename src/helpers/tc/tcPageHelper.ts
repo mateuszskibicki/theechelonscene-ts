@@ -1,4 +1,4 @@
-import { ImgHelper } from "prismic-helpers-sanitize";
+import { ImgHelper, ArrayHelper } from "prismic-helpers-sanitize";
 import { SEOhelper } from "../SEOhelper";
 // import { sliceHelper } from "../slice-helpers/SliceHelpers";
 
@@ -10,8 +10,8 @@ export const tcPageHelper = (data: any): any | null => {
   const content = {
     uid: data.uid,
     id: data.id,
-    bg_image: ImgHelper(payload.bg_image)
-    // content: sliceHelper(content.body)
+    bg_image: ImgHelper(payload.bg_image),
+    content: ArrayHelper(payload.content)
   };
 
   return {

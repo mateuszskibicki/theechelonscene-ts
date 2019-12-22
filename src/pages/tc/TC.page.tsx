@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchTCsData } from "../../store/actions";
 import { HeaderImage } from "../../components/header-image/HeaderImage";
-
+import { RichTextComponent } from "../../components/rich-text/RichText";
 export const TC: React.FC<any> = (): JSX.Element => {
   // get state
   const { loading, tc } = useSelector((state: any) => state);
@@ -28,6 +28,19 @@ export const TC: React.FC<any> = (): JSX.Element => {
         <meta property="og:type" content="website" />
       </Helmet>
       <HeaderImage title="Terms and conditions" img={bg_image} size="xsmall" />
+      <div className="container py-4">
+        <div className="row">
+          <div className="col-12">
+            {loading.loading ? (
+              <h1>LOADING</h1>
+            ) : (
+              <RichTextComponent
+                content={tc.content ? tc.content.content : null}
+              />
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

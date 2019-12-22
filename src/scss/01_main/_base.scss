@@ -22,22 +22,23 @@ body {
   font-size: 16px;
 }
 
+// Custom scrollbar
 /* width */
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: $white-primary;
+  background: #0f0708;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #bce7d2;
+  background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: darken(#bce7d2, 10%);
+  background: #555;
 }

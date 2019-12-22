@@ -6,28 +6,31 @@
   justify-content: center;
   align-items: center;
   background-color: $black-dark;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 64px 32px;
 
   &__xsmall {
-    height: 35vh;
+    min-height: 35vh;
   }
 
   &__small {
-    height: 50vh;
+    min-height: 50vh;
   }
 
   &__medium {
-    height: 70vh;
+    min-height: 70vh;
   }
 
   &__big {
-    height: 100vh;
+    min-height: 100vh;
   }
 
   &__title {
     font-size: 32px;
     text-align: center;
     color: $white-primary;
+
+    @include media-md {
+      font-size: 48px;
+    }
   }
 }
