@@ -8,10 +8,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.01);
+    background-color: rgba($black-dark, 0.2);
     border-radius: 100%;
     border: none;
     outline: none;
+    color: $white-primary;
 
     &:checked,
     &:not(:hover),
@@ -30,6 +31,7 @@
     top: 0;
     bottom: 0;
     width: 70%;
+    max-width: 300px;
     transition: 0.5s;
     padding-top: 64px;
     padding-bottom: 64px;
@@ -60,9 +62,11 @@
       text-transform: uppercase;
       margin-bottom: 32px;
       letter-spacing: 0.5px;
+      transition: 0.3s;
       &:hover {
-        color: $white-primary;
+        color: #fff;
         text-decoration: none;
+        transform: scale(1.02);
       }
     }
   }

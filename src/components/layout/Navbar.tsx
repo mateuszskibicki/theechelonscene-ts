@@ -2,13 +2,7 @@ import React, { useState } from "react";
 import { NavbarLink } from "./NavbarLink";
 
 export const Navbar: React.FC = (): JSX.Element => {
-  const [active, setActive] = useState<string>("");
   const [visible, setVisible] = useState<boolean>(false);
-
-  const onClickURL = (name: string): void => {
-    setActive(name);
-    setVisible(false);
-  };
 
   const onClickMenuButton = (): void => {
     setVisible(!visible);
@@ -24,7 +18,11 @@ export const Navbar: React.FC = (): JSX.Element => {
         aria-label="Toggle navigation"
         onClick={onClickMenuButton}
       >
-        <i className="fas fa-bars"></i>
+        {visible ? (
+          <i className="fas fa-times"></i>
+        ) : (
+          <i className="fas fa-bars"></i>
+        )}
       </button>
 
       <div
@@ -35,53 +33,51 @@ export const Navbar: React.FC = (): JSX.Element => {
         }
       >
         <ul className="navbar-nav mr-auto">
-          <NavbarLink
-            url="/"
-            name="Home"
-            onClick={onClickURL}
-            active={active === "Home"}
-          />
+          <NavbarLink url="/" name="Home" onClick={onClickMenuButton} />
           <NavbarLink
             url="/clients"
             name="Clients"
-            onClick={onClickURL}
-            active={active === "Clients"}
+            onClick={onClickMenuButton}
           />
           <NavbarLink
             url="/founder"
             name="Founder"
-            onClick={onClickURL}
-            active={active === "Founder"}
+            onClick={onClickMenuButton}
           />
           <NavbarLink
             url="/how-we-work"
             name="How we work"
-            onClick={onClickURL}
-            active={active === "How we work"}
+            onClick={onClickMenuButton}
+          />
+          <NavbarLink url="/levels" name="Levels" onClick={onClickMenuButton} />
+          <NavbarLink
+            url="/locations"
+            name="Locations"
+            onClick={onClickMenuButton}
           />
           <NavbarLink
-            url="/levels"
-            name="Levels"
-            onClick={onClickURL}
-            active={active === "Levels"}
+            url="/locations/london"
+            name="London"
+            onClick={onClickMenuButton}
+            ml
           />
           <NavbarLink
-            url="/location"
-            name="Location"
-            onClick={onClickURL}
-            active={active === "Location"}
+            url="/locations/new-york"
+            name="New York"
+            onClick={onClickMenuButton}
+            ml
           />
           <NavbarLink
-            url="/faq"
-            name="FAQ"
-            onClick={onClickURL}
-            active={active === "FAQ"}
+            url="/locations/toronto"
+            name="Toronto"
+            onClick={onClickMenuButton}
+            ml
           />
+          <NavbarLink url="/faq" name="FAQ" onClick={onClickMenuButton} />
           <NavbarLink
             url="/contact"
             name="Contact"
-            onClick={onClickURL}
-            active={active === "Contact"}
+            onClick={onClickMenuButton}
           />
         </ul>
       </div>

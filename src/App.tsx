@@ -2,7 +2,6 @@ import "./scss/styles.scss";
 import React from "react";
 import { Provider as ReduxProvider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import { HelmetProvider } from "react-helmet-async";
 import configureStore from "./store/store";
 import { MainLayout } from "./components/layout/MainLayout";
 
@@ -19,7 +18,7 @@ import {
   Contact
 } from "./pages";
 
-const App: React.FunctionComponent = (): JSX.Element => {
+const App: React.FC = (): JSX.Element => {
   return (
     <div className="app">
       <ReduxProvider store={configureStore}>
@@ -39,8 +38,6 @@ const App: React.FunctionComponent = (): JSX.Element => {
           </MainLayout>
         </Router>
       </ReduxProvider>
-      {/* <HelmetProvider context={helmetContext}>
-      </HelmetProvider> */}
     </div>
   );
 };

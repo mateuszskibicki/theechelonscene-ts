@@ -1,0 +1,33 @@
+.header-img {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $black-dark;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  &__xsmall {
+    height: 35vh;
+  }
+
+  &__small {
+    height: 50vh;
+  }
+
+  &__medium {
+    height: 70vh;
+  }
+
+  &__big {
+    height: 100vh;
+  }
+
+  &__title {
+    font-size: 32px;
+    text-align: center;
+    color: $white-primary;
+  }
+}

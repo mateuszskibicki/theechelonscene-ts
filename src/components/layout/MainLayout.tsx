@@ -7,9 +7,9 @@ interface IProps {
   children: any;
 }
 
-export const MainLayout: React.FunctionComponent<any> = ({
+export const MainLayout: React.FC<any> = ({
   children
-}: IProps) => {
+}: IProps): JSX.Element => {
   return (
     <>
       <Navbar />

@@ -16,10 +16,10 @@ export const Footer: React.FC = (): JSX.Element => {
           </div>
           <div className="col-12 col-md-4 ml-auto">
             <div className="row d-flex flex-row justify-content-around">
-              <FooterLink url="/" name="Link" />
-              <FooterLink url="/" name="Link" />
-              <FooterLink url="/" name="Link" />
-              <FooterLink url="/" name="Link" />
+              <FooterLink url="/" name="Facebook" />
+              <FooterLink url="/" name="Twitter" />
+              <FooterLink url="/" name="Linkedin" />
+              <FooterLink url="/" name="Instagram" />
             </div>
           </div>
           <div className="col-6 col-sm-4 mt-3 text-center">

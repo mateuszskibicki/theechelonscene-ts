@@ -4,23 +4,19 @@ import { Link } from "react-router-dom";
 interface IProps {
   url: string;
   name: string;
-  active: boolean;
   onClick: Function;
+  ml?: boolean;
 }
 
 export const NavbarLink: React.FC<IProps> = ({
   url,
   name,
-  active,
-  onClick
+  onClick,
+  ml
 }: IProps): JSX.Element => {
   return (
     <li
-      className={
-        active
-          ? "navbar-mobile__item navbar-mobile__item--active"
-          : "navbar-mobile__item"
-      }
+      className={ml ? "navbar-mobile__item ml-3" : "navbar-mobile__item"}
       onClick={() => onClick(name)}
     >
       <Link to={url}>{name}</Link>
