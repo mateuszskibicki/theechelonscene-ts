@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700");
-$font-titillium: "Titillium Web", sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap");
+$font-montserrat: "Montserrat", sans-serif;
 
 .text-gray {
   color: $black-light;
@@ -9,14 +9,34 @@ $font-titillium: "Titillium Web", sans-serif;
   color: $black-dark;
 }
 
-.text-400 {
-  font-weight: 400;
-}
-
 .text-600 {
   font-weight: 600;
 }
 
+.text-400 {
+  font-weight: 400;
+}
+
 .text-700 {
   font-weight: 700;
+}
+
+.letter-spacing-05 {
+  letter-spacing: 0.5px;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 1px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 2px;
+}
+
+.letter-spacing-4 {
+  letter-spacing: 4px;
+}
+
+.letter-spacing-6 {
+  letter-spacing: 6px;
 }

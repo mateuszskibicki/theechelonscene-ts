@@ -35,30 +35,22 @@ $gray-dark: rgba(131, 149, 167, 1);
 $gray-light: rgba(200, 214, 229, 1);
 $gray-bg: rgb(242, 242, 242) !important;
 //black
-$black-dark: #0f0708; //#222F3E
+$black-dark: #2d3436;
 $black-light: rgba(87, 101, 116, 1);
 //white
 $white-primary: rgba(245, 245, 245, 1);
-
-$primary-color-1: rgba(0, 152, 111, 1) !default;
-$primary-color-2: $aqua-light !default;
-$secondary-color: $red-dark !default;
-$link-color: $primary-color-1 !default;
-$hover-color: $primary-color-1 !default;
-$text-color: $black-dark !default;
-$alert-color: $red-dark !default;
 
 // ------------------------------------------------------------------ \\
 // Colour Helpers                                                     \\
 // ------------------------------------------------------------------ \\
 
-.primary-color {
-  color: $primary-color-1;
-}
+// .primary-color {
+//   color: $primary-color-1;
+// }
 
-.secondary-color {
-  color: $secondary-color;
-}
+// .secondary-color {
+//   color: $secondary-color;
+// }
 
 .white-smoke {
   color: $white-primary;

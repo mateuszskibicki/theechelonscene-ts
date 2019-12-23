@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavbarLink } from "./NavbarLink";
+import Logo from "../../assets/imgs/echelon-logo.png";
 
 export const Navbar: React.FC = (): JSX.Element => {
   const [visible, setVisible] = useState<boolean>(false);
@@ -32,7 +33,16 @@ export const Navbar: React.FC = (): JSX.Element => {
             : "navbar-mobile__main shadow-xl"
         }
       >
-        <ul className="navbar-nav mr-auto">
+        <div className="col-12 text-center mb-5">
+          <p className="small mb-3 letter-spacing-6">THE</p>
+          <img
+            src={Logo}
+            alt="The Echelon Scene - Gay Matchmaking London, New York, Toronto"
+            className="navbar-mobile__logo mb-3"
+          />
+          <p className="small letter-spacing-6 mb-0">SCENE</p>
+        </div>
+        <ul className="navbar-nav ml-5">
           <NavbarLink url="/" name="Home" onClick={onClickMenuButton} />
           <NavbarLink
             url="/clients"
@@ -80,6 +90,41 @@ export const Navbar: React.FC = (): JSX.Element => {
             onClick={onClickMenuButton}
           />
         </ul>
+        <div className="col-12 text-center mb-4">
+          <button className="btn btn-white shadow">ENQUIRE</button>
+        </div>
+        <div className="col-12 mb-2">
+          <div className="row d-flex flex-row justify-content-center">
+            <a
+              className="navbar-mobile__icon mr-4"
+              href="https://www.facebook.com/theechelonscene"
+              target="_blank"
+            >
+              <i className="fab fa-facebook"></i>
+            </a>
+            <a
+              className="navbar-mobile__icon mr-4"
+              href="https://twitter.com/TheEchelonScene"
+              target="_blank"
+            >
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a
+              className="navbar-mobile__icon mr-4"
+              href="https://www.linkedin.com/company/theechelonscene/"
+              target="_blank"
+            >
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a
+              className="navbar-mobile__icon"
+              href="https://www.instagram.com/TheEchelonScene/"
+              target="_blank"
+            >
+              <i className="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </nav>
   );

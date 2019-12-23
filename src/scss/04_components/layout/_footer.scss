@@ -1,0 +1,45 @@
+.footer {
+  background-color: $black-dark;
+  color: $white-primary;
+
+  &__logo {
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  &__icon {
+    font-size: 32px;
+    color: $white-primary;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+      color: $white-primary;
+    }
+  }
+
+  &__link {
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s;
+    &:hover {
+      color: $white-primary;
+      text-decoration: none;
+      transform: scale(1.05);
+    }
+    @include media-sm {
+      font-size: 18px;
+    }
+
+    @include media-md {
+      font-size: 20px;
+    }
+  }
+
+  &__name {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}

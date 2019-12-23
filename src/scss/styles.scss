@@ -9,9 +9,8 @@
 @import "03_elements/buttons";
 
 // // 4. Components
-@import "04_components/layout/navbar.scss", "04_components/layout/footer.scss",
-  "04_components/header-image/header-image.scss",
-  "04_components/rich-text/rich-text.scss";
+@import "04_components/layout/navbar", "04_components/layout/footer",
+  "04_components/header-image/header-image", "04_components/rich-text/rich-text";
 
 // // // 5. Pages
 // @import

@@ -1,29 +1,48 @@
-import React from "react";
-import { connect } from "react-redux";
+import React, { useEffect } from "react";
+import Helmet from "react-helmet";
+import { useSelector, useDispatch } from "react-redux";
 import { fetchTCsData } from "../../store/actions";
+import { HeaderImage } from "../../components/header-image/HeaderImage";
+import { RichTextComponent } from "../../components/rich-text/RichText";
+export const Homepage: React.FC<any> = (): JSX.Element => {
+  return <h1>homepage</h1>;
 
-interface IProps {
-  loading: { loading: boolean };
-  fetchTCsData: Function;
-}
+  // get state
+  const { loading, tc } = useSelector((state: any) => state);
+  const dispatch = useDispatch();
 
-const HomepagePage: React.FC<any> = ({
-  loading,
-  fetchTCsData
-}: IProps): JSX.Element => {
+  // fetch data
+  useEffect(() => {
+    if (!tc.content) {
+      dispatch(fetchTCsData());
+    }
+  }, [fetchTCsData, tc.content]);
+
+  // Get bg_image
+  const bg_image =
+    tc && tc.content && tc.content.bg_image && tc.content.bg_image.url
+      ? tc.content.bg_image.url
+      : null;
+
   return (
     <div>
-      <h1>homepage</h1>
-      <button onClick={() => fetchTCsData()}>aaaaaaaaaa</button>
+      <Helmet>
+        <meta property="og:type" content="website" />
+      </Helmet>
+      <HeaderImage title="Terms and conditions" img={bg_image} size="xsmall" />
+      <div className="container py-4">
+        <div className="row">
+          <div className="col-12">
+            {loading.loading ? (
+              <h1>LOADING</h1>
+            ) : (
+              <RichTextComponent
+                content={tc.content ? tc.content.content : null}
+              />
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
-
-const mapStateToProps = ({ loading }: { loading: boolean }) => loading;
-
-const mapDispatchToProps = { fetchTCsData };
-
-export const Homepage = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(HomepagePage);
