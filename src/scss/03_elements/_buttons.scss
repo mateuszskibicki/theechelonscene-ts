@@ -1,14 +1,30 @@
 .btn {
+  letter-spacing: 0.8px;
+  font-size: 14px;
+  padding: 10px 36px;
+  transition: 0.3s;
+  font-weight: 600;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &--small {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
+
   &-white {
-    font-size: 14px;
-    padding: 10px 36px;
     background-color: $white-primary;
     color: $black-dark;
-    font-weight: 600;
-    transition: 0.3s;
+  }
+
+  &-white-outline {
+    border: 2px solid $white-primary;
+    color: $white-primary;
 
     &:hover {
-      transform: scale(1.05);
+      color: $white-primary;
     }
   }
 }

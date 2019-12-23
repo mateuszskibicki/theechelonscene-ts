@@ -1,0 +1,20 @@
+.homepage {
+  &__logo-wrapper {
+    max-width: 400px;
+    margin: auto;
+    font-size: 18px;
+    color: $white-primary;
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  &__logo-cities {
+    &-single {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+  }
+}
