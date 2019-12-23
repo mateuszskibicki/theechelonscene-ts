@@ -1,7 +1,8 @@
 .homepage {
   &__logo-wrapper {
     max-width: 400px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 18px;
     color: $white-primary;
   }
@@ -15,6 +16,18 @@
     &-single {
       font-size: 20px;
       margin-bottom: 4px;
+    }
+  }
+
+  &__locations {
+    position: relative;
+
+    &-name {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      top: 0;
     }
   }
 }
