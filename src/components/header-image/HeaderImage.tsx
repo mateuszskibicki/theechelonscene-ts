@@ -2,7 +2,7 @@ import React from "react";
 
 interface IProps {
   img: string;
-  title: string;
+  title?: string;
   description?: string;
   children?: any;
   size: "xsmall" | "small" | "medium" | "big";

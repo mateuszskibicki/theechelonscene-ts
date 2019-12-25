@@ -5,7 +5,7 @@ import HomepageBG from "../../assets/imgs/rsz_homepage.jpg";
 
 export const HomepageHeader: React.FC = (): JSX.Element => {
   return (
-    <HeaderImage title="Terms and conditions" img={HomepageBG} size="big">
+    <HeaderImage title="" img={HomepageBG} size="big">
       <div className="col-12 text-center mt-5 homepage__logo-wrapper">
         {/* Logo part */}
         <p className="mb-3 letter-spacing-6">THE</p>

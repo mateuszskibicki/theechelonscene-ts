@@ -1,26 +1,21 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { loadingStart, loadingStop } from '../../store/reducers/loading/loadingSlice'
+import React from "react";
+import Helmet from "react-helmet";
+// import { HomepageHeader } from "../../components/homepage/HomepageHeader";
+// import { HomepageLocations } from "../../components/homepage/HomepageLocations";
+// import { HomepageHowWeWork } from "../../components/homepage/HomepageHowWeWork";
 
-interface IProps {
-    loading: { loading: boolean };
-    loadingStart: any
-    loadingStop: any
-}
-
-const ClientsPage: React.FC<any> = ({ loading, loadingStart, loadingStop }: IProps): JSX.Element => {
-    console.log(loading, loadingStart, loadingStop)
-    return (
-        <div>
-            <h1>Clients</h1>
-            <button onClick={() => loadingStart()}>aa</button>
-            <button onClick={() => loadingStop()}>aa</button>
-        </div>
-    )
-}
-
-const mapStateToProps = ({ loading }: { loading: boolean }) => loading;
-
-const mapDispatchToProps = { loadingStart, loadingStop };
-
-export const Clients = connect(mapStateToProps, mapDispatchToProps)(ClientsPage)
+export const Clients: React.FC<any> = (): JSX.Element => {
+  return (
+    <div className="clients">
+      <Helmet>
+        <meta property="og:type" content="website" />
+      </Helmet>
+      <h1>Clientelle</h1>
+      {/* <HomepageHeader />
+      <HomepageLocations />
+      <HomepageHowWeWork /> */}
+      {/* <HomepageLastBlog /> */}
+      {/* <HomepageReviews /> */}
+    </div>
+  );
+};
