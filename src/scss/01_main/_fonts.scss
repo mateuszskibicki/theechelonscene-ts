@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap");
 $font-montserrat: "Montserrat", sans-serif;
 
+.text-white {
+  color: $white-primary !important;
+}
+
 .text-gray {
   color: $black-light;
 }

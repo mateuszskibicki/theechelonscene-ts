@@ -1,5 +1,6 @@
 .navbar-mobile {
   color: $white-primary;
+  z-index: 500;
 
   &__logo {
     width: 80%;
@@ -22,6 +23,7 @@
     border: none;
     outline: none;
     color: $white-primary;
+    z-index: 999;
 
     &:checked,
     &:not(:hover),

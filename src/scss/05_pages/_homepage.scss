@@ -1,4 +1,5 @@
 .homepage {
+  // header
   &__logo-wrapper {
     max-width: 400px;
     margin-left: auto;
@@ -15,19 +16,128 @@
   &__logo-cities {
     &-single {
       font-size: 20px;
-      margin-bottom: 4px;
     }
   }
 
+  // locations
+
   &__locations {
     position: relative;
+    background-color: $black-dark;
+
+    &-image {
+      width: 90%;
+      max-height: 300px;
+      @include media-lg {
+        width: 100%;
+      }
+    }
+
+    &-name-wrapper {
+      position: absolute;
+      left: 16px;
+      top: 0;
+      bottom: 16px;
+      right: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      @include media-lg {
+        left: 0;
+        bottom: 0;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &--right {
+        left: 0;
+        top: 0;
+        bottom: 16px;
+        right: 16px;
+        align-items: flex-end;
+        @include media-lg {
+          bottom: 0;
+          right: 0;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
 
     &-name {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      top: 0;
+      color: $white-primary;
+      font-size: 52px;
+
+      @include media-sm {
+        font-size: 64px;
+        letter-spacing: 3px;
+      }
+
+      @include media-md {
+        font-size: 72px;
+        letter-spacing: 5px;
+      }
+
+      @include media-lg {
+        font-size: 48px;
+      }
+    }
+
+    &-single {
+      &--1 {
+        padding-left: 0;
+        @include media-lg {
+          padding-left: 15px;
+        }
+      }
+      &--2 {
+        padding-right: 0;
+        img {
+          margin-left: auto;
+        }
+        @include media-lg {
+          padding-right: 15px;
+          img {
+            margin: auto;
+          }
+        }
+      }
+      &--3 {
+        padding-left: 0;
+        @include media-lg {
+          padding-left: 15px;
+        }
+      }
+    }
+  }
+
+  // how we work
+
+  &__how-we-work {
+    background-color: $black-dark;
+    color: $white-primary;
+
+    &-single {
+      padding: 72px 36px;
+      text-align: center;
+      background-position: center;
+      background-size: cover;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h3 {
+        font-size: 32px;
+        letter-spacing: 0.5px;
+        text-shadow: -1px 2px 7px rgba($black-dark, 0.3);
+      }
+
+      p {
+        text-shadow: -1px 2px 7px rgba($black-dark, 0.3);
+        letter-spacing: 0.5px;
+      }
     }
   }
 }

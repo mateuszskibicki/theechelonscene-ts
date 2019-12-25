@@ -16,24 +16,24 @@ export const HomepageHeader: React.FC = (): JSX.Element => {
         />
         <p className="letter-spacing-6 mb-3">SCENE</p>
         {/* Cities part */}
-        <div className="homepage__logo-cities mb-3">
-          <h3 className="homepage__logo-cities-single letter-spacing-4">
+        <div className="homepage__logo-cities mb-4">
+          <h3 className="homepage__logo-cities-single letter-spacing-4 mb-2">
             LONDON
           </h3>
-          <h3 className="homepage__logo-cities-single letter-spacing-4">
+          <h3 className="homepage__logo-cities-single letter-spacing-4 mb-2">
             NEW YORK
           </h3>
-          <h3 className="homepage__logo-cities-single letter-spacing-4">
+          <h3 className="homepage__logo-cities-single letter-spacing-4 mb-2">
             TORONTO
           </h3>
         </div>
         {/* Text part */}
-        <p className="letter-spacing-05">You are exactly our niche.</p>
-        <p className="letter-spacing-05">
+        <p className="letter-spacing-05 mb-2">You are exactly our niche.</p>
+        <p className="letter-spacing-05 mb-2">
           Matchmaking for only the most eligible gay men, who want to find their
           equal partner in love.
         </p>
-        <p className="letter-spacing-05">
+        <p className="letter-spacing-05 mb-4">
           A global service; personally and discreetly delivered by the Founder,
           Jacqueline Burns.
         </p>

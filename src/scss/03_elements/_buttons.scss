@@ -4,9 +4,27 @@
   padding: 10px 36px;
   transition: 0.3s;
   font-weight: 600;
+  outline: none !important;
+  outline-color: rgba(0, 0, 0, 0);
+  outline-style: none;
+  box-shadow: none;
+
+  &:active,
+  &:visited,
+  &:focus,
+  &:active:focus {
+    outline: none !important;
+    outline-color: rgba(0, 0, 0, 0);
+    outline-style: none;
+    box-shadow: none;
+  }
 
   &:hover {
     transform: scale(1.05);
+    outline: none !important;
+    outline-color: rgba(0, 0, 0, 0);
+    outline-style: none;
+    box-shadow: none;
   }
 
   &--small {
@@ -27,4 +45,8 @@
       color: $white-primary;
     }
   }
+}
+
+.btn:focus {
+  outline: none;
 }
