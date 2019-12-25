@@ -2,10 +2,15 @@ import React from "react";
 import { HeaderImage } from "../../components/header-image/HeaderImage";
 import Logo from "../../assets/imgs/echelon-logo.png";
 import HomepageBG from "../../assets/imgs/rsz_homepage.jpg";
+import { ImgSEO } from "../common/SEO/ImgSEO";
 
 export const HomepageHeader: React.FC = (): JSX.Element => {
   return (
     <HeaderImage title="" img={HomepageBG} size="big">
+      <ImgSEO
+        url={HomepageBG}
+        alt="Homepage - Gay Matchmaking Agency London New York Toronto - The Echelon Scene"
+      />
       <div className="col-12 text-center mt-5 homepage__logo-wrapper">
         {/* Logo part */}
         <p className="mb-3 letter-spacing-6">THE</p>
