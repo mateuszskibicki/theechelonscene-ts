@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Navbar } from "./Navbar";
 import HeadSEO from "./SEOhead";
 import { Footer } from "./Footer";
+import { Testimonials } from "./Testimonials";
 import { useLocation } from "react-router-dom";
 
 interface IProps {
@@ -22,6 +23,7 @@ export const MainLayout: React.FC<any> = ({
       <Navbar />
       <HeadSEO />
       {children && children}
+      <Testimonials />
       <Footer />
     </>
   );

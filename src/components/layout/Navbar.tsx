@@ -99,6 +99,7 @@ export const Navbar: React.FC = (): JSX.Element => {
               className="navbar-mobile__icon mr-4"
               href="https://www.facebook.com/theechelonscene"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fab fa-facebook"></i>
             </a>
@@ -106,6 +107,7 @@ export const Navbar: React.FC = (): JSX.Element => {
               className="navbar-mobile__icon mr-4"
               href="https://twitter.com/TheEchelonScene"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fab fa-twitter"></i>
             </a>
@@ -113,6 +115,7 @@ export const Navbar: React.FC = (): JSX.Element => {
               className="navbar-mobile__icon mr-4"
               href="https://www.linkedin.com/company/theechelonscene/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fab fa-linkedin"></i>
             </a>
@@ -120,6 +123,7 @@ export const Navbar: React.FC = (): JSX.Element => {
               className="navbar-mobile__icon"
               href="https://www.instagram.com/TheEchelonScene/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fab fa-instagram"></i>
             </a>

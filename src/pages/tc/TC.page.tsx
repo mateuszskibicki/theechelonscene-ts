@@ -16,7 +16,7 @@ export const TC: React.FC<any> = (): JSX.Element => {
     if (!tc.content) {
       dispatch(fetchTCsData());
     }
-  }, [fetchTCsData, tc.content]);
+  }, [fetchTCsData, tc.content, dispatch]);
 
   // Get bg_image
   const bg_image =
