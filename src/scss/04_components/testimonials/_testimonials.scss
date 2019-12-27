@@ -1,0 +1,25 @@
+.testimonials {
+  max-width: 750px;
+
+  &__single {
+    outline: none;
+    border: none;
+
+    &:active,
+    &:hover {
+      outline: none;
+      border: none;
+    }
+  }
+
+  .slick-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slick-dots button::before,
+  .slick-dots .slick-active button::before {
+    color: $white-primary;
+  }
+}

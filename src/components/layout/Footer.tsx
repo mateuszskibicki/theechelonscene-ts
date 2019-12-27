@@ -27,6 +27,7 @@ export const Footer: React.FC = (): JSX.Element => {
                 className="footer__icon mr-4"
                 href="https://www.facebook.com/theechelonscene"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i className="fab fa-facebook"></i>
               </a>
@@ -34,6 +35,7 @@ export const Footer: React.FC = (): JSX.Element => {
                 className="footer__icon mr-4"
                 href="https://twitter.com/TheEchelonScene"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i className="fab fa-twitter"></i>
               </a>
@@ -41,6 +43,7 @@ export const Footer: React.FC = (): JSX.Element => {
                 className="footer__icon mr-4"
                 href="https://www.linkedin.com/company/theechelonscene/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i className="fab fa-linkedin"></i>
               </a>
@@ -48,6 +51,7 @@ export const Footer: React.FC = (): JSX.Element => {
                 className="footer__icon"
                 href="https://www.instagram.com/TheEchelonScene/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i className="fab fa-instagram"></i>
               </a>

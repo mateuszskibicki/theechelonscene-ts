@@ -11,7 +11,7 @@ export const RichTextComponent: React.FC<IProps> = ({
 }): JSX.Element | null => {
   if (!content) return null;
   return (
-    <div className="rich-text">
+    <div className="rich-text text-dark">
       {content && content.length > 0 && RichText.render(content)}
     </div>
   );

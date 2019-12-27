@@ -6,6 +6,8 @@ import { HeaderImage } from "../../components/header-image/HeaderImage";
 import { ImgSEO } from "../../components/common/SEO/ImgSEO";
 import { HeaderLogo } from "../../components/header-image/HeaderLogo";
 import { RichTextComponent } from "../../components/rich-text/RichText";
+import { Spinner } from "../../components/common/spinner/Spinner";
+
 export const TC: React.FC<any> = (): JSX.Element => {
   // get state
   const { loading, tc } = useSelector((state: any) => state);
@@ -16,7 +18,7 @@ export const TC: React.FC<any> = (): JSX.Element => {
     if (!tc.content) {
       dispatch(fetchTCsData());
     }
-  }, [fetchTCsData, tc.content, dispatch]);
+  }, [tc.content, dispatch]);
 
   // Get bg_image
   const bg_image =
@@ -40,16 +42,18 @@ export const TC: React.FC<any> = (): JSX.Element => {
         url={bg_image}
         alt="Terms and Conditions - The Echelon Scene Gay matchmaking agency London"
       />
-      <div className="container py-4">
-        <div className="row">
-          <div className="col-12">
-            {loading.loading ? (
-              <h1>LOADING</h1>
-            ) : (
-              <RichTextComponent
-                content={tc.content ? tc.content.content : null}
-              />
-            )}
+      <div className="bg-white m-auto">
+        <div className="container py-4">
+          <div className="row">
+            <div className="col-12">
+              {loading.loading ? (
+                <Spinner dark={true} />
+              ) : (
+                <RichTextComponent
+                  content={tc.content ? tc.content.content : null}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>

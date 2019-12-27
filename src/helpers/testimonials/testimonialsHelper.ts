@@ -1,4 +1,4 @@
-import { ImgHelper, ArrayHelper, TextHelper } from "prismic-helpers-sanitize";
+import { TextHelper } from "prismic-helpers-sanitize";
 
 export const testimonialsHelper = (data: any): any | null => {
   if (!data || !data.data) return null;
