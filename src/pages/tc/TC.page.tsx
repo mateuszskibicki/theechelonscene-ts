@@ -51,6 +51,7 @@ export const TC: React.FC<any> = (): JSX.Element => {
               ) : (
                 <RichTextComponent
                   content={tc.content ? tc.content.content : null}
+                  color="dark"
                 />
               )}
             </div>

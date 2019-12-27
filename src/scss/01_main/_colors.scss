@@ -55,3 +55,7 @@ $white-primary: rgba(245, 245, 245, 1);
 .white-smoke {
   color: $white-primary;
 }
+
+.bg-dark {
+  background-color: $black-dark !important;
+}

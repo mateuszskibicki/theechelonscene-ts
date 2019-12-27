@@ -5,6 +5,7 @@ interface IProps {
   title?: string;
   description?: string;
   children?: any;
+  position?: "left" | "right";
   size: "xsmall" | "small" | "medium" | "big";
 }
 
@@ -13,6 +14,7 @@ export const HeaderImage: React.FC<IProps> = ({
   title,
   description,
   children,
+  position,
   size
 }: IProps): JSX.Element => {
   let classes = "";
@@ -23,7 +25,13 @@ export const HeaderImage: React.FC<IProps> = ({
 
   if (children)
     return (
-      <div className={classes} style={{ backgroundImage: `url(${img})` }}>
+      <div
+        className={classes}
+        style={{
+          backgroundImage: `url(${img})`,
+          backgroundPosition: position ? position : "center"
+        }}
+      >
         {children}
       </div>
     );

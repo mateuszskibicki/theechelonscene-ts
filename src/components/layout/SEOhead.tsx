@@ -46,6 +46,7 @@ const HeadSEO: React.FC<any> = (): JSX.Element | null => {
       {/* {robots && <meta name="robots" content={robots} />} */}
       {/* optional */}
       {title && <title>{title}</title>}
+      {title && <meta name="title" content={title} />}
       {description && <meta name="description" content={description} />}
       {keywords && <meta name="keywords" content={keywords} />}
       {item_prop_name && <meta itemProp="name" content={item_prop_name} />}
