@@ -5,7 +5,7 @@ import { Testimonials } from "./Testimonials";
 
 export const Footer: React.FC = (): JSX.Element => {
   return (
-    <div className="footer py-5 shadow">
+    <div className="footer py-5 shadow ">
       <div className="container">
         <div className="row">
           {/* Logo and button */}

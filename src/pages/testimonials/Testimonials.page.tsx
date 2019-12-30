@@ -16,10 +16,7 @@ export const Testimonials: React.FC<any> = (): JSX.Element | null => {
     (state: any) => state.testimonials
   );
 
-  const { SEO } = useSelector((state: any) => state);
-
   const dispatch = useDispatch();
-  console.log(SEO);
 
   useEffect(() => {
     dispatch(fetchTestimonialsSEO());
@@ -86,7 +83,7 @@ export const Testimonials: React.FC<any> = (): JSX.Element | null => {
                 (item: string, index: number): JSX.Element | null => {
                   return (
                     <p
-                      className="testimonials-page__single text-center text-dark letter-spacing-05"
+                      className="testimonials-page__single py-4 shadow text-center text-dark letter-spacing-05"
                       key={index}
                     >
                       <span className="testimonials-page__single-quote">"</span>
