@@ -1,12 +1,14 @@
 import React from "react";
 import { FooterLink } from "./FooterLink";
 import Logo from "../../assets/imgs/echelon-logo.png";
+import { Testimonials } from "./Testimonials";
 
 export const Footer: React.FC = (): JSX.Element => {
   return (
-    <div className="footer py-4">
+    <div className="footer py-5 shadow">
       <div className="container">
         <div className="row">
+          {/* Logo and button */}
           <div className="col-12 text-center mb-4">
             <p className="small mb-3 letter-spacing-6">THE</p>
             <img
@@ -21,6 +23,9 @@ export const Footer: React.FC = (): JSX.Element => {
             <button className="btn btn-white shadow">ENQUIRE</button>
           </div>
 
+          <Testimonials />
+
+          {/* Social media icons */}
           <div className="col-12 mb-4">
             <div className="row d-flex flex-row justify-content-center">
               <a

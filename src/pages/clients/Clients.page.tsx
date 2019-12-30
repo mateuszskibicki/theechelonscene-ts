@@ -45,16 +45,16 @@ export const Clients: React.FC<any> = (): JSX.Element => {
         url={bg_image}
         alt="Clientele - The Echelon Scene Gay matchmaking agency London"
       />
-      <div className="bg-dark m-auto">
-        <div className="container py-4">
+      <div className="bg-white m-auto">
+        <div className="container py-5 text-center">
           <div className="row">
             <div className="col-12">
               {loading.loading ? (
-                <Spinner dark={true} />
+                <Spinner dark={false} />
               ) : (
                 <RichTextComponent
                   content={clients.content ? clients.content.content : null}
-                  color="white"
+                  color="dark"
                 />
               )}
             </div>

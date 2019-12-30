@@ -31,22 +31,26 @@ export const Testimonials: React.FC = (): JSX.Element => {
     slidesToScroll: 1
   };
   return (
-    <div className="container py-5 testimonials">
-      <h2 className="text-white text-center letter-spacing-2 mb-4">
+    <div className="container py-5 testimonials text-center">
+      <h3 className="text-white text-center letter-spacing-2 mb-3">
         Testimonials
-      </h2>
+      </h3>
       <Slider {...settings}>
-        {testimonials.map(
-          (item: string, index: number): JSX.Element => (
+        {testimonials.map((item: string, index: number): JSX.Element | null => {
+          if (index > 2) return null;
+          return (
             <p
-              className="testimonials__single text-center text-white letter-spacing-05"
+              className="testimonials__single small text-center text-white letter-spacing-05"
               key={index}
             >
               {item}
             </p>
-          )
-        )}
+          );
+        })}
       </Slider>
+      <button className="btn btn--small btn-white-outline shadow mt-5">
+        READ MORE
+      </button>
     </div>
   );
 };
