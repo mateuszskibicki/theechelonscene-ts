@@ -1,0 +1,64 @@
+.testimonials-page {
+  background-color: $pastel-pink;
+  &__wrapper {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  &__img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media-sm {
+      justify-content: flex-start;
+    }
+
+    &-text {
+      position: absolute;
+
+      h2 {
+        padding: 36px;
+        // border: 1px solid $black-dark;
+        background-color: rgba($pastel-pink, 0.3);
+
+        @include media-lg {
+          padding: 68px 48px;
+        }
+      }
+
+      @include media-sm {
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__single {
+    max-width: 800px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    @include media-sm {
+      font-size: 18px;
+      font-style: italic;
+    }
+  }
+
+  &__single:not(:last-of-type) {
+    margin-bottom: 36px;
+  }
+
+  &__single-quote {
+    font-size: 54px;
+    font-weight: 700;
+    font-family: cursive;
+    margin-right: 16px;
+    line-height: 0;
+    bottom: -10px;
+    position: relative;
+  }
+}

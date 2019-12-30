@@ -5,9 +5,13 @@ import {
   setLoadingTrue,
   setLoadingFalse
 } from "../../reducers/testimonials";
-import { testimonialsHelper } from "../../../helpers/testimonials/testimonialsHelper";
+import {
+  testimonialsHelper,
+  testimonialsSEOHelper
+} from "../../../helpers/testimonials/testimonialsHelper";
+import { setSEO } from "../../reducers/SEO";
 
-// Get T&Cs from Prismic.
+// Get testimonials from Prismic.
 export const fetchTestimonials = () => async (
   dispatch: Dispatch
 ): Promise<void> => {
@@ -29,6 +33,27 @@ export const fetchTestimonials = () => async (
 
     // Stop loading
     dispatch(setLoadingFalse());
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// Get SEO testimonials from Prismic.
+export const fetchTestimonialsSEO = () => async (
+  dispatch: Dispatch
+): Promise<void> => {
+  try {
+    // Prismic connection
+    const prismicApi = await prismicConnection();
+
+    // Grab data
+    const data = await prismicApi.getSingle("testimonials-seo");
+
+    // Sanitize data
+    const { SEO } = testimonialsSEOHelper(data);
+
+    // SEO update
+    dispatch(setSEO(SEO));
   } catch (err) {
     console.log(err);
   }

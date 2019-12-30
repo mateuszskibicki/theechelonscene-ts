@@ -3,7 +3,7 @@ import Logo from "../../assets/imgs/echelon-logo.png";
 
 export const HeaderLogo = () => {
   return (
-    <div className="header-logo">
+    <div className="header-logo mb-4">
       {/* Logo part */}
       <p className="mb-3 letter-spacing-6 text-white">THE</p>
       <img

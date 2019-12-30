@@ -83,6 +83,11 @@ export const Navbar: React.FC = (): JSX.Element => {
             onClick={onClickMenuButton}
             ml
           />
+          <NavbarLink
+            url="/testimonials"
+            name="Testimonials"
+            onClick={onClickMenuButton}
+          />
           <NavbarLink url="/faq" name="FAQ" onClick={onClickMenuButton} />
           <NavbarLink
             url="/contact"

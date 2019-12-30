@@ -15,7 +15,8 @@ import {
   Location,
   TC,
   FAQ,
-  Contact
+  Contact,
+  Testimonials
 } from "./pages";
 
 const App: React.FC = (): JSX.Element => {
@@ -34,6 +35,7 @@ const App: React.FC = (): JSX.Element => {
               <Route path="/tc" component={TC} exact />
               <Route path="/faq" component={FAQ} exact />
               <Route path="/contact" component={Contact} exact />
+              <Route path="/testimonials" component={Testimonials} exact />
             </Switch>
           </MainLayout>
         </Router>

@@ -1,112 +1,105 @@
 import React, { useEffect } from "react";
 import Helmet from "react-helmet";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchClientsData } from "../../store/actions";
 import { HeaderImage } from "../../components/header-image/HeaderImage";
 import { ImgSEO } from "../../components/common/SEO/ImgSEO";
 import { HeaderLogo } from "../../components/header-image/HeaderLogo";
 import { Spinner } from "../../components/common/spinner/Spinner";
-import { RichTextComponent } from "../../components/rich-text/RichText";
 import { EnquireButton } from "../../components/common/enquire-button/EnquireButton";
+import bgIMG from "../../assets/imgs/contact.jpg";
+import testimonials1IMG from "../../assets/imgs/testimonials/testimonials1.jpg";
+import { fetchTestimonialsSEO } from "../../store/actions";
 
 export const Testimonials: React.FC<any> = (): JSX.Element | null => {
-  // get state
-  const { loading, clients } = useSelector((state: any) => state);
+  // data from redux
+  const { testimonials, loading } = useSelector(
+    (state: any) => state.testimonials
+  );
+
+  const { SEO } = useSelector((state: any) => state);
+
   const dispatch = useDispatch();
+  console.log(SEO);
 
-  // fetch data
   useEffect(() => {
-    if (!clients.content) {
-      dispatch(fetchClientsData());
-    }
-  }, [clients.content, dispatch]);
+    dispatch(fetchTestimonialsSEO());
+  }, [dispatch]);
 
-  if (loading.loading || !clients.content)
+  if (loading || !testimonials)
     return (
       <div className="bg-dark text-center py-5">
         <Spinner />
       </div>
     );
 
-  // Get bg_image
-  const bg_image =
-    clients &&
-    clients.content &&
-    clients.content.bg_image &&
-    clients.content.bg_image.url
-      ? clients.content.bg_image.url
-      : null;
-  // Get bg_image alt
-  const bg_image_alt =
-    clients &&
-    clients.content &&
-    clients.content.bg_image &&
-    clients.content.bg_image.alt
-      ? clients.content.bg_image.alt
-      : null;
-
-  const {
-    left_block_content,
-    left_block_bg,
-    right_block_1_content,
-    right_block_1_bg,
-    right_block_2_content,
-    right_block_2_bg
-  } = clients.content.content;
-
   return (
-    <div className="clients">
+    <div className="testimonials-page">
       <Helmet>
         <meta property="og:type" content="website" />
       </Helmet>
-      <HeaderImage img={bg_image} size="medium" position="left">
+      <HeaderImage img={bgIMG} size="medium" position="left">
         <HeaderLogo />
         <h1 className="text-center text-white letter-spacing-4 mb-4">
-          Clientele
+          Testimonials
         </h1>
         <button className="btn btn-white">ENQUIRE</button>
       </HeaderImage>
-      <ImgSEO url={bg_image} alt={bg_image_alt} />
-      <div className="container-fluid">
-        <div className="row">
-          {/* left part */}
-          <div
-            className="col-12 col-md-6 clients__block text-dark letter-spacing-1"
-            style={{ backgroundImage: `url(${left_block_bg.url})` }}
-          >
-            <ImgSEO url={left_block_bg.url} alt={left_block_bg.alt} />
-            <RichTextComponent content={left_block_content} color="dark" />
-          </div>
-          {/* right part */}
-          <div className="col-12 col-md-6">
-            <div className="row">
-              {/* top part */}
-              <div
-                className="col-12 clients__block text-dark"
-                style={{ backgroundImage: `url(${right_block_1_bg.url})` }}
-              >
-                <ImgSEO url={right_block_1_bg.url} alt={right_block_1_bg.alt} />
-                <RichTextComponent
-                  content={right_block_1_content}
-                  color="dark"
-                />
-              </div>
-              {/* bottom part */}
-              <div
-                className="col-12 clients__block text-dark"
-                style={{ backgroundImage: `url(${right_block_2_bg.url})` }}
-              >
-                <ImgSEO url={right_block_2_bg.url} alt={right_block_2_bg.alt} />
-                <RichTextComponent
-                  content={right_block_2_content}
-                  color="dark"
-                />
+      <ImgSEO
+        url={bgIMG}
+        alt={
+          "Testimonials, reviews, endorsements - gay matchmaking agency London - The Echelon Scene"
+        }
+      />
+      <div className="testimonials-page__wrapper">
+        <div className="container pt-5 pb-3">
+          <div className="row">
+            <div className="col-12">
+              <div className="row testimonials-page__img mb-5">
+                <div className="col-12 col-sm-8 col-md-7">
+                  <img
+                    className="img-fluid shadow"
+                    src={testimonials1IMG}
+                    alt="Testimonials, reviews - The Echelon Scene - Gay Matchmaking Agency London"
+                  />
+                </div>
+                <div className="col-12 col-sm-8 testimonials-page__img-text">
+                  <h3 className="text-center text-dark d-sm-none mb-5">
+                    London
+                    <br />
+                    New York <br />
+                    Toronto <br />
+                    We're getting amazing reviews from all around the world!
+                  </h3>
+                  <h2 className="text-center text-dark d-none d-sm-block shadow rounded">
+                    <span className="mb-2 d-inline-block">London</span>
+                    <br />
+                    <span className="mb-2 d-inline-block">New York</span>
+                    <br />
+                    <span className="mb-2 d-inline-block">Toronto</span> <br />
+                    We're getting amazing reviews from all around the world!{" "}
+                  </h2>
+                </div>
               </div>
             </div>
+            <div className="col-12">
+              {testimonials.map(
+                (item: string, index: number): JSX.Element | null => {
+                  return (
+                    <p
+                      className="testimonials-page__single text-center text-dark letter-spacing-05"
+                      key={index}
+                    >
+                      <span className="testimonials-page__single-quote">"</span>
+                      {item}
+                    </p>
+                  );
+                }
+              )}
+            </div>
           </div>
-          <EnquireButton />
         </div>
       </div>
+      <EnquireButton />
     </div>
   );
 };

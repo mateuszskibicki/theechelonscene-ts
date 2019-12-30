@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchTestimonials } from "../../store/actions/testimonials";
 import { Spinner } from "../common/spinner/Spinner";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 export const Testimonials: React.FC = (): JSX.Element => {
   // data from redux
@@ -48,9 +49,12 @@ export const Testimonials: React.FC = (): JSX.Element => {
           );
         })}
       </Slider>
-      <button className="btn btn--small btn-white-outline shadow mt-5">
+      <Link
+        to="/testimonials"
+        className="btn btn--small btn-white-outline shadow mt-5"
+      >
         READ MORE
-      </button>
+      </Link>
     </div>
   );
 };
