@@ -1,0 +1,15 @@
+.clients {
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    padding: 64px 24px;
+    @include media-lg {
+      padding: 64px 32px;
+    }
+  }
+}

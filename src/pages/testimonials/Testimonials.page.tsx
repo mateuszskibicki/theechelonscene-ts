@@ -9,7 +9,7 @@ import { Spinner } from "../../components/common/spinner/Spinner";
 import { RichTextComponent } from "../../components/rich-text/RichText";
 import { EnquireButton } from "../../components/common/enquire-button/EnquireButton";
 
-export const Clients: React.FC<any> = (): JSX.Element | null => {
+export const Testimonials: React.FC<any> = (): JSX.Element | null => {
   // get state
   const { loading, clients } = useSelector((state: any) => state);
   const dispatch = useDispatch();

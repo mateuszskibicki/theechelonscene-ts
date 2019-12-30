@@ -7,6 +7,7 @@ import { ImgSEO } from "../../components/common/SEO/ImgSEO";
 import { HeaderLogo } from "../../components/header-image/HeaderLogo";
 import { RichTextComponent } from "../../components/rich-text/RichText";
 import { Spinner } from "../../components/common/spinner/Spinner";
+import { EnquireButton } from "../../components/common/enquire-button/EnquireButton";
 
 export const TC: React.FC<any> = (): JSX.Element => {
   // get state
@@ -58,6 +59,7 @@ export const TC: React.FC<any> = (): JSX.Element => {
           </div>
         </div>
       </div>
+      <EnquireButton />
     </div>
   );
 };
