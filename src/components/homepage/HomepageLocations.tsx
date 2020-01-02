@@ -9,9 +9,7 @@ export const HomepageLocations: React.FC = (): JSX.Element => {
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-12 mb-4">
-            <h2 className="text-center text-white">
-              Find your perfect location
-            </h2>
+            <h2 className="text-center text-white">Our locations</h2>
           </div>
 
           {/* London */}
