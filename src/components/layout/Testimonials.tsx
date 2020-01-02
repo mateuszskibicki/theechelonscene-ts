@@ -37,17 +37,22 @@ export const Testimonials: React.FC = (): JSX.Element => {
         Testimonials
       </h3>
       <Slider {...settings}>
-        {testimonials.map((item: string, index: number): JSX.Element | null => {
-          if (index > 2) return null;
-          return (
-            <p
-              className="testimonials__single small text-center text-white letter-spacing-05"
-              key={index}
-            >
-              {item}
-            </p>
-          );
-        })}
+        {testimonials.map(
+          (
+            item: { content: string; img: object },
+            index: number
+          ): JSX.Element | null => {
+            if (index > 2) return null;
+            return (
+              <p
+                className="testimonials__single small text-center text-white letter-spacing-05"
+                key={index}
+              >
+                {item.content}
+              </p>
+            );
+          }
+        )}
       </Slider>
       <Link
         to="/testimonials"

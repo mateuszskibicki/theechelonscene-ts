@@ -5,9 +5,8 @@ import { HeaderImage } from "../../components/header-image/HeaderImage";
 import { ImgSEO } from "../../components/common/SEO/ImgSEO";
 import { HeaderLogo } from "../../components/header-image/HeaderLogo";
 import { Spinner } from "../../components/common/spinner/Spinner";
-import { EnquireButton } from "../../components/common/enquire-button/EnquireButton";
 import bgIMG from "../../assets/imgs/contact.jpg";
-import testimonials1IMG from "../../assets/imgs/testimonials/testimonials1.jpg";
+// import testimonials1IMG from "../../assets/imgs/testimonials/testimonials2.jpg";
 import { fetchTestimonialsSEO } from "../../store/actions";
 
 export const Testimonials: React.FC<any> = (): JSX.Element | null => {
@@ -25,6 +24,9 @@ export const Testimonials: React.FC<any> = (): JSX.Element | null => {
   if (loading || !testimonials)
     return (
       <div className="bg-dark text-center py-5">
+        <Helmet>
+          <meta property="og:type" content="website" />
+        </Helmet>
         <Spinner />
       </div>
     );
@@ -48,11 +50,53 @@ export const Testimonials: React.FC<any> = (): JSX.Element | null => {
         }
       />
       <div className="testimonials-page__wrapper">
-        <div className="container pt-5 pb-3">
+        <div className="container py-5">
+          <div className="row">
+            <div className="col-12">
+              <h2 className="text-white text-center mb-4">
+                Our services are getting amazing reviews from all around the
+                world!
+              </h2>
+            </div>
+            {testimonials.map(
+              (
+                testimonial: {
+                  content: string;
+                  img: { url: string; alt: string };
+                },
+                index: number
+              ): JSX.Element | null => {
+                if (!testimonial.img) return null;
+
+                return (
+                  <div className="col-12 col-md-6 mb-4" key={index}>
+                    <ImgSEO
+                      url={testimonial.img.url}
+                      alt={testimonial.img.alt}
+                    />
+                    <div
+                      className="testimonials-page__single shadow py-5 h-100 d-flex justify-content-center align-items-center"
+                      style={{ backgroundImage: `url(${testimonial.img.url})` }}
+                    >
+                      <p className="text-white text-center mb-0">
+                        <span className="testimonials-page__single-quote">
+                          "
+                        </span>
+                        {testimonial.content}
+                      </p>
+                    </div>
+                  </div>
+                );
+              }
+            )}
+          </div>
+        </div>
+
+        {/* <div className="container pt-5 pb-3">
           <div className="row">
             <div className="col-12">
               <div className="row testimonials-page__img mb-5">
-                <div className="col-12 col-sm-8 col-md-7">
+                <div className="col-12 col-sm-8 col-md-8">
                   <img
                     className="img-fluid shadow"
                     src={testimonials1IMG}
@@ -60,21 +104,21 @@ export const Testimonials: React.FC<any> = (): JSX.Element | null => {
                   />
                 </div>
                 <div className="col-12 col-sm-8 testimonials-page__img-text">
-                  <h3 className="text-center text-dark d-sm-none mb-5">
+                  <h4 className="text-center text-white d-md-none mb-1 px-2">
                     London
                     <br />
                     New York <br />
                     Toronto <br />
                     We're getting amazing reviews from all around the world!
-                  </h3>
-                  <h2 className="text-center text-dark d-none d-sm-block shadow rounded">
-                    <span className="mb-2 d-inline-block">London</span>
+                  </h4>
+                  <h3 className="text-center text-white py-5 d-none d-md-block shadow rounded">
+                    <span className="mb-1 d-inline-block">London</span>
                     <br />
-                    <span className="mb-2 d-inline-block">New York</span>
+                    <span className="mb-1 d-inline-block">New York</span>
                     <br />
-                    <span className="mb-2 d-inline-block">Toronto</span> <br />
+                    <span className="mb-1 d-inline-block">Toronto</span> <br />
                     We're getting amazing reviews from all around the world!{" "}
-                  </h2>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -83,7 +127,7 @@ export const Testimonials: React.FC<any> = (): JSX.Element | null => {
                 (item: string, index: number): JSX.Element | null => {
                   return (
                     <p
-                      className="testimonials-page__single py-4 shadow text-center text-dark letter-spacing-05"
+                      className="testimonials-page__single py-4 shadow text-center text-white letter-spacing-05"
                       key={index}
                     >
                       <span className="testimonials-page__single-quote">"</span>
@@ -94,9 +138,8 @@ export const Testimonials: React.FC<any> = (): JSX.Element | null => {
               )}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
-      <EnquireButton />
     </div>
   );
 };

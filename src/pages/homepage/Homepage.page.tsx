@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { HomepageHeader } from "../../components/homepage/HomepageHeader";
-import { HomepageLocations } from "../../components/homepage/HomepageLocations";
+// import { HomepageLocations } from "../../components/homepage/HomepageLocations";
 import { HomepageHowWeWork } from "../../components/homepage/HomepageHowWeWork";
 
 export const Homepage: React.FC<any> = (): JSX.Element => {
@@ -12,7 +12,7 @@ export const Homepage: React.FC<any> = (): JSX.Element => {
       </Helmet>
       <HomepageHeader />
       <HomepageHowWeWork />
-      <HomepageLocations />
+      {/* <HomepageLocations /> */}
       {/* <HomepageLastBlog /> */}
       {/* <HomepageReviews /> */}
     </div>

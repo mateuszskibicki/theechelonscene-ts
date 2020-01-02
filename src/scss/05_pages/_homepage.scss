@@ -128,6 +128,10 @@
       justify-content: center;
       align-items: center;
 
+      @include media-lg {
+        padding: 80px 40px;
+      }
+
       h3 {
         font-size: 32px;
         letter-spacing: 0.5px;

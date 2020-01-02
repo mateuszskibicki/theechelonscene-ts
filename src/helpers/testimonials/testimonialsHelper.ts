@@ -1,4 +1,4 @@
-import { TextHelper } from "prismic-helpers-sanitize";
+import { TextHelper, ImgHelper } from "prismic-helpers-sanitize";
 import { SEOhelper } from "../SEOhelper";
 
 export const testimonialsHelper = (data: any): any | null => {
@@ -6,9 +6,9 @@ export const testimonialsHelper = (data: any): any | null => {
 
   const payload = data.data;
 
-  const content = payload.single_testimonial.map((item: any) =>
-    TextHelper(item.content)
-  );
+  const content = payload.single_testimonial.map((item: any) => {
+    return { content: TextHelper(item.content), img: ImgHelper(item.img) };
+  });
 
   return content;
 };
