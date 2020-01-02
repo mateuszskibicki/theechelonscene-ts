@@ -7,7 +7,7 @@ import { ImgSEO } from "../../components/common/SEO/ImgSEO";
 import { HeaderLogo } from "../../components/header-image/HeaderLogo";
 import { Spinner } from "../../components/common/spinner/Spinner";
 import { RichTextComponent } from "../../components/rich-text/RichText";
-import { EnquireButton } from "../../components/common/enquire-button/EnquireButton";
+// import { EnquireButton } from "../../components/common/enquire-button/EnquireButton";
 
 export const Clients: React.FC<any> = (): JSX.Element | null => {
   // get state
@@ -71,40 +71,39 @@ export const Clients: React.FC<any> = (): JSX.Element | null => {
         <div className="row">
           {/* left part */}
           <div
-            className="col-12 col-md-6 clients__block text-dark letter-spacing-1"
+            className="col-12 col-md-6 clients__block text-white letter-spacing-1"
             style={{ backgroundImage: `url(${left_block_bg.url})` }}
           >
             <ImgSEO url={left_block_bg.url} alt={left_block_bg.alt} />
-            <RichTextComponent content={left_block_content} color="dark" />
+            <RichTextComponent content={left_block_content} color="white" />
           </div>
           {/* right part */}
           <div className="col-12 col-md-6">
             <div className="row">
               {/* top part */}
               <div
-                className="col-12 clients__block text-dark"
+                className="col-12 clients__block text-white"
                 style={{ backgroundImage: `url(${right_block_1_bg.url})` }}
               >
                 <ImgSEO url={right_block_1_bg.url} alt={right_block_1_bg.alt} />
                 <RichTextComponent
                   content={right_block_1_content}
-                  color="dark"
+                  color="white"
                 />
               </div>
               {/* bottom part */}
               <div
-                className="col-12 clients__block text-dark"
+                className="col-12 clients__block text-white"
                 style={{ backgroundImage: `url(${right_block_2_bg.url})` }}
               >
                 <ImgSEO url={right_block_2_bg.url} alt={right_block_2_bg.alt} />
                 <RichTextComponent
                   content={right_block_2_content}
-                  color="dark"
+                  color="white"
                 />
               </div>
             </div>
           </div>
-          <EnquireButton />
         </div>
       </div>
     </div>

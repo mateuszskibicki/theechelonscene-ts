@@ -11,8 +11,8 @@ export const Homepage: React.FC<any> = (): JSX.Element => {
         <meta property="og:type" content="website" />
       </Helmet>
       <HomepageHeader />
-      <HomepageLocations />
       <HomepageHowWeWork />
+      <HomepageLocations />
       {/* <HomepageLastBlog /> */}
       {/* <HomepageReviews /> */}
     </div>
