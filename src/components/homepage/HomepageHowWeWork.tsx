@@ -4,6 +4,7 @@ import hp2IMG from "../../assets/imgs/homepage/homepage2.jpg";
 import hp3IMG from "../../assets/imgs/homepage/homepage3.jpg";
 import hp4IMG from "../../assets/imgs/homepage/homepage4.jpg";
 import { ImgSEO } from "../common/SEO/ImgSEO";
+import { Link } from "react-router-dom";
 
 export const HomepageHowWeWork: React.FC = (): JSX.Element => {
   return (
@@ -24,9 +25,12 @@ export const HomepageHowWeWork: React.FC = (): JSX.Element => {
                 The Echelon Scene delivers a proactive and personal service to
                 each of their Clients, that's why we have 85% success rate.
               </p>
-              <button className="btn btn-white-outline btn--small shadow">
+              <Link
+                to="/how-we-work"
+                className="btn btn-white-outline btn--small shadow"
+              >
                 READ MORE <i className="fas fa-arrow-right ml-3" />
-              </button>
+              </Link>
             </div>
           </div>
           {/* More about founder */}
@@ -44,9 +48,12 @@ export const HomepageHowWeWork: React.FC = (): JSX.Element => {
                 Jacqueline has been a well-known feature in both the gay world
                 and the matchmaking world for the past 9 years.
               </p>
-              <button className="btn btn-white-outline btn--small shadow">
+              <Link
+                to="/founder"
+                className="btn btn-white-outline btn--small shadow"
+              >
                 READ MORE <i className="fas fa-arrow-right ml-3" />
-              </button>
+              </Link>
             </div>
           </div>
           {/* More about founder */}
@@ -64,9 +71,12 @@ export const HomepageHowWeWork: React.FC = (): JSX.Element => {
                 The Echelon Scene meets on average two incredible single gay
                 men, every single day.
               </p>
-              <button className="btn btn-white-outline btn--small shadow">
+              <Link
+                to="/clients"
+                className="btn btn-white-outline btn--small shadow"
+              >
                 READ MORE <i className="fas fa-arrow-right ml-3" />
-              </button>
+              </Link>
             </div>
           </div>
           {/* Our locations */}
@@ -84,9 +94,12 @@ export const HomepageHowWeWork: React.FC = (): JSX.Element => {
                 We provide our service in London, New York, Toronto and we plan
                 to expand.
               </p>
-              <button className="btn btn-white-outline btn--small shadow">
+              <Link
+                to="/locations"
+                className="btn btn-white-outline btn--small shadow"
+              >
                 READ MORE <i className="fas fa-arrow-right ml-3" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
