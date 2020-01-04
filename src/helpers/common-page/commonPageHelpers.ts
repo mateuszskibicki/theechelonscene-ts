@@ -1,7 +1,7 @@
 import { ImgHelper, ArrayHelper } from "prismic-helpers-sanitize";
 import { SEOhelper } from "../SEOhelper";
 
-export const clientsPageHelper = (data: any): any | null => {
+export const commonPageHelper = (data: any): any | null => {
   if (!data || !data.data) return null;
 
   const payload = data.data;

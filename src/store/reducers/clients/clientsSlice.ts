@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export interface LoadingState {
+export interface ClientsState {
   content: object | null;
 }
-const initialState: LoadingState = {
+const initialState: ClientsState = {
   content: null
 };
 

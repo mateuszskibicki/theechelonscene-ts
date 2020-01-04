@@ -1,26 +1,25 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { loadingStart, loadingStop } from '../../store/reducers/loading/loadingSlice'
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchHowWeWork } from "../../store/actions";
+import { CommonPageLayout } from "../../components/common/page/CommonPageLayout";
 
-interface IProps {
-    loading: { loading: boolean };
-    loadingStart: any
-    loadingStop: any
-}
+export const HowWeWork: React.FC<any> = (): JSX.Element | null => {
+  // get state
+  const { loading, howWeWork } = useSelector((state: any) => state);
+  const dispatch = useDispatch();
 
-const HowWeWorkPage: React.FC<any> = ({ loading, loadingStart, loadingStop }: IProps): JSX.Element => {
-    console.log(loading, loadingStart, loadingStop)
-    return (
-        <div>
-            <h1>HowWeWork</h1>
-            <button onClick={() => loadingStart()}>aa</button>
-            <button onClick={() => loadingStop()}>aa</button>
-        </div>
-    )
-}
+  // fetch data
+  useEffect(() => {
+    if (!howWeWork.content) {
+      dispatch(fetchHowWeWork());
+    }
+  }, [howWeWork.content, dispatch]);
 
-const mapStateToProps = ({ loading }: { loading: boolean }) => loading;
-
-const mapDispatchToProps = { loadingStart, loadingStop };
-
-export const HowWeWork = connect(mapStateToProps, mapDispatchToProps)(HowWeWorkPage)
+  return (
+    <CommonPageLayout
+      loading={loading}
+      content={howWeWork.content}
+      title="How we work"
+    />
+  );
+};

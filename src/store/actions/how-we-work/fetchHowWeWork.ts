@@ -1,12 +1,12 @@
-import { commonPageHelper } from "./../../../helpers/common-page/commonPageHelpers";
 import { Dispatch } from "redux";
 import { prismicConnection } from "../prismic-connection/prismicConnection";
 import { loadingStart, loadingStop } from "../../reducers/loading";
-import { getClients } from "../../reducers/clients/clientsSlice";
+import { getHowWeWork } from "../../reducers/how-we-work/howWeWorkSlice";
 import { setSEO } from "../../reducers/SEO/seoSlice";
+import { commonPageHelper } from "./../../../helpers/common-page/commonPageHelpers";
 
 // Get clients page from Prismic.
-export const fetchClientsData = () => async (
+export const fetchHowWeWork = () => async (
   dispatch: Dispatch
 ): Promise<void> => {
   try {
@@ -17,7 +17,7 @@ export const fetchClientsData = () => async (
     const prismicApi = await prismicConnection();
 
     // Grab data
-    const data = await prismicApi.getSingle("clients-page");
+    const data = await prismicApi.getSingle("how-we-work-page");
 
     // Helper
     const { SEO, content } = commonPageHelper(data);
@@ -26,7 +26,7 @@ export const fetchClientsData = () => async (
     dispatch(setSEO(SEO));
 
     // Push data to redux (use helper to clean it)
-    dispatch(getClients(content));
+    dispatch(getHowWeWork(content));
 
     // Stop loading
     dispatch(loadingStop());

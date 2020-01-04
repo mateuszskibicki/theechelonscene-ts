@@ -65,7 +65,7 @@ export const Navbar: React.FC = (): JSX.Element => {
             name="Locations"
             onClick={onClickMenuButton}
           />
-          {/* <NavbarLink
+          <NavbarLink
             url="/locations/london"
             name="London"
             onClick={onClickMenuButton}
@@ -82,7 +82,7 @@ export const Navbar: React.FC = (): JSX.Element => {
             name="Toronto"
             onClick={onClickMenuButton}
             ml
-          /> */}
+          />
           <NavbarLink
             url="/testimonials"
             name="Testimonials"
