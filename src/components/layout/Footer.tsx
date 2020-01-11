@@ -1,90 +1,223 @@
 import React from "react";
-import { FooterLink } from "./FooterLink";
-import Logo from "../../assets/imgs/echelon-logo.png";
-import { Testimonials } from "./Testimonials";
+import { Link } from "react-router-dom";
 
 export const Footer: React.FC = (): JSX.Element => {
+  const FooterSocialIcons: React.FC<{ margin?: string }> = ({
+    margin
+  }): JSX.Element => (
+    <>
+      <a
+        className={`footer__icon ${margin === "small" ? "mr-4" : "mr-5"}`}
+        href="https://www.facebook.com/theechelonscene"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-facebook"></i>
+      </a>
+      <a
+        className={`footer__icon ${margin === "small" ? "mr-4" : "mr-5"}`}
+        href="https://twitter.com/TheEchelonScene"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-twitter"></i>
+      </a>
+      <a
+        className={`footer__icon ${margin === "small" ? "mr-4" : "mr-5"}`}
+        href="https://www.linkedin.com/company/theechelonscene/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-linkedin"></i>
+      </a>
+      <a
+        className="footer__icon"
+        href="https://www.instagram.com/TheEchelonScene/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-instagram"></i>
+      </a>
+    </>
+  );
+
   return (
-    <div className="footer py-5 shadow ">
+    <div className="footer py-4">
       <div className="container">
-        <div className="row">
-          {/* Logo and button */}
-          <div className="col-12 text-center mb-4">
-            <p className="small mb-3 letter-spacing-6">THE</p>
-            <img
-              src={Logo}
-              alt="The Echelon Scene - Gay Matchmaking London, New York, Toronto"
-              className="footer__logo mb-3"
-            />
-            <p className="small letter-spacing-6 mb-0">SCENE</p>
-          </div>
-
-          <div className="col-12 text-center mb-4">
-            <button className="btn btn-white shadow">ENQUIRE</button>
-          </div>
-
-          <Testimonials />
-
-          {/* Social media icons */}
-          <div className="col-12 mb-4">
-            <div className="row d-flex flex-row justify-content-center">
-              <a
-                className="footer__icon mr-4"
-                href="https://www.facebook.com/theechelonscene"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-facebook"></i>
-              </a>
-              <a
-                className="footer__icon mr-4"
-                href="https://twitter.com/TheEchelonScene"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a
-                className="footer__icon mr-4"
-                href="https://www.linkedin.com/company/theechelonscene/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-linkedin"></i>
-              </a>
-              <a
-                className="footer__icon"
-                href="https://www.instagram.com/TheEchelonScene/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-instagram"></i>
-              </a>
-            </div>
-          </div>
-          <div className="col-6 col-sm-4 mb-4 text-center">
-            <FooterLink url="/" name="Home" />
-            <FooterLink url="/clients" name="Clients" />
-            <FooterLink url="/founder" name="Founder" />
-            <FooterLink url="/levels" name="Levels" />
-          </div>
-          <div className="col-6 col-sm-4 mb-4 text-center">
-            <FooterLink url="/locations" name="Locations" />
-            <FooterLink url="/locations/london" name="London" />
-            <FooterLink url="/locations/new-york" name="New York" />
-            <FooterLink url="/locations/toronto" name="Toronto" />
-          </div>
-          <div className="col-10 col-sm-4 mb-4 text-center mx-auto">
-            <FooterLink url="/how-we-work" name="How we work" />
-            <FooterLink url="/faq" name="FAQ" />
-            <FooterLink url="/contact" name="Contact" />
-            <FooterLink url="/tc" name="Terms and Conditions" />
+        {/* Mobile only */}
+        <div className="row d-md-none">
+          <div className="col-12 mb-3">
+            <p className="text-xs text-white mb-0 text-center">
+              Copyright © 2018 The Echelon Sence
+            </p>
           </div>
 
           <div className="col-12">
-            <p className="footer__name mb-3 text-center white-smoke">
-              Copyright © 2018 The Echelon Scene
-            </p>
+            <div className="row d-flex flex-row justify-content-center">
+              <FooterSocialIcons />
+            </div>
+          </div>
+
+          <div className="col-12 text-center my-2">
+            <button className="btn btn--xsmall btn-white-outline">
+              ENQUIRE
+            </button>
+          </div>
+
+          <div className="col-12 mb-2">
+            <div className="row d-flex flex-row">
+              <div className="col-4 px-1 text-center">
+                <Link to="/" className="text-white text-xs">
+                  Home
+                </Link>
+              </div>
+              <div className="col-4 px-1 text-center">
+                <Link to="/clients" className="text-white text-xs">
+                  Clients
+                </Link>
+              </div>
+              <div className="col-4 px-1 text-center">
+                <Link to="/founder" className="text-white text-xs">
+                  Founder
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-12 mb-3">
+            <div className="row d-flex flex-row">
+              <div className="col-4 px-1 text-center">
+                <Link to="/how-we-work" className="text-white text-xs">
+                  How we work
+                </Link>
+              </div>
+              <div className="col-4 px-1 text-center">
+                <Link to="/levels" className="text-white text-xs">
+                  Levels
+                </Link>
+              </div>
+              <div className="col-4 px-1 text-center">
+                <Link to="/levels" className="text-white text-xs">
+                  Testimonials
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-12 mb-3">
+            <div className="row d-flex flex-row">
+              <div className="col-12">
+                <p className="mb-1 text-center text-sm text-600">Locations:</p>
+              </div>
+              <div className="col-4 px-1 text-center">
+                <Link to="/levels" className="text-white text-xs">
+                  London
+                </Link>
+              </div>
+              <div className="col-4 px-1 text-center">
+                <Link to="/levels" className="text-white text-xs">
+                  New York
+                </Link>
+              </div>
+              <div className="col-4 px-1 text-center">
+                <Link to="/levels" className="text-white text-xs">
+                  Toronto
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-12 text-center">
+            <Link to="/tc" className="text-white text-xs">
+              Terms and conditions
+            </Link>
+          </div>
+        </div>
+
+        {/* desktop */}
+        <div className="row d-none d-md-flex">
+          <div className="col-12 mb-3">
+            <div className="row">
+              <div className="col-5">
+                <p className="text-xs text-white mb-0">
+                  Copyright © 2018 The Echelon Sence
+                </p>
+              </div>
+              <div className="col-5">
+                <FooterSocialIcons margin={"small"} />
+              </div>
+              <div className="col-2 text-right">
+                <button className="btn btn--xsmall btn-white-outline">
+                  ENQUIRE
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-12 mb-3">
+            <div className="row justify-content-center">
+              <div className="col-2 col-xl-1 text-center">
+                <Link to="/" className="text-white text-xs">
+                  Home
+                </Link>
+              </div>
+              <div className="col-2 col-xl-1 text-center">
+                <Link to="/clients" className="text-white text-xs">
+                  Clients
+                </Link>
+              </div>
+              <div className="col-2 col-xl-1 text-center">
+                <Link to="/founder" className="text-white text-xs">
+                  Founder
+                </Link>
+              </div>
+              <div className="col-2 text-center d-xl-none">
+                <Link to="/how-we-work" className="text-white text-xs">
+                  How we work
+                </Link>
+              </div>
+              <div className="col-2 col-xl-1 mx-2 px-0 text-center d-none d-xl-flex justofy-content-center align-items-center">
+                <Link
+                  to="/how-we-work"
+                  className="text-white text-center w-100 m-auto text-xs"
+                >
+                  How we work
+                </Link>
+              </div>
+              <div className="col-2 col-xl-1 text-center">
+                <Link to="/levels" className="text-white text-xs">
+                  Levels
+                </Link>
+              </div>
+              <div className="col-2 col-xl-1 text-center">
+                <Link to="/levels" className="text-white text-xs">
+                  Testimonials
+                </Link>
+              </div>
+
+              <div className="col-2 col-xl-1 text-center">
+                <Link to="/levels" className="text-white text-xs">
+                  London
+                </Link>{" "}
+              </div>
+              <div className="col-2 col-xl-1 text-center">
+                <Link to="/levels" className="text-white text-xs">
+                  New York
+                </Link>{" "}
+              </div>
+
+              <div className="col-2 col-xl-1 text-center">
+                <Link to="/levels" className="text-white text-xs">
+                  Toronto
+                </Link>{" "}
+              </div>
+            </div>
+          </div>
+
+          <div className="col-12 text-center">
+            <Link to="/tc" className="text-white text-xs">
+              Terms and conditions
+            </Link>
           </div>
         </div>
       </div>

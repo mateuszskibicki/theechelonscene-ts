@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap");
 $font-montserrat: "Montserrat", sans-serif;
 
+.text-xs {
+  font-size: 12px !important;
+}
+
+.text-sm {
+  font-size: 14px !important;
+}
+
 .text-white {
   color: $white-primary !important;
 }

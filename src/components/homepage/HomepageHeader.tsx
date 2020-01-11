@@ -21,7 +21,18 @@ export const HomepageHeader: React.FC = (): JSX.Element => {
         />
         <p className="letter-spacing-6 mb-3">SCENE</p>
         {/* Cities part */}
-        <div className="homepage__logo-cities mb-4">
+        <div className="homepage__logo-cities mb-4 d-md-none">
+          <h3 className="homepage__logo-cities-single letter-spacing-4 mb-2">
+            LONDON
+          </h3>
+          <h3 className="homepage__logo-cities-single letter-spacing-4 mb-2">
+            NEW YORK
+          </h3>
+          <h3 className="homepage__logo-cities-single letter-spacing-4 mb-2">
+            TORONTO
+          </h3>
+        </div>
+        <div className="d-none d-md-flex justify-content-around mb-4">
           <h3 className="homepage__logo-cities-single letter-spacing-4 mb-2">
             LONDON
           </h3>
