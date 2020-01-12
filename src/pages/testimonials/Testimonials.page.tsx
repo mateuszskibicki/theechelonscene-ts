@@ -43,7 +43,7 @@ export const Testimonials: React.FC<any> = (): JSX.Element | null => {
         <h1 className="text-center text-white letter-spacing-4 mb-4">
           Testimonials
         </h1>
-        <button className="btn btn-white">ENQUIRE</button>
+        <button className="btn btn--small btn-white-outline">ENQUIRE</button>
       </HeaderImage>
       <ImgSEO
         url={bgIMG}

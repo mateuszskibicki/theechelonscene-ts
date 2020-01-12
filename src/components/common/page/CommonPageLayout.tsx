@@ -47,7 +47,7 @@ export const CommonPageLayout: React.FC<IProps> = ({
         <h1 className="text-center text-white letter-spacing-4 mb-4">
           {title}
         </h1>
-        <button className="btn btn-white">ENQUIRE</button>
+        <button className="btn btn--small btn-white-outline">ENQUIRE</button>
       </HeaderImage>
       <ImgSEO url={bg_image} alt={bg_image_alt} />
       {content_text && (

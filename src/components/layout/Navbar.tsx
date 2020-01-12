@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavbarLink } from "./NavbarLink";
 import Logo from "../../assets/imgs/echelon-logo.png";
+import { MenuIcon, MenuCloseIcon } from "../common/icons/Icons";
 
 export const Navbar: React.FC = (): JSX.Element => {
   const [visible, setVisible] = useState<boolean>(false);
@@ -19,11 +20,7 @@ export const Navbar: React.FC = (): JSX.Element => {
         aria-label="Toggle navigation"
         onClick={onClickMenuButton}
       >
-        {visible ? (
-          <i className="fas fa-times"></i>
-        ) : (
-          <i className="fas fa-bars"></i>
-        )}
+        {visible ? <MenuCloseIcon /> : <MenuIcon />}
       </button>
 
       <div
