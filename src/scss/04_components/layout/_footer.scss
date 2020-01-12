@@ -20,21 +20,32 @@
   }
 
   &__link {
-    letter-spacing: 1px;
-    font-size: 16px;
-    font-weight: 700;
-    transition: 0.3s;
+    // text-transform: uppercase;
+    color: $white-primary;
+    text-decoration: none;
+    // font-size: 12px;
+    // letter-spacing: 1px;
+    &::after {
+      height: 1px;
+      content: "";
+      display: block;
+      margin: 6px auto 0;
+      bottom: 0;
+      overflow: hidden;
+      background-color: #fff;
+      max-width: 100px;
+      width: 30%;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: left;
+      transform-origin: left;
+      transition: transform 0.3s ease-in-out;
+    }
     &:hover {
-      color: $white-primary;
       text-decoration: none;
-      transform: scale(1.05);
-    }
-    @include media-sm {
-      font-size: 18px;
-    }
-
-    @include media-md {
-      font-size: 20px;
+      &::after {
+        transform: scaleX(1);
+      }
     }
   }
 

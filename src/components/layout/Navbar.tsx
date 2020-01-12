@@ -96,7 +96,9 @@ export const Navbar: React.FC = (): JSX.Element => {
           />
         </ul>
         <div className="col-12 text-center mb-4">
-          <button className="btn btn-white shadow">ENQUIRE</button>
+          <button className="btn btn-white-outline btn--small shadow">
+            ENQUIRE
+          </button>
         </div>
         <div className="col-12 mb-2">
           <div className="row d-flex flex-row justify-content-center">

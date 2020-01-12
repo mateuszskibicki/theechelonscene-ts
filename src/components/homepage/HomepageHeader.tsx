@@ -3,6 +3,7 @@ import { HeaderImage } from "../../components/header-image/HeaderImage";
 import Logo from "../../assets/imgs/echelon-logo.png";
 import HomepageBG from "../../assets/imgs/rsz_homepage.jpg";
 import { ImgSEO } from "../common/SEO/ImgSEO";
+import { Link } from "react-router-dom";
 
 export const HomepageHeader: React.FC = (): JSX.Element => {
   return (
@@ -64,8 +65,21 @@ export const HomepageHeader: React.FC = (): JSX.Element => {
         </button>
       </div>
       <div className="d-none mb-5 d-sm-flex">
-        <button className="btn btn-white shadow mr-4">ENQUIRE</button>
-        <button className="btn btn-white-outline shadow">READ MORE</button>
+        {/* <button className="btn btn-white shadow mr-4">ENQUIRE</button> */}
+        <button className="btn btn--small btn-white-outline shadow">
+          CONTACT
+        </button>
+      </div>
+      <div className="container homepage__desktop-links d-none d-lg-block">
+        <div className="row justify-content-around">
+          <Link to="/">Clientele</Link>
+          <Link to="/">Founder</Link>
+          <Link to="/">How we work</Link>
+          <Link to="/">Levels</Link>
+          <Link to="/">Media</Link>
+          <Link to="/">Testimonials</Link>
+          <Link to="/">Locations</Link>
+        </div>
       </div>
     </HeaderImage>
   );
