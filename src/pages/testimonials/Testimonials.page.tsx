@@ -6,8 +6,7 @@ import { ImgSEO } from "../../components/common/SEO/ImgSEO";
 import { HeaderLogo } from "../../components/header-image/HeaderLogo";
 import { Spinner } from "../../components/common/spinner/Spinner";
 import bgIMG from "../../assets/imgs/contact.jpg";
-// import testimonials1IMG from "../../assets/imgs/testimonials/testimonials2.jpg";
-import { fetchTestimonialsSEO } from "../../store/actions";
+import { fetchTestimonialsSEO, fetchTestimonials } from "../../store/actions";
 
 export const Testimonials: React.FC<any> = (): JSX.Element | null => {
   // data from redux
@@ -18,8 +17,11 @@ export const Testimonials: React.FC<any> = (): JSX.Element | null => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchTestimonialsSEO());
-  }, [dispatch]);
+    if (testimonials && testimonials.length === 0) {
+      dispatch(fetchTestimonials());
+      dispatch(fetchTestimonialsSEO());
+    }
+  }, [dispatch, testimonials]);
 
   if (loading || !testimonials)
     return (
@@ -51,7 +53,7 @@ export const Testimonials: React.FC<any> = (): JSX.Element | null => {
       />
       <div className="testimonials-page__wrapper">
         <div className="container py-5">
-          <div className="row">
+          <div className="row justify-content-center">
             <div className="col-12">
               <h2 className="text-white text-center mb-4">
                 Our services are getting amazing reviews from all around the
@@ -62,22 +64,12 @@ export const Testimonials: React.FC<any> = (): JSX.Element | null => {
               (
                 testimonial: {
                   content: string;
-                  img: { url: string; alt: string };
                 },
                 index: number
-              ): JSX.Element | null => {
-                if (!testimonial.img) return null;
-
+              ): JSX.Element => {
                 return (
-                  <div className="col-12 col-md-6 mb-4" key={index}>
-                    <ImgSEO
-                      url={testimonial.img.url}
-                      alt={testimonial.img.alt}
-                    />
-                    <div
-                      className="testimonials-page__single shadow py-5 h-100 d-flex justify-content-center align-items-center"
-                      style={{ backgroundImage: `url(${testimonial.img.url})` }}
-                    >
+                  <div className="col-12 col-md-9 mb-4 px-3" key={index}>
+                    <div className="shadow py-3 h-100 d-flex justify-content-center align-items-center">
                       <p className="text-white text-center mb-0">
                         <span className="testimonials-page__single-quote">
                           "

@@ -35,14 +35,7 @@ export const CommonPageLayout: React.FC<IProps> = ({
       ? content.bg_image.alt
       : null;
 
-  const {
-    left_block_content,
-    left_block_bg,
-    right_block_1_content,
-    right_block_1_bg,
-    right_block_2_content,
-    right_block_2_bg
-  } = content.content;
+  const { content_text } = content.content;
 
   return (
     <div className="common-page">
@@ -57,45 +50,18 @@ export const CommonPageLayout: React.FC<IProps> = ({
         <button className="btn btn-white">ENQUIRE</button>
       </HeaderImage>
       <ImgSEO url={bg_image} alt={bg_image_alt} />
-      <div className="container-fluid">
-        <div className="row">
-          {/* left part */}
-          <div
-            className="col-12 col-md-6 common-page__block text-white letter-spacing-1"
-            style={{ backgroundImage: `url(${left_block_bg.url})` }}
-          >
-            <ImgSEO url={left_block_bg.url} alt={left_block_bg.alt} />
-            <RichTextComponent content={left_block_content} color="white" />
-          </div>
-          {/* right part */}
-          <div className="col-12 col-md-6">
-            <div className="row">
-              {/* top part */}
-              <div
-                className="col-12 common-page__block text-white"
-                style={{ backgroundImage: `url(${right_block_1_bg.url})` }}
-              >
-                <ImgSEO url={right_block_1_bg.url} alt={right_block_1_bg.alt} />
-                <RichTextComponent
-                  content={right_block_1_content}
-                  color="white"
-                />
-              </div>
-              {/* bottom part */}
-              <div
-                className="col-12 common-page__block text-white"
-                style={{ backgroundImage: `url(${right_block_2_bg.url})` }}
-              >
-                <ImgSEO url={right_block_2_bg.url} alt={right_block_2_bg.alt} />
-                <RichTextComponent
-                  content={right_block_2_content}
-                  color="white"
-                />
-              </div>
+      {content_text && (
+        <div className="container px-3 py-5">
+          <div className="row justify-content-center">
+            <div className="col-12 col-md-10">
+              <RichTextComponent
+                content={content_text}
+                color="white"
+              ></RichTextComponent>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

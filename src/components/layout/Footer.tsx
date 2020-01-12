@@ -58,7 +58,7 @@ export const Footer: React.FC = (): JSX.Element => {
             </div>
           </div>
 
-          <div className="col-12 text-center my-2">
+          <div className="col-12 text-center my-3">
             <button className="btn btn--xsmall btn-white-outline">
               ENQUIRE
             </button>
@@ -100,7 +100,10 @@ export const Footer: React.FC = (): JSX.Element => {
                 </Link>
               </div>
               <div className="col-4 px-1 text-center">
-                <Link to="/levels" className="text-white text-xs footer__link">
+                <Link
+                  to="/testimonials"
+                  className="text-white text-xs footer__link"
+                >
                   Testimonials
                 </Link>
               </div>
@@ -113,17 +116,26 @@ export const Footer: React.FC = (): JSX.Element => {
                 <p className="mb-1 text-center text-sm text-600">Locations:</p>
               </div>
               <div className="col-4 px-1 text-center">
-                <Link to="/levels" className="text-white text-xs footer__link">
+                <Link
+                  to="/locations/london"
+                  className="text-white text-xs footer__link"
+                >
                   London
                 </Link>
               </div>
               <div className="col-4 px-1 text-center">
-                <Link to="/levels" className="text-white text-xs footer__link">
+                <Link
+                  to="/locations/new-york"
+                  className="text-white text-xs footer__link"
+                >
                   New York
                 </Link>
               </div>
               <div className="col-4 px-1 text-center">
-                <Link to="/levels" className="text-white text-xs footer__link">
+                <Link
+                  to="/locations/toronto"
+                  className="text-white text-xs footer__link"
+                >
                   Toronto
                 </Link>
               </div>
@@ -196,26 +208,38 @@ export const Footer: React.FC = (): JSX.Element => {
                 </Link>
               </div>
               <div className="col-2 col-xl-1 text-center">
-                <Link to="/levels" className="text-white text-xs footer__link">
+                <Link
+                  to="/testimonials"
+                  className="text-white text-xs footer__link"
+                >
                   Testimonials
                 </Link>
               </div>
 
               <div className="col-2 col-xl-1 text-center">
-                <Link to="/levels" className="text-white text-xs footer__link">
+                <Link
+                  to="/locations/london"
+                  className="text-white text-xs footer__link"
+                >
                   London
-                </Link>{" "}
+                </Link>
               </div>
               <div className="col-2 col-xl-1 text-center">
-                <Link to="/levels" className="text-white text-xs footer__link">
+                <Link
+                  to="/locations/new-york"
+                  className="text-white text-xs footer__link"
+                >
                   New York
-                </Link>{" "}
+                </Link>
               </div>
 
               <div className="col-2 col-xl-1 text-center">
-                <Link to="/levels" className="text-white text-xs footer__link">
+                <Link
+                  to="/locations/toronto"
+                  className="text-white text-xs footer__link"
+                >
                   Toronto
-                </Link>{" "}
+                </Link>
               </div>
             </div>
           </div>

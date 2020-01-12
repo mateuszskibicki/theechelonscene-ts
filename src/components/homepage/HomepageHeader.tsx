@@ -72,13 +72,13 @@ export const HomepageHeader: React.FC = (): JSX.Element => {
       </div>
       <div className="container homepage__desktop-links d-none d-lg-block">
         <div className="row justify-content-around">
-          <Link to="/">Clientele</Link>
-          <Link to="/">Founder</Link>
-          <Link to="/">How we work</Link>
-          <Link to="/">Levels</Link>
-          <Link to="/">Media</Link>
-          <Link to="/">Testimonials</Link>
-          <Link to="/">Locations</Link>
+          <Link to="/clients">Clientele</Link>
+          <Link to="/founder">Founder</Link>
+          <Link to="/how-we-work">How we work</Link>
+          <Link to="/levels">Levels</Link>
+          <Link to="/blog">Media</Link>
+          <Link to="/testimonials">Testimonials</Link>
+          <Link to="/locations">Locations</Link>
         </div>
       </div>
     </HeaderImage>

@@ -11,12 +11,13 @@ export const commonPageHelper = (data: any): any | null => {
     id: data.id,
     bg_image: ImgHelper(payload.bg_image),
     content: {
-      left_block_content: ArrayHelper(payload.left_block_content),
-      left_block_bg: ImgHelper(payload.left_block_bg),
-      right_block_1_content: ArrayHelper(payload.right_block_1_content),
-      right_block_1_bg: ImgHelper(payload.right_block_1_bg),
-      right_block_2_content: ArrayHelper(payload.right_block_2_content),
-      right_block_2_bg: ImgHelper(payload.right_block_2_bg)
+      // left_block_content: ArrayHelper(payload.left_block_content),
+      // left_block_bg: ImgHelper(payload.left_block_bg),
+      // right_block_1_content: ArrayHelper(payload.right_block_1_content),
+      // right_block_1_bg: ImgHelper(payload.right_block_1_bg),
+      // right_block_2_content: ArrayHelper(payload.right_block_2_content),
+      // right_block_2_bg: ImgHelper(payload.right_block_2_bg),
+      content_text: ArrayHelper(payload.content)
     }
   };
 
