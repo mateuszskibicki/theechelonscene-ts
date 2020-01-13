@@ -64,79 +64,56 @@ export const Footer: React.FC = (): JSX.Element => {
             </button>
           </div>
 
-          <div className="col-12 mb-2">
-            <div className="row d-flex flex-row">
+          <div className="col-12 mb-3">
+            <div className="row flex-row justify-content-center px-3">
               <div className="col-4 px-1 text-center">
-                <Link to="/" className="text-white text-xs footer__link">
+                <Link to="/" className="text-white text-xs footer__link ">
                   Home
                 </Link>
               </div>
-              <div className="col-4 px-1 text-center">
-                <Link to="/clients" className="text-white text-xs footer__link">
+              <div className="col-4 px-1 text-center mb-3">
+                <Link
+                  to="/clients"
+                  className="text-white text-xs footer__link "
+                >
                   Clients
                 </Link>
               </div>
-              <div className="col-4 px-1 text-center">
-                <Link to="/founder" className="text-white text-xs footer__link">
+              <div className="col-4 px-1 text-center mb-3">
+                <Link
+                  to="/founder"
+                  className="text-white text-xs footer__link "
+                >
                   Founder
                 </Link>
               </div>
-            </div>
-          </div>
-
-          <div className="col-12 mb-3">
-            <div className="row d-flex flex-row">
-              <div className="col-4 px-1 text-center">
+              <div className="col-4 px-1 text-center mb-3">
                 <Link
                   to="/how-we-work"
-                  className="text-white text-xs footer__link"
+                  className="text-white text-xs footer__link "
                 >
                   How we work
                 </Link>
               </div>
-              <div className="col-4 px-1 text-center">
-                <Link to="/levels" className="text-white text-xs footer__link">
+              <div className="col-4 px-1 text-center mb-3">
+                <Link to="/levels" className="text-white text-xs footer__link ">
                   Levels
                 </Link>
               </div>
-              <div className="col-4 px-1 text-center">
+              <div className="col-4 px-1 text-center mb-3">
                 <Link
                   to="/testimonials"
-                  className="text-white text-xs footer__link"
+                  className="text-white text-xs footer__link "
                 >
                   Testimonials
                 </Link>
               </div>
-            </div>
-          </div>
-
-          <div className="col-12 mb-3">
-            <div className="row d-flex flex-row">
-              <div className="col-12">
-                <p className="mb-1 text-center text-sm text-600">Locations:</p>
-              </div>
-              <div className="col-4 px-1 text-center">
+              <div className="col-4 px-1 text-center mb-3">
                 <Link
-                  to="/locations/london"
-                  className="text-white text-xs footer__link"
+                  to="/testimonials"
+                  className="text-white text-xs footer__link "
                 >
-                  London
-                </Link>
-              </div>
-              <div className="col-4 px-1 text-center">
-                <Link
-                  to="/locations/new-york"
-                  className="text-white text-xs footer__link"
-                >
-                  New York
-                </Link>
-              </div>
-              <div className="col-4 px-1 text-center">
-                <Link
-                  to="/locations/toronto"
-                  className="text-white text-xs footer__link"
-                >
-                  Toronto
+                  Locations
                 </Link>
               </div>
             </div>
@@ -213,32 +190,6 @@ export const Footer: React.FC = (): JSX.Element => {
                   className="text-white text-xs footer__link"
                 >
                   Testimonials
-                </Link>
-              </div>
-
-              <div className="col-2 col-xl-1 text-center">
-                <Link
-                  to="/locations/london"
-                  className="text-white text-xs footer__link"
-                >
-                  London
-                </Link>
-              </div>
-              <div className="col-2 col-xl-1 text-center">
-                <Link
-                  to="/locations/new-york"
-                  className="text-white text-xs footer__link"
-                >
-                  New York
-                </Link>
-              </div>
-
-              <div className="col-2 col-xl-1 text-center">
-                <Link
-                  to="/locations/toronto"
-                  className="text-white text-xs footer__link"
-                >
-                  Toronto
                 </Link>
               </div>
             </div>

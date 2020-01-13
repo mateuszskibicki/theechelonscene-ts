@@ -19,7 +19,7 @@ export const Clients: React.FC<any> = (): JSX.Element | null => {
     <CommonPageLayout
       loading={loading}
       content={clients.content}
-      title="Our clients"
+      title="Clientele"
     />
   );
 };

@@ -65,7 +65,6 @@ export const HomepageHeader: React.FC = (): JSX.Element => {
         </button>
       </div>
       <div className="d-none mb-5 d-sm-flex">
-        {/* <button className="btn btn-white shadow mr-4">ENQUIRE</button> */}
         <button className="btn btn--small btn-white-outline shadow">
           CONTACT
         </button>

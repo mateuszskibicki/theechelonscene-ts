@@ -19,7 +19,7 @@ export const Founder: React.FC<any> = (): JSX.Element | null => {
     <CommonPageLayout
       loading={loading}
       content={founder.content}
-      title="About founder"
+      title="Founder"
     />
   );
 };
