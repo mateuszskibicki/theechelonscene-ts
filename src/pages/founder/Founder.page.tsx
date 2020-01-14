@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchFounderData } from "../../store/actions";
 import { CommonPageLayout } from "../../components/common/page/CommonPageLayout";
 
-export const Founder: React.FC<any> = (): JSX.Element | null => {
+const FounderPage: React.FC<any> = (): JSX.Element | null => {
   // get state
   const { loading, founder } = useSelector((state: any) => state);
   const dispatch = useDispatch();
@@ -23,3 +23,5 @@ export const Founder: React.FC<any> = (): JSX.Element | null => {
     />
   );
 };
+
+export default FounderPage;

@@ -8,7 +8,7 @@ import { Spinner } from "../../components/common/spinner/Spinner";
 import bgIMG from "../../assets/imgs/contact.jpg";
 import { fetchTestimonialsSEO, fetchTestimonials } from "../../store/actions";
 
-export const Testimonials: React.FC<any> = (): JSX.Element | null => {
+const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
   // data from redux
   const { testimonials, loading } = useSelector(
     (state: any) => state.testimonials
@@ -83,55 +83,9 @@ export const Testimonials: React.FC<any> = (): JSX.Element | null => {
             )}
           </div>
         </div>
-
-        {/* <div className="container pt-5 pb-3">
-          <div className="row">
-            <div className="col-12">
-              <div className="row testimonials-page__img mb-5">
-                <div className="col-12 col-sm-8 col-md-8">
-                  <img
-                    className="img-fluid shadow"
-                    src={testimonials1IMG}
-                    alt="Testimonials, reviews - The Echelon Scene - Gay Matchmaking Agency London"
-                  />
-                </div>
-                <div className="col-12 col-sm-8 testimonials-page__img-text">
-                  <h4 className="text-center text-white d-md-none mb-1 px-2">
-                    London
-                    <br />
-                    New York <br />
-                    Toronto <br />
-                    We're getting amazing reviews from all around the world!
-                  </h4>
-                  <h3 className="text-center text-white py-5 d-none d-md-block shadow rounded">
-                    <span className="mb-1 d-inline-block">London</span>
-                    <br />
-                    <span className="mb-1 d-inline-block">New York</span>
-                    <br />
-                    <span className="mb-1 d-inline-block">Toronto</span> <br />
-                    We're getting amazing reviews from all around the world!{" "}
-                  </h3>
-                </div>
-              </div>
-            </div>
-            <div className="col-12">
-              {testimonials.map(
-                (item: string, index: number): JSX.Element | null => {
-                  return (
-                    <p
-                      className="testimonials-page__single py-4 shadow text-center text-white letter-spacing-05"
-                      key={index}
-                    >
-                      <span className="testimonials-page__single-quote">"</span>
-                      {item}
-                    </p>
-                  );
-                }
-              )}
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );
 };
+
+export default TestimonialsPage;

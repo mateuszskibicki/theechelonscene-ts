@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchClientsData } from "../../store/actions";
 import { CommonPageLayout } from "../../components/common/page/CommonPageLayout";
 
-export const Clients: React.FC<any> = (): JSX.Element | null => {
+const Clients: React.FC<any> = (): JSX.Element | null => {
   // get state
   const { loading, clients } = useSelector((state: any) => state);
   const dispatch = useDispatch();
@@ -23,3 +23,5 @@ export const Clients: React.FC<any> = (): JSX.Element | null => {
     />
   );
 };
+
+export default Clients;

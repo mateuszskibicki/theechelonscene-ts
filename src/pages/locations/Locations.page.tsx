@@ -11,7 +11,7 @@ interface IProps {
   loadingStop: any;
 }
 
-const LevelsPage: React.FC<any> = ({
+const LocationPage: React.FC<any> = ({
   loading,
   loadingStart,
   loadingStop
@@ -19,7 +19,7 @@ const LevelsPage: React.FC<any> = ({
   console.log(loading, loadingStart, loadingStop);
   return (
     <div>
-      <h1>Levels</h1>
+      <h1>location</h1>
       <button onClick={() => loadingStart()}>aa</button>
       <button onClick={() => loadingStop()}>aa</button>
     </div>
@@ -30,4 +30,4 @@ const mapStateToProps = ({ loading }: { loading: boolean }) => loading;
 
 const mapDispatchToProps = { loadingStart, loadingStop };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LevelsPage);
+export default connect(mapStateToProps, mapDispatchToProps)(LocationPage);

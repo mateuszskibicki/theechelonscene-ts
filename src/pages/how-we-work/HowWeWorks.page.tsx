@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchHowWeWork } from "../../store/actions";
 import { CommonPageLayout } from "../../components/common/page/CommonPageLayout";
 
-export const HowWeWork: React.FC<any> = (): JSX.Element | null => {
+const HowWeWorkPage: React.FC<any> = (): JSX.Element | null => {
   // get state
   const { loading, howWeWork } = useSelector((state: any) => state);
   const dispatch = useDispatch();
@@ -23,3 +23,5 @@ export const HowWeWork: React.FC<any> = (): JSX.Element | null => {
     />
   );
 };
+
+export default HowWeWorkPage;

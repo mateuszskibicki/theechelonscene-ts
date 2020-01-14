@@ -8,7 +8,7 @@ import { HeaderLogo } from "../../components/header-image/HeaderLogo";
 import { RichTextComponent } from "../../components/rich-text/RichText";
 import { Spinner } from "../../components/common/spinner/Spinner";
 
-export const TC: React.FC<any> = (): JSX.Element => {
+const TCPage: React.FC<any> = (): JSX.Element => {
   // get state
   const { loading, tc } = useSelector((state: any) => state);
   const dispatch = useDispatch();
@@ -62,3 +62,5 @@ export const TC: React.FC<any> = (): JSX.Element => {
     </div>
   );
 };
+
+export default TCPage;

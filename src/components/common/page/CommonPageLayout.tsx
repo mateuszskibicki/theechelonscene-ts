@@ -17,12 +17,7 @@ export const CommonPageLayout: React.FC<IProps> = ({
   content,
   title
 }): JSX.Element => {
-  if (loading.loading || !content)
-    return (
-      <div className="bg-dark text-center py-5">
-        <Spinner />
-      </div>
-    );
+  if (loading.loading || !content) return <Spinner />;
 
   // Get bg_image
   const bg_image =
