@@ -16,7 +16,6 @@ const LevelsPage: React.FC<any> = ({
   loadingStart,
   loadingStop
 }: IProps): JSX.Element => {
-  console.log(loading, loadingStart, loadingStop);
   return (
     <div>
       <h1>Levels</h1>

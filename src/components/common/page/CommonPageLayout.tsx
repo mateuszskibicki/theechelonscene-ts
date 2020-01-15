@@ -42,7 +42,7 @@ export const CommonPageLayout: React.FC<IProps> = ({
       {content_text && (
         <div className="container px-3 py-5">
           <div className="row justify-content-center">
-            <div className="col-12 col-md-10">
+            <div className="col-12 col-md-10 col-lg-9 px-3">
               <RichTextComponent
                 content={content_text}
                 color="white"

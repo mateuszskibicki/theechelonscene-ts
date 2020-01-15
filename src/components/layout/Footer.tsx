@@ -160,6 +160,14 @@ export const Footer: React.FC = (): JSX.Element => {
                     Testimonials
                   </Link>
                 </div>
+                <div className="col-2 col-xl-1 text-center">
+                  <Link
+                    to="/locations"
+                    className="text-white text-xs footer__link"
+                  >
+                    Locations
+                  </Link>
+                </div>
               </div>
             </div>
           )}

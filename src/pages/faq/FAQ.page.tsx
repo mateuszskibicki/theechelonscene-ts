@@ -16,7 +16,6 @@ const FAQPage: React.FC<any> = ({
   loadingStart,
   loadingStop
 }: IProps): JSX.Element => {
-  console.log(loading, loadingStart, loadingStop);
   return (
     <div>
       <h1>FAQ</h1>

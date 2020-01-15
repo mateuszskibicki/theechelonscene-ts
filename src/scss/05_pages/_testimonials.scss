@@ -3,49 +3,9 @@
   &__wrapper {
     max-width: 900px;
     margin: auto;
-  }
 
-  &__img {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @include media-sm {
-      justify-content: flex-start;
-    }
-
-    &-text {
-      position: absolute;
-
-      h3 {
-        padding: 36px;
-        // border: 1px solid $black-dark;
-        background-color: rgba($white-primary, 0.1);
-
-        @include media-lg {
-          padding: 68px 48px;
-        }
-      }
-
-      @include media-sm {
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
-  }
-
-  &__single {
-    background-position: center;
-    background-size: cover;
-    min-height: 300px;
-    padding-left: 24px;
-    padding-right: 24px;
-
-    @include media-lg {
-      padding-left: 48px;
-      padding-right: 48px;
+    p {
+      font-style: italic;
     }
   }
 
@@ -53,7 +13,7 @@
     font-size: 54px;
     font-weight: 700;
     font-family: cursive;
-    margin-right: 16px;
+    margin-right: 18px;
     line-height: 0;
     bottom: -16px;
     position: relative;

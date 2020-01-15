@@ -16,17 +16,11 @@ export const fetchLocationSingleData = (uid: string) => async (
     // Prismic connection
     const prismicApi = await prismicConnection();
 
-    console.log(uid);
-
     // Grab data
     const data = await prismicApi.getByUID("location-single-page", uid);
 
-    console.log(data);
-
     // Helper
     const { SEO, content } = commonPageHelper(data);
-
-    console.log(SEO, content);
 
     // SEO update
     dispatch(setSEO(SEO));
