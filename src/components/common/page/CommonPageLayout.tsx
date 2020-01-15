@@ -20,15 +20,9 @@ export const CommonPageLayout: React.FC<IProps> = ({
   if (loading.loading || !content) return <Spinner />;
 
   // Get bg_image
-  const bg_image =
-    content && content.bg_image && content.bg_image.url
-      ? content.bg_image.url
-      : null;
+  const bg_image = content?.bg_image?.url;
   // Get bg_image alt
-  const bg_image_alt =
-    content && content.bg_image && content.bg_image.alt
-      ? content.bg_image.alt
-      : null;
+  const bg_image_alt = content?.bg_image?.alt;
 
   const { content_text } = content.content;
 
@@ -42,7 +36,7 @@ export const CommonPageLayout: React.FC<IProps> = ({
         <h1 className="text-center text-white letter-spacing-4 mb-4">
           {title}
         </h1>
-        <button className="btn btn--small btn-white-outline">ENQUIRE</button>
+        <button className="btn btn--small btn-white-outline">CONTACT</button>
       </HeaderImage>
       <ImgSEO url={bg_image} alt={bg_image_alt} />
       {content_text && (

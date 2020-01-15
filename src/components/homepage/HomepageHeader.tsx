@@ -12,7 +12,7 @@ export const HomepageHeader: React.FC = (): JSX.Element => {
         url={HomepageBG}
         alt="Homepage - Gay Matchmaking Agency London New York Toronto - The Echelon Scene"
       />
-      <div className="col-12 text-center mt-5 homepage__logo-wrapper">
+      <div className="col-12 text-center mt-5 px-0 homepage__logo-wrapper">
         {/* Logo part */}
         <p className="mb-3 letter-spacing-6">THE</p>
         <img
@@ -57,11 +57,8 @@ export const HomepageHeader: React.FC = (): JSX.Element => {
       </div>
       {/* Buttons */}
       <div className="d-flex mb-5 d-sm-none">
-        <button className="btn btn--small btn-white shadow mr-2">
-          ENQUIRE
-        </button>
         <button className="btn btn--small btn-white-outline shadow">
-          READ MORE
+          CONTACT
         </button>
       </div>
       <div className="d-none mb-5 d-sm-flex">

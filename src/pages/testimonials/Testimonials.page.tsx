@@ -75,6 +75,9 @@ const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
                           "
                         </span>
                         {testimonial.content}
+                        <span className="testimonials-page__single-quote testimonials-page__single-quote--last">
+                          ”
+                        </span>
                       </p>
                     </div>
                   </div>

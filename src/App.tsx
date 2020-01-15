@@ -17,9 +17,12 @@ const FounderPage = React.lazy(() => import("./pages/founder/Founder.page"));
 const HowWeWorkPage = React.lazy(() =>
   import("./pages/how-we-work/HowWeWorks.page")
 );
-const Levelspage = React.lazy(() => import("./pages/levels/Levels.page"));
+const LevelsPage = React.lazy(() => import("./pages/levels/Levels.page"));
 const LocationsPage = React.lazy(() =>
   import("./pages/locations/Locations.page")
+);
+const LocationSinglePage = React.lazy(() =>
+  import("./pages/location-single/LocationSingle.page")
 );
 const TCPage = React.lazy(() => import("./pages/tc/TC.page"));
 const TestimonialsPage = React.lazy(() =>
@@ -38,8 +41,13 @@ const App: React.FC = (): JSX.Element => {
                 <Route path="/clients" component={ClientsPage} exact />
                 <Route path="/founder" component={FounderPage} exact />
                 <Route path="/how-we-work" component={HowWeWorkPage} exact />
-                <Route path="/levels" component={Levelspage} exact />
+                <Route path="/levels" component={LevelsPage} exact />
                 <Route path="/locations" component={LocationsPage} exact />
+                <Route
+                  path="/location/:uid"
+                  component={LocationSinglePage}
+                  exact
+                />
                 <Route path="/tc" component={TCPage} exact />
                 <Route
                   path="/testimonials"
