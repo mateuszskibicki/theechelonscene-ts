@@ -6,7 +6,7 @@ interface IProps {
 
 export const Spinner: React.FC<IProps> = ({ dark }: IProps): JSX.Element => {
   return (
-    <div className="bg-dark text-center py-5">
+    <div className="text-center py-5">
       <div className="container my-4">
         <div className="row">
           <div className="col-12 text-center">
