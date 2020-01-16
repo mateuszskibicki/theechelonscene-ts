@@ -1,12 +1,34 @@
-import { ImgHelper, ArrayHelper, TextHelper } from "prismic-helpers-sanitize";
+import {
+  ImgHelper,
+  ArrayHelper,
+  TextHelper,
+  SmallTextHelper
+} from "prismic-helpers-sanitize";
 import { SEOhelper } from "../SEOhelper";
 
-export const commonPageHelper = (data: any): any | null => {
+interface Content {
+  uid: string | null;
+  id: string | null;
+  bg_image: {
+    url: string;
+    alt: string | null;
+  } | null;
+  header_title: string | null;
+  content: { content_text: any[] | null };
+  title?: string | null;
+  description?: string | null;
+  date?: string | null;
+}
+
+export const commonPageHelper = (
+  data: any,
+  isArticle?: boolean
+): any | null => {
   if (!data || !data.data) return null;
 
   const payload = data.data;
 
-  const content = {
+  let content: Content = {
     uid: data.uid,
     id: data.id,
     bg_image: ImgHelper(payload.bg_image),
@@ -15,6 +37,15 @@ export const commonPageHelper = (data: any): any | null => {
       content_text: ArrayHelper(payload.content)
     }
   };
+
+  if (isArticle) {
+    content = {
+      ...content,
+      title: TextHelper(payload.title),
+      description: TextHelper(payload.description),
+      date: SmallTextHelper(payload.date)
+    };
+  }
 
   return {
     content,

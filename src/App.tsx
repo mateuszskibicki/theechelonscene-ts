@@ -28,6 +28,9 @@ const TCPage = React.lazy(() => import("./pages/tc/TC.page"));
 const TestimonialsPage = React.lazy(() =>
   import("./pages/testimonials/Testimonials.page")
 );
+const ArticleSinglePage = React.lazy(() =>
+  import("./pages/article-single/ArticleSingle.page")
+);
 
 const App: React.FC = (): JSX.Element => {
   return (
@@ -48,6 +51,7 @@ const App: React.FC = (): JSX.Element => {
                   component={LocationSinglePage}
                   exact
                 />
+                <Route path="/blog/:uid" component={ArticleSinglePage} exact />
                 <Route path="/tc" component={TCPage} exact />
                 <Route
                   path="/testimonials"

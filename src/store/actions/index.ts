@@ -1,3 +1,4 @@
+export * from './article-single';
 export * from './clients';
 export * from './founder';
 export * from './how-we-work';

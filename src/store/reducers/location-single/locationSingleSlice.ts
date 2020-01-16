@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export type LocationsMainState = object;
-const initialState: LocationsMainState = {};
+export type LocationsSingleState = object;
+const initialState: LocationsSingleState = {};
 
 export const locationSingleSlice = createSlice({
   name: "location-single",
