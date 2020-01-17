@@ -67,10 +67,15 @@ export const Footer: React.FC = (): JSX.Element => {
               </div>
               <div className="col-4 px-1 text-center mb-3">
                 <Link
-                  to="/testimonials"
+                  to="/locations"
                   className="text-white text-xs footer__link "
                 >
                   Locations
+                </Link>
+              </div>
+              <div className="col-4 px-1 text-center mb-3">
+                <Link to="/blog" className="text-white text-xs footer__link ">
+                  Media
                 </Link>
               </div>
             </div>
@@ -166,6 +171,11 @@ export const Footer: React.FC = (): JSX.Element => {
                     className="text-white text-xs footer__link"
                   >
                     Locations
+                  </Link>
+                </div>
+                <div className="col-2 col-xl-1 text-center">
+                  <Link to="/blog" className="text-white text-xs footer__link">
+                    Media
                   </Link>
                 </div>
               </div>

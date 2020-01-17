@@ -10,4 +10,19 @@
       font-size: 18px;
     }
   }
+  a {
+    color: tomato;
+    font-weight: 600;
+    font-style: italic;
+  }
+  .block-img {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 36px;
+
+    img {
+      max-width: 100%;
+    }
+  }
 }

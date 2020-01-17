@@ -6,7 +6,7 @@ import {
 } from "prismic-helpers-sanitize";
 import { SEOhelper } from "../SEOhelper";
 
-interface Content {
+export interface CommonPage {
   uid: string | null;
   id: string | null;
   bg_image: {
@@ -28,7 +28,7 @@ export const commonPageHelper = (
 
   const payload = data.data;
 
-  let content: Content = {
+  let content: CommonPage = {
     uid: data.uid,
     id: data.id,
     bg_image: ImgHelper(payload.bg_image),

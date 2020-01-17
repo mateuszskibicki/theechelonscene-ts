@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchArticleSingleData } from "../../store/actions";
-import { CommonPageLayout } from "../../components/common/page/CommonPageLayout";
+import { ArticleSingleLayout } from "../../components/article-single/ArticleSingleLayout";
 import { useParams } from "react-router-dom";
 
 const ArticleSinglePage: React.FC<any> = (): JSX.Element | null => {
@@ -19,13 +19,7 @@ const ArticleSinglePage: React.FC<any> = (): JSX.Element | null => {
     }
   }, [articleSingle, dispatch, uid]);
 
-  return (
-    <CommonPageLayout
-      loading={loading}
-      content={data}
-      title={data?.header_title}
-    />
-  );
+  return <ArticleSingleLayout loading={loading} content={data} />;
 };
 
 export default ArticleSinglePage;

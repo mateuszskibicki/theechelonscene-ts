@@ -57,6 +57,7 @@ export const Navbar: React.FC = (): JSX.Element => {
             name="Testimonials"
             onClick={onClickMenuButton}
           />
+          <NavbarLink url="/blog" name="Media" onClick={onClickMenuButton} />
           <button className="btn btn--small btn-white-outline shadow w-auto navbar-mobile__contact-button">
             CONTACT
           </button>
