@@ -34,6 +34,19 @@ $font-avenir: "Avenir", sans-serif;
   color: $black-dark !important;
 }
 
+.text-red {
+  color: tomato;
+  font-weight: 600;
+  font-style: italic;
+
+  &:hover,
+  &:active {
+    color: tomato;
+    font-weight: 600;
+    font-style: italic;
+  }
+}
+
 .text-600 {
   font-weight: 600;
 }

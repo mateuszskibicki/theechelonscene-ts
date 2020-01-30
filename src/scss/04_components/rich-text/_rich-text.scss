@@ -3,7 +3,7 @@
   margin: auto;
   p {
     font-size: 16px;
-    margin-bottom: 36px;
+    margin-bottom: 24px;
     letter-spacing: 1px;
 
     @include media-md {
@@ -14,6 +14,13 @@
     color: tomato;
     font-weight: 600;
     font-style: italic;
+
+    &:hover,
+    &:active {
+      color: tomato;
+      font-weight: 600;
+      font-style: italic;
+    }
   }
   .block-img {
     margin: auto;
