@@ -9,6 +9,7 @@ import founderSlice from "./founder/founderSlice";
 import locationsMainSlice from "./locations-main/locationsMainSlice";
 import locationSingleSlice from "./location-single/locationSingleSlice";
 import articleSingleSlice from "./article-single/articleSingleSlice";
+import articlesSlice from "./articles/articlesSlice";
 
 export default combineReducers({
   loading: loadingSlice,
@@ -20,5 +21,6 @@ export default combineReducers({
   founder: founderSlice,
   locationsMain: locationsMainSlice,
   locationSingle: locationSingleSlice,
-  articleSingle: articleSingleSlice
+  articleSingle: articleSingleSlice,
+  articles: articlesSlice
 });

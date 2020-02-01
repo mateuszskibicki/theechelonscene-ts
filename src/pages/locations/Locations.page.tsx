@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchLocationsMainData } from "../../store/actions";
 import { CommonPageLayout } from "../../components/common/page/CommonPageLayout";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import { NextArrowButton, PrevArrowButton } from "../../components/carousel";
 
 interface ILocationsArray {
   title: string;
@@ -18,6 +20,49 @@ const locationsArray: ILocationsArray[] = [
   { title: "Los Angeles", url: "los-angeles" },
   { title: "San Francisco", url: "san-francisco" }
 ];
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  nextArrow: <NextArrowButton />,
+  prevArrow: <PrevArrowButton />,
+  responsive: [
+    {
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 0,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+};
 
 const LocationsPage: React.FC<any> = (): JSX.Element | null => {
   // get state
@@ -40,29 +85,35 @@ const LocationsPage: React.FC<any> = (): JSX.Element | null => {
       />
       <div className="container mt-5 mb-3">
         <div className="row justify-content-center">
-          <div className="col-12 mb-5">
+          <div className="col-12 mb-3">
             <h2 className="text-white text-center letter-spacing-05">
               We provide our services all around the world
             </h2>
           </div>
-          {locationsArray.map(
-            (location: ILocationsArray): JSX.Element => (
-              <div
-                className="col-12 col-sm-6 col-md-4 col-lg-3 text-center mb-5"
-                key={location.title}
-              >
-                <h2 className="text-white letter-spacing-1 mb-3">
-                  {location.title}
-                </h2>
-                <Link
-                  to={`/location/${location.url}`}
-                  className="btn btn-white-outline btn--small text-white shadow"
-                >
-                  Read more
-                </Link>
-              </div>
-            )
-          )}
+        </div>
+        <div className="col-12 px-4 mt-5 mb-5">
+          <Slider {...settings}>
+            {locationsArray.map(
+              (location: ILocationsArray): JSX.Element => (
+                <div className="text-center px-3" key={location.title}>
+                  <h2 className="text-white letter-spacing-1 mb-3">
+                    {location.title}
+                  </h2>
+                  <p className="text-small text-gray">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora debitis facilis qui vitae corrupti corporis, natus
+                    eveniet molestiae dolore magni!
+                  </p>
+                  <Link
+                    to={`/location/${location.url}`}
+                    className="btn btn-white-outline btn--small text-white shadow"
+                  >
+                    Read more
+                  </Link>
+                </div>
+              )
+            )}
+          </Slider>
         </div>
       </div>
     </>

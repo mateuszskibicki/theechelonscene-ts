@@ -27,7 +27,7 @@ $font-avenir: "Avenir", sans-serif;
 }
 
 .text-gray {
-  color: $black-light;
+  color: darken($color: $white-primary, $amount: 20%);
 }
 
 .text-dark {

@@ -17,7 +17,7 @@ export const SEOhelper = (response: any): ISEO | null => {
     title: TextHelper(seoData.seo_title),
     description: TextHelper(seoData.seo_description),
     keywords: TextHelper(seoData.seo_keywords),
-    fb_admins: TextHelper(seoData.seo_fb_admins),
+    fb_admins: TextHelper(seoData.seo_fb_admins), //TODO DEFAULT
     item_prop_image: UrlHelper(seoData.seo_item_prop_image),
     twitter_image: UrlHelper(seoData.seo_twitter_image),
     og_image: UrlHelper(seoData.seo_og_image)

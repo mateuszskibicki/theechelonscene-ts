@@ -1,4 +1,5 @@
 export * from './article-single';
+export * from './articles';
 export * from './clients';
 export * from './founder';
 export * from './how-we-work';

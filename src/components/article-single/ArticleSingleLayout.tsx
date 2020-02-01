@@ -79,7 +79,7 @@ export const ArticleSingleLayout: React.FC<IProps> = ({
               ></RichTextComponent>
             </div>
             <div className="col-12">
-              <div className="row justify-content-center align-items-center py-4">
+              <div className="row justify-content-center align-items-center pt-4">
                 <div className="col-8 col-sm-6 col-md-3 col-lg-2 mb-3">
                   <img
                     src={profileImg}

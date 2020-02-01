@@ -31,6 +31,7 @@ const TestimonialsPage = React.lazy(() =>
 const ArticleSinglePage = React.lazy(() =>
   import("./pages/article-single/ArticleSingle.page")
 );
+const MediaPage = React.lazy(() => import("./pages/media/MediaPage"));
 
 const App: React.FC = (): JSX.Element => {
   return (
@@ -51,6 +52,7 @@ const App: React.FC = (): JSX.Element => {
                   component={LocationSinglePage}
                   exact
                 />
+                <Route path="/blog" component={MediaPage} exact />
                 <Route path="/blog/:uid" component={ArticleSinglePage} exact />
                 <Route path="/tc" component={TCPage} exact />
                 <Route
