@@ -1,0 +1,14 @@
+.slick-slide,
+.slick-active,
+.carousel-single-wrapper {
+  outline: none !important;
+  outline-color: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.slick-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

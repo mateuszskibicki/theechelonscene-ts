@@ -7,6 +7,43 @@ import { HeaderLogo } from "../../components/header-image/HeaderLogo";
 import { Spinner } from "../../components/common/spinner/Spinner";
 import bgIMG from "../../assets/imgs/contact.jpg";
 import { fetchTestimonialsSEO, fetchTestimonials } from "../../store/actions";
+import Slider from "react-slick";
+import { NextArrowButton, PrevArrowButton } from "../../components/carousel";
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  nextArrow: <NextArrowButton />,
+  prevArrow: <PrevArrowButton />,
+  responsive: [
+    {
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 0,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+};
 
 const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
   // data from redux
@@ -60,6 +97,8 @@ const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
                 world!
               </h2>
             </div>
+          </div>
+          <Slider {...settings}>
             {testimonials.map(
               (
                 testimonial: {
@@ -68,8 +107,11 @@ const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
                 index: number
               ): JSX.Element => {
                 return (
-                  <div className="col-12 col-md-9 mb-4 px-3" key={index}>
-                    <div className="shadow py-3 h-100 d-flex justify-content-center align-items-center">
+                  <div
+                    key={index}
+                    className="d-flex justify-content-center align-items-center carousel-single-wrapper"
+                  >
+                    <div className="py-3 px-3 h-100 text-center d-flex justify-content-center align-items-center">
                       <p className="text-white text-center mb-0">
                         <span className="testimonials-page__single-quote">
                           "
@@ -84,7 +126,7 @@ const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
                 );
               }
             )}
-          </div>
+          </Slider>
         </div>
       </div>
     </div>

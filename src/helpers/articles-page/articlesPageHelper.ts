@@ -1,11 +1,11 @@
 import {
-  ImgHelper,
-  ArrayHelper,
+  // ImgHelper,
+  // ArrayHelper,
   TextHelper,
   SmallTextHelper
 } from "prismic-helpers-sanitize";
 //   import { SEOhelper } from "../SEOhelper";
-
+// TODO
 export interface Article {
   uid: string | null;
   title: string | null;

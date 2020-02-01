@@ -95,7 +95,10 @@ const LocationsPage: React.FC<any> = (): JSX.Element | null => {
           <Slider {...settings}>
             {locationsArray.map(
               (location: ILocationsArray): JSX.Element => (
-                <div className="text-center px-3" key={location.title}>
+                <div
+                  className="text-center carousel-single-wrapper px-3"
+                  key={location.title}
+                >
                   <h2 className="text-white letter-spacing-1 mb-3">
                     {location.title}
                   </h2>
