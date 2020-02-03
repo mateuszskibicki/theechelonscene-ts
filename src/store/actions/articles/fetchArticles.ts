@@ -3,8 +3,8 @@ import { articlesPageHelper } from "./../../../helpers/articles-page/articlesPag
 import { Dispatch } from "redux";
 import { prismicConnection } from "../prismic-connection/prismicConnection";
 import { loadingStart, loadingStop } from "../../reducers/loading";
-// import { setSEO } from "../../reducers/SEO/seoSlice";
 import { setArticles } from "../../reducers/articles";
+import { setSEO } from "../../reducers/SEO";
 
 // Get article single page from Prismic.
 export const fetchArticlesData = () => async (
@@ -32,11 +32,13 @@ export const fetchArticlesData = () => async (
       }
     );
 
+    const seoData = await prismicApi.getSingle("articles-page-seo");
+
     // Helper for articles
-    const { articles } = articlesPageHelper(data);
+    const { articles, SEO } = articlesPageHelper(data, seoData);
 
     // SEO update
-    // dispatch(setSEO(SEO));
+    dispatch(setSEO(SEO));
 
     // Push data to redux (use helper to clean it)
     dispatch(setArticles(articles));

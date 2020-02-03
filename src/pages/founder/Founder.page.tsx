@@ -24,4 +24,4 @@ const FounderPage: React.FC<any> = (): JSX.Element | null => {
   );
 };
 
-export default FounderPage;
+export default React.memo(FounderPage);

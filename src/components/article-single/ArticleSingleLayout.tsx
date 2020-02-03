@@ -9,18 +9,7 @@ import bgImg from "../../assets/imgs/clientele.jpg";
 import profileImg from "../../assets/imgs/profile.jpg";
 import { CommonPage } from "../../helpers/common-page/commonPageHelpers";
 import { Link } from "react-router-dom";
-
-// uid: string | null;
-// id: string | null;
-// bg_image: {
-//   url: string;
-//   alt: string | null;
-// } | null;
-// header_title: string | null;
-// content: { content_text: any[] | null };
-// title?: string | null;
-// description?: string | null;
-// date?: string | null;
+import { LastArticlesCarousel } from "./LastArticlesCarousel";
 
 interface IProps {
   loading: { loading: boolean };
@@ -107,6 +96,7 @@ export const ArticleSingleLayout: React.FC<IProps> = ({
           </div>
         </div>
       )}
+      <LastArticlesCarousel />
     </div>
   );
 };

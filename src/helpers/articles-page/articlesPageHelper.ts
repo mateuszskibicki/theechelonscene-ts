@@ -1,10 +1,5 @@
-import {
-  // ImgHelper,
-  // ArrayHelper,
-  TextHelper,
-  SmallTextHelper
-} from "prismic-helpers-sanitize";
-//   import { SEOhelper } from "../SEOhelper";
+import { TextHelper, SmallTextHelper } from "prismic-helpers-sanitize";
+import { SEOhelper } from "../SEOhelper";
 // TODO
 export interface Article {
   uid: string | null;
@@ -13,7 +8,7 @@ export interface Article {
   date: string | null;
 }
 
-export const articlesPageHelper = (data: any): any | null => {
+export const articlesPageHelper = (data: any, seoData: any): any | null => {
   if (!data || !data.results) return null;
 
   const articles = data.results.map(
@@ -28,7 +23,7 @@ export const articlesPageHelper = (data: any): any | null => {
   );
 
   return {
-    articles
-    //   SEO: SEOhelper(payload)
+    articles,
+    SEO: SEOhelper(seoData?.data)
   } as { articles: Article[] };
 };
