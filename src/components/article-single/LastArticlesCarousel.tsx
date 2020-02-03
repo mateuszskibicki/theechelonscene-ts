@@ -92,7 +92,7 @@ export const LastArticlesCarousel: React.FC = (): JSX.Element => {
                         : article.description || ""}
                     </p>
                     <Link
-                      to={`/blod/${article.uid}`}
+                      to={`/blog/${article.uid}`}
                       className="btn btn-white-outline btn--small text-white shadow"
                     >
                       Read more
