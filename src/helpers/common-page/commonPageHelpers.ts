@@ -5,7 +5,7 @@ import {
   SmallTextHelper
 } from "prismic-helpers-sanitize";
 import { SEOhelper } from "../SEOhelper";
-
+import { CommonPageType } from "../enum/CommonPageType";
 export interface CommonPage {
   uid: string | null;
   id: string | null;
@@ -18,11 +18,12 @@ export interface CommonPage {
   title?: string | null;
   description?: string | null;
   date?: string | null;
+  levels?: { title: string; description: string }[];
 }
 
 export const commonPageHelper = (
   data: any,
-  isArticle?: boolean
+  type?: CommonPageType
 ): any | null => {
   if (!data || !data.data) return null;
 
@@ -38,12 +39,22 @@ export const commonPageHelper = (
     }
   };
 
-  if (isArticle) {
+  if (type === CommonPageType.ARTICLE) {
     content = {
       ...content,
       title: TextHelper(payload.title),
       description: TextHelper(payload.description),
       date: SmallTextHelper(payload.date)
+    };
+  }
+
+  if (type === CommonPageType.LEVELS) {
+    content = {
+      ...content,
+      levels: payload.levels.map((level: any) => ({
+        title: TextHelper(level.level_title),
+        description: TextHelper(level.level_description)
+      }))
     };
   }
 

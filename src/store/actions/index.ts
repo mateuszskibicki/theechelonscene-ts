@@ -3,6 +3,7 @@ export * from './articles';
 export * from './clients';
 export * from './founder';
 export * from './how-we-work';
+export * from './levels';
 export * from './locations-main';
 export * from './locations-single';
 export * from './prismic-connection';
