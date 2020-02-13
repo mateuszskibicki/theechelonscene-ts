@@ -24,7 +24,7 @@ export const PrevArrowButton: React.FC = (props: any): JSX.Element => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 256 512"
         className="svg-inline--fa fa-chevron-left fa-w-8"
-        style={{ width: 14, color: "white" }}
+        style={{ width: 12, color: "white" }}
       >
         <path
           fill="currentColor"

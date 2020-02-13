@@ -13,36 +13,10 @@ import { NextArrowButton, PrevArrowButton } from "../../components/carousel";
 const settings = {
   dots: true,
   infinite: true,
-  speed: 500,
-  slidesToShow: 2,
-  slidesToScroll: 2,
+  slidesToShow: 1,
+  slidesToScroll: 1,
   nextArrow: <NextArrowButton />,
-  prevArrow: <PrevArrowButton />,
-  responsive: [
-    {
-      breakpoint: 1280,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 900,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 0,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
+  prevArrow: <PrevArrowButton />
 };
 
 const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
@@ -109,9 +83,9 @@ const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
                 return (
                   <div
                     key={index}
-                    className="d-flex justify-content-center align-items-center carousel-single-wrapper"
+                    className="justify-content-center align-items-center carousel-single-wrapper"
                   >
-                    <div className="py-3 px-3 h-100 text-center d-flex justify-content-center align-items-center">
+                    <div className="py-3 px-3 h-100 text-center justify-content-center align-items-center">
                       <p className="text-white text-center mb-0">
                         <span className="testimonials-page__single-quote">
                           "
