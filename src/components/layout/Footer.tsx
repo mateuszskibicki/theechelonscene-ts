@@ -15,7 +15,7 @@ export const Footer: React.FC = (): JSX.Element => {
             </div>
           </div>
 
-          <div className="col-12 text-center my-3">
+          <div className="col-12 text-center my-4">
             <button className="btn btn--xsmall btn-white-outline">
               ENQUIRE
             </button>
@@ -28,7 +28,7 @@ export const Footer: React.FC = (): JSX.Element => {
                   Home
                 </Link>
               </div>
-              <div className="col-4 px-1 text-center mb-3">
+              <div className="col-4 px-1 text-center mb-4">
                 <Link
                   to="/clients"
                   className="text-white text-xs footer__link "
@@ -36,7 +36,7 @@ export const Footer: React.FC = (): JSX.Element => {
                   Clients
                 </Link>
               </div>
-              <div className="col-4 px-1 text-center mb-3">
+              <div className="col-4 px-1 text-center mb-4">
                 <Link
                   to="/founder"
                   className="text-white text-xs footer__link "
@@ -44,7 +44,7 @@ export const Footer: React.FC = (): JSX.Element => {
                   Founder
                 </Link>
               </div>
-              <div className="col-4 px-1 text-center mb-3">
+              <div className="col-4 px-1 text-center mb-4">
                 <Link
                   to="/how-we-work"
                   className="text-white text-xs footer__link "
@@ -52,12 +52,12 @@ export const Footer: React.FC = (): JSX.Element => {
                   How we work
                 </Link>
               </div>
-              <div className="col-4 px-1 text-center mb-3">
+              <div className="col-4 px-1 text-center mb-4">
                 <Link to="/levels" className="text-white text-xs footer__link ">
                   Levels
                 </Link>
               </div>
-              <div className="col-4 px-1 text-center mb-3">
+              <div className="col-4 px-1 text-center mb-4">
                 <Link
                   to="/testimonials"
                   className="text-white text-xs footer__link "
@@ -65,7 +65,7 @@ export const Footer: React.FC = (): JSX.Element => {
                   Testimonials
                 </Link>
               </div>
-              <div className="col-4 px-1 text-center mb-3">
+              <div className="col-4 px-1 text-center mb-4">
                 <Link
                   to="/locations"
                   className="text-white text-xs footer__link "
@@ -73,7 +73,7 @@ export const Footer: React.FC = (): JSX.Element => {
                   Locations
                 </Link>
               </div>
-              <div className="col-4 px-1 text-center mb-3">
+              <div className="col-4 px-1 text-center mb-4">
                 <Link to="/blog" className="text-white text-xs footer__link ">
                   Media
                 </Link>
@@ -96,19 +96,6 @@ export const Footer: React.FC = (): JSX.Element => {
 
         {/* desktop */}
         <div className="row d-none d-md-flex">
-          <div className="col-12 mb-3">
-            <div className="row justify-content-around">
-              <div className="col-5">
-                <FooterSocialIcons margin={"small"} />
-              </div>
-              <div className="col-3 text-right">
-                <button className="btn btn--xsmall btn-white-outline">
-                  ENQUIRE
-                </button>
-              </div>
-            </div>
-          </div>
-
           {location.pathname !== "/" && (
             <div className="col-12 mb-3">
               <div className="row justify-content-center">
@@ -182,16 +169,30 @@ export const Footer: React.FC = (): JSX.Element => {
             </div>
           )}
 
-          <div className="col-12 text-center mb-4">
-            <Link to="/tc" className="text-white text-xs footer__link">
-              Terms and conditions
-            </Link>
+          <div className="col-12 mb-4 text-center">
+            <button className="btn btn--xsmall btn-white-outline">
+              ENQUIRE
+            </button>
           </div>
 
-          <div className="col-12 text-center">
-            <p className="text-xs text-white mb-0">
-              Copyright © 2018 The Echelon Sence
-            </p>
+          <div className="col-12 mb-3">
+            <div className="row justify-content-around align-items-center">
+              <div className="col-4">
+                <FooterSocialIcons margin={"small"} />
+              </div>
+
+              <div className="col-4 text-center">
+                <p className="text-xs text-white mb-0">
+                  Copyright © 2018 The Echelon Sence
+                </p>
+              </div>
+
+              <div className="col-4 text-right">
+                <Link to="/tc" className="text-white text-xs ">
+                  Terms and conditions
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
