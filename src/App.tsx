@@ -31,7 +31,8 @@ const TestimonialsPage = React.lazy(() =>
 const ArticleSinglePage = React.lazy(() =>
   import("./pages/article-single/ArticleSingle.page")
 );
-const MediaPage = React.lazy(() => import("./pages/media/MediaPage"));
+const MediaPage = React.lazy(() => import("./pages/media/Media.page"));
+const ContactPage = React.lazy(() => import("./pages/contact/Contact.page"));
 
 const App: React.FC = (): JSX.Element => {
   return (
@@ -60,7 +61,7 @@ const App: React.FC = (): JSX.Element => {
                   component={TestimonialsPage}
                   exact
                 />
-                {/* <Route path="/contact" component={Contact} exact /> */}
+                <Route path="/contact" component={ContactPage} exact />
               </Suspense>
             </Switch>
           </MainLayout>
