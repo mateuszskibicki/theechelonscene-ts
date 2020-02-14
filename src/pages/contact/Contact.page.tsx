@@ -208,6 +208,7 @@ import { HeaderImage } from "../../components/header-image/HeaderImage";
 import { HeaderLogo } from "../../components/header-image/HeaderLogo";
 import { ImgSEO } from "../../components/common/SEO/ImgSEO";
 import HomepageBG from "../../assets/imgs/rsz_homepage.jpg";
+import { OptionsRadioButton } from "../../components/contact-form";
 
 const Contact: React.FC<any> = (): JSX.Element | null => {
   const api_token = "pjY7DkRfUrGzbYAXGpmt";
@@ -245,8 +246,24 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
         alt={"Contact - The Echelon Scnene - Gay Matchmaker London New York"}
       />
       <div className="container">
-        <div className="row">
-          <div className="col-12">Contact</div>
+        <div className="row justify-content-center my-5">
+          <div className="col-12 col-md-10 col-lg-8">
+            <h4 className="letter-spacing-2 text-white mb-2">
+              Gain a better understanding of our service
+            </h4>
+            <p className="letter-spacing-1 text-white">
+              Please fill in the information below
+            </p>
+
+            <form className="contact-form">
+              {/* Inpu radio */}
+              <div className="form-group">
+                <OptionsRadioButton />
+              </div>
+            </form>
+
+            {/*  */}
+          </div>
         </div>
       </div>
     </div>
