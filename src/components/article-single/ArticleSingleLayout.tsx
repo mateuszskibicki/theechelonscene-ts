@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { HeaderImage } from "../header-image/HeaderImage";
-import { ImgSEO } from "../common/SEO/ImgSEO";
+import { SEOImgHeaders } from "../common/SEO/SEOImgHeaders";
 import { HeaderLogo } from "../header-image/HeaderLogo";
 import { Spinner } from "../common/spinner/Spinner";
 import { RichTextComponent } from "../rich-text/RichText";
@@ -27,11 +27,9 @@ export const ArticleSingleLayout: React.FC<IProps> = ({
 
   return (
     <div className="common-page">
-      {/* SEO */}
-      <h1 className="d-none">{title}</h1>
-      <h2 className="d-none">{title}</h2>
+      {/* SEO starts */}
+      <SEOImgHeaders img_url={bgImg} title={title || ""} />
       <Helmet>
-        <meta property="og:type" content="website" />
         {date && <meta property="article:published_time" content={date} />}
         {date && <meta property="article:modified_time" content={date} />}
       </Helmet>
@@ -51,7 +49,6 @@ export const ArticleSingleLayout: React.FC<IProps> = ({
           CONTACT
         </Link>
       </HeaderImage>
-      <ImgSEO url={bgImg} alt={title ? title : ""} />
       {content_text && (
         <div className="container px-3 py-5">
           <div className="row justify-content-center">

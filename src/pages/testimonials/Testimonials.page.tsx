@@ -59,6 +59,14 @@ const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
           ENQUIRE
         </Link>
       </HeaderImage>
+      <h1 className="d-none">
+        Testimonials The Echelon Scene - Gay Matchmaking Agency - London New
+        York Berlin Toronto
+      </h1>
+      <h2 className="d-none">
+        Testimonials The Echelon Scene - Gay Matchmaking Agency - London New
+        York Berlin Toronto
+      </h2>
       <ImgSEO
         url={bgIMG}
         alt={

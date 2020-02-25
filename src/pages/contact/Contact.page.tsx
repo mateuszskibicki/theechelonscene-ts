@@ -203,10 +203,9 @@
 // }
 
 import React, { useState } from "react";
-import Helmet from "react-helmet";
 import { HeaderImage } from "../../components/header-image/HeaderImage";
 import { HeaderLogo } from "../../components/header-image/HeaderLogo";
-import { ImgSEO } from "../../components/common/SEO/ImgSEO";
+import { SEOImgHeaders } from "../../components/common/SEO/SEOImgHeaders";
 import HomepageBG from "../../assets/imgs/rsz_homepage.jpg";
 import { OptionsRadioButton } from "../../components/contact-form";
 
@@ -267,19 +266,13 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
 
   return (
     <div className="contact-page">
-      <Helmet>
-        <meta property="og:type" content="website" />
-      </Helmet>
+      <SEOImgHeaders img_url={HomepageBG} title={"Contact The Echelon Scene"} />
       <HeaderImage img={HomepageBG} size="small" position="left">
         <HeaderLogo />
         <h1 className="text-center text-white letter-spacing-4 mb-4">
           Contact The Echelon Scene
         </h1>
       </HeaderImage>
-      <ImgSEO
-        url={HomepageBG}
-        alt={"Contact - The Echelon Scnene - Gay Matchmaker London New York"}
-      />
       <div className="container">
         <div className="row justify-content-center my-5">
           <div className="col-12 col-md-10 col-lg-8">

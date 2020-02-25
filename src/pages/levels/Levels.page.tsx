@@ -2,10 +2,9 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchLevelsPage } from "../../store/actions";
 import { Spinner } from "../../components/common/spinner/Spinner";
-import Helmet from "react-helmet";
 import { HeaderImage } from "../../components/header-image/HeaderImage";
 import { HeaderLogo } from "../../components/header-image/HeaderLogo";
-import { ImgSEO } from "../../components/common/SEO/ImgSEO";
+import { SEOImgHeaders } from "../../components/common/SEO/SEOImgHeaders";
 import img_BG from "../../assets/imgs/rsz_homepage.jpg";
 import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
@@ -28,25 +27,9 @@ const LevelsPage: React.FC<any> = (): JSX.Element | null => {
 
   return (
     <div className="aritcles-page">
-      {/* SEO */}
-      <Helmet>
-        <meta property="og:type" content="website" />
-      </Helmet>
-      <ImgSEO
-        url={img_BG}
-        alt={
-          "Levels of service - The Echelon Scene - Gay Matchmaker London New York"
-        }
-      />
-      <h1 className="d-none">
-        Levels of service - agency based in London and New York - The Echelon
-        Scene
-      </h1>
-      <h2 className="d-none">
-        Levels of service - agency based in London and New York - The Echelon
-        Scene
-      </h2>
-      {/* SEO */}
+      {/* SEO starts */}
+      <SEOImgHeaders img_url={img_BG} title={"Levels of service"} />
+      {/* SEO ends */}
       <HeaderImage img={img_BG} size="medium">
         <HeaderLogo />
         <h1 className="text-center text-white letter-spacing-4 mb-4">
