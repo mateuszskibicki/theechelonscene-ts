@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavbarLink } from "./NavbarLink";
 import { MenuIcon, MenuCloseIcon } from "../common/icons/Icons";
+import { Link } from "react-router-dom";
 
 export const Navbar: React.FC = (): JSX.Element => {
   const [visible, setVisible] = useState<boolean>(false);
@@ -58,9 +59,12 @@ export const Navbar: React.FC = (): JSX.Element => {
             onClick={onClickMenuButton}
           />
           <NavbarLink url="/blog" name="Media" onClick={onClickMenuButton} />
-          <button className="btn btn--small btn-white-outline shadow w-auto navbar-mobile__contact-button">
+          <Link
+            to="/contact"
+            className="btn btn--small btn-white-outline shadow w-auto navbar-mobile__contact-button"
+          >
             CONTACT
-          </button>
+          </Link>
         </ul>
       </div>
     </nav>

@@ -48,7 +48,9 @@ const MediaPage: React.FC<any> = (): JSX.Element | null => {
       <HeaderImage img={img_BG} size="small">
         <HeaderLogo />
         <h1 className="text-center text-white letter-spacing-4 mb-4">Media</h1>
-        <button className="btn btn--small btn-white-outline">CONTACT</button>
+        <Link to="/contact" className="btn btn--small btn-white-outline">
+          CONTACT
+        </Link>
       </HeaderImage>
       <div className="container py-4 px-3 text-white">
         <div className="row justify-content-center">

@@ -57,14 +57,14 @@ export const HomepageHeader: React.FC = (): JSX.Element => {
       </div>
       {/* Buttons */}
       <div className="d-flex mb-5 d-sm-none">
-        <button className="btn btn--small btn-white-outline shadow">
+        <Link to="/contact" className="btn btn--small btn-white-outline shadow">
           CONTACT
-        </button>
+        </Link>
       </div>
       <div className="d-none mb-5 d-sm-flex">
-        <button className="btn btn--small btn-white-outline shadow">
+        <Link to="/contact" className="btn btn--small btn-white-outline shadow">
           CONTACT
-        </button>
+        </Link>
       </div>
       <div className="container homepage__desktop-links d-none d-lg-block">
         <div className="row justify-content-around">

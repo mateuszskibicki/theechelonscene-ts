@@ -16,9 +16,9 @@ export const Footer: React.FC = (): JSX.Element => {
           </div>
 
           <div className="col-12 text-center my-4">
-            <button className="btn btn--xsmall btn-white-outline">
+            <Link to="/contact" className="btn btn--xsmall btn-white-outline">
               ENQUIRE
-            </button>
+            </Link>
           </div>
 
           <div className="col-12">
@@ -170,9 +170,9 @@ export const Footer: React.FC = (): JSX.Element => {
           )}
 
           <div className="col-12 mb-4 text-center">
-            <button className="btn btn--xsmall btn-white-outline">
+            <Link to="/contact" className="btn btn--xsmall btn-white-outline">
               ENQUIRE
-            </button>
+            </Link>
           </div>
 
           <div className="col-12 mb-3">

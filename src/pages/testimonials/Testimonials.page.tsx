@@ -9,6 +9,7 @@ import bgIMG from "../../assets/imgs/contact.jpg";
 import { fetchTestimonialsSEO, fetchTestimonials } from "../../store/actions";
 import Slider from "react-slick";
 import { NextArrowButton, PrevArrowButton } from "../../components/carousel";
+import { Link } from "react-router-dom";
 
 const settings = {
   dots: true,
@@ -54,7 +55,9 @@ const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
         <h1 className="text-center text-white letter-spacing-4 mb-4">
           Testimonials
         </h1>
-        <button className="btn btn--small btn-white-outline">ENQUIRE</button>
+        <Link to="/contact" className="btn btn--small btn-white-outline">
+          ENQUIRE
+        </Link>
       </HeaderImage>
       <ImgSEO
         url={bgIMG}

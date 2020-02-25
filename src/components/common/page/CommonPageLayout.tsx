@@ -5,6 +5,7 @@ import { ImgSEO } from "../../common/SEO/ImgSEO";
 import { HeaderLogo } from "../../header-image/HeaderLogo";
 import { Spinner } from "../../common/spinner/Spinner";
 import { RichTextComponent } from "../../rich-text/RichText";
+import { Link } from "react-router-dom";
 
 interface IProps {
   loading: { loading: boolean };
@@ -33,7 +34,9 @@ export const CommonPageLayout: React.FC<IProps> = React.memo(
           <h1 className="text-center text-white letter-spacing-4 mb-4">
             {title}
           </h1>
-          <button className="btn btn--small btn-white-outline">CONTACT</button>
+          <Link to="/contact" className="btn btn--small btn-white-outline">
+            CONTACT
+          </Link>
         </HeaderImage>
         <ImgSEO url={bg_image} alt={bg_image_alt} />
         {content_text && (

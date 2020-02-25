@@ -211,23 +211,59 @@ import HomepageBG from "../../assets/imgs/rsz_homepage.jpg";
 import { OptionsRadioButton } from "../../components/contact-form";
 
 const Contact: React.FC<any> = (): JSX.Element | null => {
-  const api_token = "pjY7DkRfUrGzbYAXGpmt";
+  // const api_token = "pjY7DkRfUrGzbYAXGpmt";
 
-  //         first_name: this.fname.value,
-  //         last_name: this.lname.value,
-  //         phone_numbers: this.number.value,
-  //         secondary_emails: this.email.value,
-  //         country: this.country.value,
-  //         custom_field_197950: this.state.selectedOption,
-
+  // Form data
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
     phone_numbers: "",
     secondary_emails: "",
     country: "",
-    custom_field_197950: ""
+    custom_field_197950: "call"
   });
+
+  // Form errors
+  const [formErrors, setFormErrors] = useState("");
+
+  // On button option change
+  const onOptionButtonChange = (option: string): void => {
+    setFormErrors("");
+    setFormData({ ...formData, custom_field_197950: option });
+  };
+
+  // On text input change
+  const onTextInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    setFormErrors("");
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
+
+  // On enquire click
+  const onEnquireClick = async (): Promise<void> => {
+    let error: string = "";
+
+    if (formData.custom_field_197950 === "call") {
+      (!formData.phone_numbers || formData.phone_numbers.length === 0) &&
+        (error = "Please input your phone number.");
+    }
+
+    if (formData.custom_field_197950 === "email") {
+      (!formData.secondary_emails || formData.secondary_emails.length === 0) &&
+        (error = "Please input your email.");
+    }
+
+    if (formData.custom_field_197950 === "facetoface") {
+      (!formData.secondary_emails || formData.secondary_emails.length === 0) &&
+        (!formData.phone_numbers || formData.phone_numbers.length === 0) &&
+        (error = "Please input your phone number or email.");
+    }
+
+    if (error || error.length > 0) {
+      return setFormErrors(error);
+    }
+  };
 
   return (
     <div className="contact-page">
@@ -237,9 +273,8 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
       <HeaderImage img={HomepageBG} size="small" position="left">
         <HeaderLogo />
         <h1 className="text-center text-white letter-spacing-4 mb-4">
-          Contact
+          Contact The Echelon Scene
         </h1>
-        <button className="btn btn--small btn-white-outline">CONTACT</button>
       </HeaderImage>
       <ImgSEO
         url={HomepageBG}
@@ -251,18 +286,85 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
             <h4 className="letter-spacing-2 text-white mb-2">
               Gain a better understanding of our service
             </h4>
-            <p className="letter-spacing-1 text-white">
+            <p className="letter-spacing-1 text-white mb-4">
               Please fill in the information below
             </p>
-
-            <form className="contact-form">
+            <div className="contact-form">
               {/* Inpu radio */}
-              <div className="form-group">
-                <OptionsRadioButton />
+              <div className="form-group mb-4">
+                <OptionsRadioButton
+                  onClick={onOptionButtonChange}
+                  active={formData.custom_field_197950 === "call"}
+                  name="Call"
+                  value="call"
+                />
+                <OptionsRadioButton
+                  onClick={onOptionButtonChange}
+                  active={formData.custom_field_197950 === "email"}
+                  name="Email"
+                  value="email"
+                />
+                <OptionsRadioButton
+                  onClick={onOptionButtonChange}
+                  active={formData.custom_field_197950 === "facetoface"}
+                  name="Meet with Jacqueline"
+                  value="facetoface"
+                />
               </div>
-            </form>
+              {/* Form inputs */}
+              <div className="form-group mb-4">
+                <input
+                  type="text"
+                  className="form-control letter-spacing-2"
+                  name="first_name"
+                  placeholder="First Name:"
+                  onChange={onTextInputChange}
+                />
+                <input
+                  type="text"
+                  className="form-control letter-spacing-2"
+                  name="last_name"
+                  placeholder="Last Name:"
+                  onChange={onTextInputChange}
+                />
+                <input
+                  type="text"
+                  className="form-control letter-spacing-2"
+                  name="phone_numbers"
+                  placeholder="Phone Number:"
+                  onChange={onTextInputChange}
+                />
+                <input
+                  type="email"
+                  className="form-control letter-spacing-2"
+                  name="secondary_emails"
+                  placeholder="Email:"
+                  onChange={onTextInputChange}
+                />
+                <input
+                  type="text"
+                  className="form-control letter-spacing-2"
+                  name="country"
+                  placeholder="Country:"
+                  onChange={onTextInputChange}
+                />
+              </div>
 
-            {/*  */}
+              <p className="letter-spacing-1 text-white mb-4">
+                The details are kept strictly confidential.
+              </p>
+
+              {formErrors && (
+                <p className="letter-spacing-1 text-red mb-4">{formErrors}</p>
+              )}
+
+              <button
+                className="btn btn-white-outline shadow rounded"
+                onClick={onEnquireClick}
+              >
+                Enquire
+              </button>
+            </div>
           </div>
         </div>
       </div>

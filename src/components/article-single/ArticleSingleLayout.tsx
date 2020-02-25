@@ -6,7 +6,7 @@ import { HeaderLogo } from "../header-image/HeaderLogo";
 import { Spinner } from "../common/spinner/Spinner";
 import { RichTextComponent } from "../rich-text/RichText";
 import bgImg from "../../assets/imgs/clientele.jpg";
-import profileImg from "../../assets/imgs/profile.jpg";
+import { BlockAboutFounder } from "./BlockAboutFounder";
 import { CommonPage } from "../../helpers/common-page/commonPageHelpers";
 import { Link } from "react-router-dom";
 import { LastArticlesCarousel } from "./LastArticlesCarousel";
@@ -47,7 +47,9 @@ export const ArticleSingleLayout: React.FC<IProps> = ({
             </div>
           </div>
         </div>
-        <button className="btn btn--small btn-white-outline">CONTACT</button>
+        <Link to="/contact" className="btn btn--small btn-white-outline">
+          CONTACT
+        </Link>
       </HeaderImage>
       <ImgSEO url={bgImg} alt={title ? title : ""} />
       {content_text && (
@@ -67,32 +69,7 @@ export const ArticleSingleLayout: React.FC<IProps> = ({
                 color="white"
               ></RichTextComponent>
             </div>
-            <div className="col-12">
-              <div className="row justify-content-center align-items-center pt-4">
-                <div className="col-8 col-sm-6 col-md-3 col-lg-2 mb-3">
-                  <img
-                    src={profileImg}
-                    alt="Jacqueline Burns - Gay Matchmaker - The Echelon Scene"
-                    className="shadow rounded-circle img-fluid"
-                  />
-                </div>
-                <div className="col-12 col-sm-8 col-md-7 col-lg-6">
-                  <p className="text-white letter-spacing-1 mb-2">
-                    By Jacqueline Burns
-                  </p>
-                  <p className="text-white letter-spacing-1 mb-2">
-                    Founder of{" "}
-                    <Link to="/" className="text-red">
-                      The Echelon Scene
-                    </Link>
-                  </p>
-                  <p className="text-white letter-spacing-1 mb-2">
-                    The Echelon Scene is an offline gay matchmaking agency for
-                    eligible gay men seeking a long term partner
-                  </p>
-                </div>
-              </div>
-            </div>
+            <BlockAboutFounder />
           </div>
         </div>
       )}

@@ -7,6 +7,7 @@ import { ImgSEO } from "../../components/common/SEO/ImgSEO";
 import { HeaderLogo } from "../../components/header-image/HeaderLogo";
 import { RichTextComponent } from "../../components/rich-text/RichText";
 import { Spinner } from "../../components/common/spinner/Spinner";
+import { Link } from "react-router-dom";
 
 const TCPage: React.FC<any> = (): JSX.Element => {
   // get state
@@ -37,7 +38,9 @@ const TCPage: React.FC<any> = (): JSX.Element => {
         <h1 className="text-center text-white letter-spacing-4">
           Terms and Conditions
         </h1>
-        <button className="btn btn--small btn-white-outline">ENQUIRE</button>
+        <Link to="/contact" className="btn btn--small btn-white-outline">
+          ENQUIRE
+        </Link>
       </HeaderImage>
       <ImgSEO
         url={bg_image}

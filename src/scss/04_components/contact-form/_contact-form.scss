@@ -5,6 +5,37 @@
       height: 18px;
       border-radius: 100%;
       border: 1px solid $white-primary;
+      background-color: transparent;
+      transition: 0.3s;
+
+      &--active {
+        width: 20px;
+        height: 20px;
+        border: 1px solid $white-primary;
+        background-color: $white-primary;
+      }
+    }
+  }
+
+  .form-control {
+    border-radius: 0;
+    width: 100%;
+    background-color: transparent;
+    -webkit-appearance: none;
+    border: none;
+    border-bottom: 1px solid hsla(0, 0%, 73.3%, 0.3);
+    padding: 16px 8px;
+    color: $white-primary;
+    font-size: 16px;
+    &:first-of-type {
+      border-top: 1px solid hsla(0, 0%, 73.3%, 0.3);
+    }
+    &:active,
+    &:focus {
+      outline-color: none;
+      outline-style: none;
+      outline: none;
+      box-shadow: none;
     }
   }
 }
