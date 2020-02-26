@@ -19,6 +19,11 @@ export interface CommonPage {
   description?: string | null;
   date?: string | null;
   levels?: { title: string; description: string }[];
+  locations?: {
+    name: string;
+    description: string;
+    url: string;
+  }[];
 }
 
 export const commonPageHelper = (
@@ -54,6 +59,18 @@ export const commonPageHelper = (
       levels: payload.levels.map((level: any) => ({
         title: TextHelper(level.level_title),
         description: TextHelper(level.level_description)
+      }))
+    };
+  }
+
+  if (type === CommonPageType.LOCATIONS) {
+    content = {
+      ...content,
+      title: TextHelper(payload.title),
+      locations: payload.locations.map((location: any) => ({
+        name: TextHelper(location.locations_name),
+        description: TextHelper(location.location_description),
+        url: TextHelper(location.location_url)
       }))
     };
   }

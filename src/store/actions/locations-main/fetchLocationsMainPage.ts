@@ -4,6 +4,7 @@ import { prismicConnection } from "../prismic-connection/prismicConnection";
 import { loadingStart, loadingStop } from "../../reducers/loading";
 import { setSEO } from "../../reducers/SEO/seoSlice";
 import { setLocationsMain } from "../../reducers/locations-main/locationsMainSlice";
+import { CommonPageType } from "../../../helpers/enum/CommonPageType";
 
 // Get locations main page from Prismic.
 export const fetchLocationsMainData = () => async (
@@ -20,7 +21,7 @@ export const fetchLocationsMainData = () => async (
     const data = await prismicApi.getSingle("locations-page");
 
     // Helper
-    const { SEO, content } = commonPageHelper(data);
+    const { SEO, content } = commonPageHelper(data, CommonPageType.LOCATIONS);
 
     // SEO update
     dispatch(setSEO(SEO));

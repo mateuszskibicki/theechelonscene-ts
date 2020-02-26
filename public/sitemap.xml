@@ -2,163 +2,244 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-   <url>
+    <url>
       <loc>https://theechelonscene.com</loc>
       <lastmod>2020-02-01</lastmod>
       <priority>0.9</priority>
-   </url>
+    </url>
 
-   <url>
-      <loc>https://theechelonscene.com/blog/</loc>
+    <url>
+      <loc>https://theechelonscene.com/clients</loc>
       <lastmod>2020-02-01</lastmod>
       <priority>0.7</priority>
-   </url>
+    </url>
 
-<url>
+    <url>
+      <loc>https://theechelonscene.com/blog</loc>
+      <lastmod>2020-02-01</lastmod>
+      <priority>0.7</priority>
+    </url>
+
+    <url>
+      <loc>https://theechelonscene.com/founder</loc>
+      <lastmod>2020-02-01</lastmod>
+      <priority>0.7</priority>
+    </url>
+
+    <url>
+      <loc>https://theechelonscene.com/how-we-work</loc>
+      <lastmod>2020-02-01</lastmod>
+      <priority>0.7</priority>
+    </url>
+
+    <url>
+      <loc>https://theechelonscene.com/levels</loc>
+      <lastmod>2020-02-01</lastmod>
+      <priority>0.7</priority>
+    </url>
+
+    <url>
+      <loc>https://theechelonscene.com/locations</loc>
+      <lastmod>2020-02-01</lastmod>
+      <priority>0.7</priority>
+    </url>
+
+    <url>
+      <loc>https://theechelonscene.com/location/san-francisco</loc>
+      <lastmod>2020-02-01</lastmod>
+      <priority>0.7</priority>
+    </url>
+
+    <url>
+      <loc>https://theechelonscene.com/location/los-angeles</loc>
+      <lastmod>2020-02-01</lastmod>
+      <priority>0.7</priority>
+    </url>
+
+    <url>
+      <loc>https://theechelonscene.com/location/new-york</loc>
+      <lastmod>2020-02-01</lastmod>
+      <priority>0.7</priority>
+    </url>
+
+    <url>
+      <loc>https://theechelonscene.com/location/zurich</loc>
+      <lastmod>2020-02-01</lastmod>
+      <priority>0.7</priority>
+    </url>
+
+    <url>
+      <loc>https://theechelonscene.com/location/berlin</loc>
+      <lastmod>2020-02-01</lastmod>
+      <priority>0.7</priority>
+    </url>
+
+    <url>
+      <loc>https://theechelonscene.com/location/toronto</loc>
+      <lastmod>2020-02-01</lastmod>
+      <priority>0.7</priority>
+    </url>
+
+    <url>
+      <loc>https://theechelonscene.com/location/london</loc>
+      <lastmod>2020-02-01</lastmod>
+      <priority>0.7</priority>
+    </url>
+
+    <url>
+      <loc>https://theechelonscene.com/testimonials</loc>
+      <lastmod>2020-02-01</lastmod>
+      <priority>0.7</priority>
+    </url>
+
+    <url>
+      <loc>https://theechelonscene.com/contact</loc>
+      <lastmod>2020-02-01</lastmod>
+      <priority>0.7</priority>
+    </url>
+
+    <url>
     <loc>https://theechelonscene.com/blog/narrowing-down-the-gay-dating-pool-to-find-love</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/how-important-is-the-question-of-family-in-gay-dating</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/csi-the-search-for-gay-love</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/mercury-retrograde-five-ways-to-survive-it-and-remain-dating-confident</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/the-echelon-scene--standing-out-from-the-gay-matchmaking-crowd</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/ignore-the-three-day-rule-when-gay-dating</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/gay-dating-podcast-listen-now</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/global-gay-matchmaking--finding-love-across-seas</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/dont-oversell-yourself-gay-singles</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/the-echelon-scene-interviews-saskia-nelson-at-hey-saturday</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/marriage</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/feature-in-kensington-chelsea--westminster-today-on-gay-dating-and-the-echelon-scene</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/how-men-communicate-in-long-term-gay-relationships-by-gay-matchmaker-jacqueline-burns</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/click-the-link-below--jacqueline-burns-full-interview-on-the-latest-lgbt-tv</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/gay-dating--how-to-find-love-in-a-sea-of-commitment-phobes-by-gay-matchmaker-jacqueline-burns</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/gay-matchmaker-jacqueline-burns-talks-exes-with-her-clients-prior-to-gay-matchmaking</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/interview-with-out-of-office-luxury-gay-travel-company-about-the-world-of-gay-matchmaking</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/a-cultural-shift-in-gay-dating-by-gay-matchmaker-jacqueline-burns</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/good-advice-bad-advice-made-clear-by-gay-matchmaker-jacqueline-burns</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/money-talks-by-gay-matchmaker-jacqueline-burns</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/honesty-in-gay-dating-by-gay-matchmaker-jacqueline-burns</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/are-you-ready-for-an-emotionally-available-gay-long-term-relationship-by-gay-matchmaker-jacqueline-burns</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/ready-or-not---commitment-to-a-long-term-gay-relationship-by-gay-matchmaker-jacqueline-burns</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
+    </url>
 
-<url>
+    <url>
     <loc>https://theechelonscene.com/blog/family-matters-in-gay-matchmaking-by-gay-matchmaker-jacqueline-burns</loc>
     <priority>0.5</priority>
     <lastmod>2020-02-01</lastmod>
-</url>
-
-
-
+    </url>
 
 </urlset> 

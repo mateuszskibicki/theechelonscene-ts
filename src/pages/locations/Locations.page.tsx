@@ -7,19 +7,10 @@ import Slider from "react-slick";
 import { NextArrowButton, PrevArrowButton } from "../../components/carousel";
 
 interface ILocationsArray {
-  title: string;
+  name: string;
   url: string;
+  description: string;
 }
-
-const locationsArray: ILocationsArray[] = [
-  { title: "London", url: "london" },
-  { title: "New York", url: "new-york" },
-  { title: "Toronto", url: "toronto" },
-  { title: "Berlin", url: "berlin" },
-  { title: "Zurich", url: "zurich" },
-  { title: "Los Angeles", url: "los-angeles" },
-  { title: "San Francisco", url: "san-francisco" }
-];
 
 const settings = {
   dots: true,
@@ -87,26 +78,22 @@ const LocationsPage: React.FC<any> = (): JSX.Element | null => {
         <div className="row justify-content-center">
           <div className="col-12 mb-3">
             <h2 className="text-white text-center letter-spacing-05">
-              We provide our services all around the world
+              {locationsMain?.content?.title}
             </h2>
           </div>
         </div>
         <div className="col-12 px-4 mt-5 mb-5">
           <Slider {...settings}>
-            {locationsArray.map(
+            {locationsMain?.content?.locations?.map(
               (location: ILocationsArray): JSX.Element => (
                 <div
                   className="text-center carousel-single-wrapper px-3"
-                  key={location.title}
+                  key={location.name}
                 >
                   <h2 className="text-white letter-spacing-1 mb-3">
-                    {location.title}
+                    {location.name}
                   </h2>
-                  <p className="text-small text-gray">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Tempora debitis facilis qui vitae corrupti corporis, natus
-                    eveniet molestiae dolore magni!
-                  </p>
+                  <p className="text-small text-gray">{location.description}</p>
                   <Link
                     to={`/location/${location.url}`}
                     className="btn btn-white-outline btn--small text-white shadow"
