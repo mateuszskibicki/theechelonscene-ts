@@ -62,6 +62,7 @@ export const Navbar: React.FC = (): JSX.Element => {
           <Link
             to="/contact"
             className="btn btn--small btn-white-outline shadow w-auto navbar-mobile__contact-button"
+            onClick={onClickMenuButton}
           >
             CONTACT
           </Link>
