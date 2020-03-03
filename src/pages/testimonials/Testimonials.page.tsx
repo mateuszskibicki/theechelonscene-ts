@@ -14,6 +14,9 @@ import { Link } from "react-router-dom";
 const settings = {
   dots: true,
   infinite: true,
+  fade: true,
+  speed: 700,
+  adaptiveHeight: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   nextArrow: <NextArrowButton />,
@@ -92,11 +95,8 @@ const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
                 index: number
               ): JSX.Element => {
                 return (
-                  <div
-                    key={index}
-                    className="justify-content-center align-items-center carousel-single-wrapper"
-                  >
-                    <div className="py-3 px-3 h-100 text-center justify-content-center align-items-center">
+                  <div key={index} className="carousel-single-wrapper">
+                    <div className="py-5 px-4 h-100 text-center">
                       <p className="text-white text-center mb-0">
                         <span className="testimonials-page__single-quote">
                           "
