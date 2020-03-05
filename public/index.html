@@ -134,12 +134,18 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
     <script defer async>
-      setTimeout(() => {
+      window.runRipple = function() {
         $(".header-img").ripples({
           resolution: 200,
           perturbance: 0.04
         });
-      }, 1000);
+      };
+      // setTimeout(() => {
+      //   $(".header-img").ripples({
+      //     resolution: 200,
+      //     perturbance: 0.04
+      //   });
+      // }, 1000);
     </script>
   </body>
 </html>
