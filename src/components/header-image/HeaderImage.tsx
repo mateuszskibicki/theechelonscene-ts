@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 interface IProps {
   img: string;
@@ -17,11 +17,6 @@ export const HeaderImage: React.FC<IProps> = ({
   position,
   size
 }: IProps): JSX.Element => {
-  useEffect(() => {
-    // @ts-ignore
-    window.runRipple();
-  }, []);
-
   let classes = "";
   size === "xsmall" && (classes = "header-img header-img__xsmall");
   size === "small" && (classes = "header-img header-img__small");
