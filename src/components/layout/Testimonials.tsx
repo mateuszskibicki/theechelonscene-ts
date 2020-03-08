@@ -33,9 +33,7 @@ export const Testimonials: React.FC = (): JSX.Element => {
   };
   return (
     <div className="container py-4 shadow-sm my-4 testimonials text-center">
-      <h3 className="text-white text-center letter-spacing-2 mb-3">
-        Testimonials
-      </h3>
+      <h3 className="text-white text-center letter-spacing-2 mb-3">Reviews</h3>
       <Slider {...settings}>
         {testimonials.map(
           (

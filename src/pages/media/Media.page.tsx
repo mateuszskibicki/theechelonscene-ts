@@ -28,7 +28,7 @@ const MediaPage: React.FC<any> = (): JSX.Element | null => {
       {/* SEO starts */}
       <SEOImgHeaders img_url={img_BG} title={"Media, blog, articles, gay"} />
       {/* SEO ends */}
-      <HeaderImage img={img_BG} size="small">
+      <HeaderImage img={img_BG} size="medium">
         <HeaderLogo />
         <h1 className="text-center text-white letter-spacing-4 mb-4">Media</h1>
         <Link to="/contact" className="btn btn--small btn-white-outline">

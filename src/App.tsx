@@ -56,11 +56,7 @@ const App: React.FC = (): JSX.Element => {
                 <Route path="/blog" component={MediaPage} exact />
                 <Route path="/blog/:uid" component={ArticleSinglePage} exact />
                 <Route path="/tc" component={TCPage} exact />
-                <Route
-                  path="/testimonials"
-                  component={TestimonialsPage}
-                  exact
-                />
+                <Route path="/reviews" component={TestimonialsPage} exact />
                 <Route path="/contact" component={ContactPage} exact />
               </Suspense>
             </Switch>

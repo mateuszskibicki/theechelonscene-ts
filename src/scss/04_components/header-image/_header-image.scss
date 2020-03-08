@@ -1,4 +1,5 @@
 .header-img {
+  position: relative;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -32,6 +33,41 @@
 
     @include media-md {
       font-size: 48px;
+    }
+  }
+}
+
+.desktop-links {
+  position: absolute;
+  bottom: 24px;
+
+  a {
+    text-transform: uppercase;
+    color: $white-primary;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    &::after {
+      height: 1px;
+      content: "";
+      display: block;
+      margin: 6px auto 0;
+      bottom: 0;
+      overflow: hidden;
+      background-color: #fff;
+      max-width: 100px;
+      width: 50%;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: left;
+      transform-origin: left;
+      transition: transform 0.3s ease-in-out;
+    }
+    &:hover {
+      text-decoration: none;
+      &::after {
+        transform: scaleX(1);
+      }
     }
   }
 }

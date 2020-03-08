@@ -56,19 +56,19 @@ const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
       <HeaderImage img={bgIMG} size="medium" position="left">
         <HeaderLogo />
         <h1 className="text-center text-white letter-spacing-4 mb-4">
-          Testimonials
+          Reviews
         </h1>
         <Link to="/contact" className="btn btn--small btn-white-outline">
           ENQUIRE
         </Link>
       </HeaderImage>
       <h1 className="d-none">
-        Testimonials The Echelon Scene - Gay Matchmaking Agency - London New
-        York Berlin Toronto
+        Reviews The Echelon Scene - Gay Matchmaking Agency - London New York
+        Berlin Toronto
       </h1>
       <h2 className="d-none">
-        Testimonials The Echelon Scene - Gay Matchmaking Agency - London New
-        York Berlin Toronto
+        Reviews The Echelon Scene - Gay Matchmaking Agency - London New York
+        Berlin Toronto
       </h2>
       <ImgSEO
         url={bgIMG}

@@ -59,10 +59,10 @@ export const Footer: React.FC = (): JSX.Element => {
               </div>
               <div className="col-4 px-1 text-center mb-4">
                 <Link
-                  to="/testimonials"
+                  to="/reviews"
                   className="text-white text-xs footer__link "
                 >
-                  Testimonials
+                  Reviews
                 </Link>
               </div>
               <div className="col-4 px-1 text-center mb-4">
@@ -146,10 +146,10 @@ export const Footer: React.FC = (): JSX.Element => {
                 </div>
                 <div className="col-2 col-xl-1 text-center">
                   <Link
-                    to="/testimonials"
+                    to="/reviews"
                     className="text-white text-xs footer__link"
                   >
-                    Testimonials
+                    Reviews
                   </Link>
                 </div>
                 <div className="col-2 col-xl-1 text-center">

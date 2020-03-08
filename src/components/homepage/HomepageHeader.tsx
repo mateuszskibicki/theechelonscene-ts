@@ -4,6 +4,7 @@ import Logo from "../../assets/imgs/echelon-logo.png";
 import HomepageBG from "../../assets/imgs/rsz_homepage.jpg";
 import { ImgSEO } from "../common/SEO/ImgSEO";
 import { Link } from "react-router-dom";
+import { DesktopLinks } from "../header-image/DesktopLinks";
 
 export const HomepageHeader: React.FC = (): JSX.Element => {
   return (
@@ -66,17 +67,7 @@ export const HomepageHeader: React.FC = (): JSX.Element => {
           CONTACT
         </Link>
       </div>
-      <div className="container homepage__desktop-links d-none d-lg-block">
-        <div className="row justify-content-around">
-          <Link to="/clients">Clientele</Link>
-          <Link to="/founder">Founder</Link>
-          <Link to="/how-we-work">How we work</Link>
-          <Link to="/levels">Levels</Link>
-          <Link to="/blog">Media</Link>
-          <Link to="/testimonials">Testimonials</Link>
-          <Link to="/locations">Locations</Link>
-        </div>
-      </div>
+      <DesktopLinks />
     </HeaderImage>
   );
 };

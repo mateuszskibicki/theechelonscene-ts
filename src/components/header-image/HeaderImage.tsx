@@ -1,4 +1,5 @@
 import React from "react";
+import { DesktopLinks } from "./DesktopLinks";
 
 interface IProps {
   img: string;
@@ -33,6 +34,7 @@ export const HeaderImage: React.FC<IProps> = ({
         }}
       >
         {children}
+        <DesktopLinks />
       </div>
     );
 
@@ -42,6 +44,7 @@ export const HeaderImage: React.FC<IProps> = ({
       {description && (
         <h2 className="header-img__description">{description}</h2>
       )}
+      <DesktopLinks />
     </div>
   );
 };
