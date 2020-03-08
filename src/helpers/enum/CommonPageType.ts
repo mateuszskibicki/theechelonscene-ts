@@ -1,5 +1,6 @@
 export enum CommonPageType {
   ARTICLE = "ARTICLE",
   LEVELS = "LEVELS",
-  LOCATIONS = "LOCATIONS"
+  LOCATIONS = "LOCATIONS",
+  PRESS = "PRESS"
 }

@@ -14,8 +14,6 @@ const LevelsPage: React.FC<any> = (): JSX.Element | null => {
   const { loading, levels } = useSelector((state: any) => state);
   const dispatch = useDispatch();
 
-  // console.log(levels);
-
   // fetch data
   useEffect(() => {
     if (!levels || !levels.levels) {

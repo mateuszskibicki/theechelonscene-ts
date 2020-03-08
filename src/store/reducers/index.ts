@@ -11,6 +11,7 @@ import locationSingleSlice from "./location-single/locationSingleSlice";
 import articleSingleSlice from "./article-single/articleSingleSlice";
 import articlesSlice from "./articles/articlesSlice";
 import levelsSlice from "./levels/levelsSlice";
+import pressSlice from "./press/pressSlice";
 
 export default combineReducers({
   loading: loadingSlice,
@@ -24,5 +25,6 @@ export default combineReducers({
   locationSingle: locationSingleSlice,
   articleSingle: articleSingleSlice,
   articles: articlesSlice,
-  levels: levelsSlice
+  levels: levelsSlice,
+  press: pressSlice
 });

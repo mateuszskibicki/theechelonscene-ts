@@ -24,6 +24,14 @@ export interface CommonPage {
     description: string;
     url: string;
   }[];
+  press?: {
+    title: string;
+    url: string;
+    img: {
+      url: string;
+      alt: string | null;
+    } | null;
+  };
 }
 
 export const commonPageHelper = (
@@ -71,6 +79,18 @@ export const commonPageHelper = (
         name: TextHelper(location.locations_name),
         description: TextHelper(location.location_description),
         url: TextHelper(location.location_url)
+      }))
+    };
+  }
+
+  if (type === CommonPageType.PRESS) {
+    content = {
+      ...content,
+      title: TextHelper(payload.title),
+      press: payload.press.map((singlePress: any) => ({
+        title: TextHelper(singlePress.press_title),
+        url: TextHelper(singlePress.press_url),
+        img: ImgHelper(singlePress.press_img)
       }))
     };
   }

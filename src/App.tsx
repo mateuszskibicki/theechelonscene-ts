@@ -33,6 +33,7 @@ const ArticleSinglePage = React.lazy(() =>
 );
 const MediaPage = React.lazy(() => import("./pages/media/Media.page"));
 const ContactPage = React.lazy(() => import("./pages/contact/Contact.page"));
+const PressPage = React.lazy(() => import("./pages/press/Press.page"));
 
 const App: React.FC = (): JSX.Element => {
   return (
@@ -57,6 +58,7 @@ const App: React.FC = (): JSX.Element => {
                 <Route path="/blog/:uid" component={ArticleSinglePage} exact />
                 <Route path="/tc" component={TCPage} exact />
                 <Route path="/reviews" component={TestimonialsPage} exact />
+                <Route path="/press" component={PressPage} exact />
                 <Route path="/contact" component={ContactPage} exact />
               </Suspense>
             </Switch>

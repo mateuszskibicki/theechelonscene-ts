@@ -34,7 +34,7 @@ export const Navbar: React.FC = (): JSX.Element => {
           <NavbarLink url="/" name="Home" onClick={onClickMenuButton} />
           <NavbarLink
             url="/clients"
-            name="Clients"
+            name="Clientele"
             onClick={onClickMenuButton}
           />
           <NavbarLink
@@ -48,17 +48,18 @@ export const Navbar: React.FC = (): JSX.Element => {
             onClick={onClickMenuButton}
           />
           <NavbarLink url="/levels" name="Levels" onClick={onClickMenuButton} />
-          <NavbarLink
-            url="/locations"
-            name="Locations"
-            onClick={onClickMenuButton}
-          />
+          <NavbarLink url="/blog" name="Media" onClick={onClickMenuButton} />
           <NavbarLink
             url="/reviews"
             name="Reviews"
             onClick={onClickMenuButton}
           />
-          <NavbarLink url="/blog" name="Media" onClick={onClickMenuButton} />
+          <NavbarLink url="/press" name="Press" onClick={onClickMenuButton} />
+          <NavbarLink
+            url="/locations"
+            name="Locations"
+            onClick={onClickMenuButton}
+          />
           <Link
             to="/contact"
             className="btn btn--small btn-white-outline shadow w-auto navbar-mobile__contact-button"
