@@ -13,10 +13,11 @@ import { Link } from "react-router-dom";
 
 const settings = {
   dots: true,
-  infinite: true,
+  // infinite: true,
   fade: true,
-  speed: 700,
-  adaptiveHeight: true,
+  speed: 2000,
+  adaptiveHeight: false,
+  cssEase: "cubic-bezier(.17,.67,.83,.67)",
   slidesToShow: 1,
   slidesToScroll: 1,
   nextArrow: <NextArrowButton />,
