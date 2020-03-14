@@ -13,6 +13,27 @@
     }
   }
 
+  &__wrapper-group {
+    position: relative;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media-sm {
+      height: 300px;
+    }
+    @include media-md {
+      height: 200px;
+    }
+  }
+
+  &__single {
+    position: absolute;
+    opacity: 0;
+    animation-name: topFadeOut;
+    animation-duration: 9s;
+  }
+
   &__single-quote {
     font-size: 54px;
     font-weight: 700;
@@ -26,5 +47,31 @@
       bottom: -28px;
       left: 12px;
     }
+  }
+}
+
+@keyframes topFadeOut {
+  0% {
+    position: absolute;
+    top: -1rem;
+    opacity: 0;
+  }
+
+  15% {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+  }
+
+  85% {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+  }
+
+  100% {
+    position: absolute;
+    top: 1rem;
+    opacity: 0;
   }
 }

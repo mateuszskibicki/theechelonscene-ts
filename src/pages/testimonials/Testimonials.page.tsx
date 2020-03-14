@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Helmet from "react-helmet";
 import { useSelector, useDispatch } from "react-redux";
 import { HeaderImage } from "../../components/header-image/HeaderImage";
@@ -7,22 +7,7 @@ import { HeaderLogo } from "../../components/header-image/HeaderLogo";
 import { Spinner } from "../../components/common/spinner/Spinner";
 import bgIMG from "../../assets/imgs/contact.jpg";
 import { fetchTestimonialsSEO, fetchTestimonials } from "../../store/actions";
-import Slider from "react-slick";
-import { NextArrowButton, PrevArrowButton } from "../../components/carousel";
 import { Link } from "react-router-dom";
-
-const settings = {
-  dots: true,
-  // infinite: true,
-  fade: true,
-  speed: 2000,
-  adaptiveHeight: false,
-  cssEase: "cubic-bezier(.17,.67,.83,.67)",
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  nextArrow: <NextArrowButton />,
-  prevArrow: <PrevArrowButton />
-};
 
 const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
   // data from redux
@@ -30,14 +15,24 @@ const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
     (state: any) => state.testimonials
   );
 
+  const [fadeNumber, setFadeNumber] = useState(0);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (testimonials && testimonials.length === 0) {
       dispatch(fetchTestimonials());
       dispatch(fetchTestimonialsSEO());
+    } else {
+      setTimeout(() => {
+        if (fadeNumber + 1 === testimonials.length) {
+          setFadeNumber(0);
+        } else {
+          setFadeNumber(fadeNumber + 1);
+        }
+      }, 9000);
     }
-  }, [dispatch, testimonials]);
+  }, [dispatch, fadeNumber, testimonials]);
 
   if (loading || !testimonials)
     return (
@@ -87,17 +82,20 @@ const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
               </h2>
             </div>
           </div>
-          <Slider {...settings}>
+          <div className="testimonials-page__wrapper-group">
             {testimonials.map(
               (
                 testimonial: {
                   content: string;
                 },
                 index: number
-              ): JSX.Element => {
-                return (
-                  <div key={index} className="carousel-single-wrapper">
-                    <div className="py-5 px-4 h-100 text-center">
+              ): JSX.Element | null => {
+                if (index === fadeNumber)
+                  return (
+                    <div
+                      className="py-5 px-4 h-100 text-center testimonials-page__single"
+                      key={index}
+                    >
                       <p className="text-white text-center mb-0">
                         <span className="testimonials-page__single-quote">
                           "
@@ -108,11 +106,11 @@ const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
                         </span>
                       </p>
                     </div>
-                  </div>
-                );
+                  );
+                return null;
               }
             )}
-          </Slider>
+          </div>
         </div>
       </div>
     </div>
