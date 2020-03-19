@@ -83,6 +83,7 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
         }
       );
       if (res && (res.status === 200 || res.status === 201)) {
+        console.log(res);
         setPending(false);
         setSuccess(true);
       }
