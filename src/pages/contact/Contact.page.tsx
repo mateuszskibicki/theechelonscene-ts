@@ -23,6 +23,9 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
     custom_field_197950: "call"
   });
 
+  // is pending
+  const [pending, setPending] = useState(false);
+
   // Success request
   const [success, setSuccess] = useState(false);
 
@@ -67,18 +70,25 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
       return setFormErrors(error);
     }
 
-    const res = await axios.post(
-      "https://app.karmacrm.com/api/v3/settings/form_submissions/69424/submit.json",
-      JSON.stringify(formData),
-      {
-        headers: {
-          "Content-Type": "application/json"
-        }
-      }
-    );
+    setPending(true);
 
-    if (res && (res.status === 200 || res.status === 201)) {
-      setSuccess(true);
+    try {
+      const res = await axios.post(
+        "https://app.karmacrm.com/api/v3/settings/form_submissions/69424/submit.json",
+        JSON.stringify(formData),
+        {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }
+      );
+      if (res && (res.status === 200 || res.status === 201)) {
+        setPending(false);
+        setSuccess(true);
+      }
+    } catch (e) {
+      setPending(false);
+      setFormErrors("Something went wrong, try again please.");
     }
   };
 
@@ -172,12 +182,18 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
                   <p className="letter-spacing-1 text-red mb-4">{formErrors}</p>
                 )}
 
-                <button
-                  className="btn btn-white-outline shadow rounded"
-                  onClick={onEnquireClick}
-                >
-                  Enquire
-                </button>
+                {pending ? (
+                  <button className="btn btn-white-outline shadow rounded">
+                    Please wait...
+                  </button>
+                ) : (
+                  <button
+                    className="btn btn-white-outline shadow rounded"
+                    onClick={onEnquireClick}
+                  >
+                    Enquire
+                  </button>
+                )}
               </div>
             </div>
           </div>
