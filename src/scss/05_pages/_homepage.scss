@@ -6,6 +6,35 @@
     margin-right: auto;
     font-size: 18px;
     color: $white-primary;
+
+    &--animation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo-line {
+      width: 480px;
+      height: 2px;
+      position: absolute;
+      top: 22px;
+      background: white;
+      border: none;
+      transform: translateX(-110%);
+      opacity: 0;
+      animation: line_move 1.5s 0.5s forwards ease-in-out;
+
+      @media screen and (min-width: 350px) {
+        top: 30px;
+      }
+
+      @include media-sm {
+        top: 38px;
+        width: 500px;
+        height: 3px;
+      }
+    }
   }
 
   &__logo {
@@ -17,5 +46,66 @@
     &-single {
       font-size: 20px;
     }
+  }
+}
+
+.animation-down {
+  opacity: 0;
+  animation: animate_down 1.5s 0.5s forwards ease-in-out;
+}
+
+.animation-up {
+  opacity: 0;
+  animation: animate_up 1.5s 0.5s forwards ease-in-out;
+}
+
+.animation-up-slow {
+  opacity: 0;
+  animation: animate_up 1s 1.5s forwards ease-in-out;
+}
+
+.animation-opacity {
+  opacity: 0;
+  animation: animate_opacity 1.5s 0.5s forwards ease-in-out;
+}
+
+@keyframes line_move {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-0px);
+  }
+}
+@keyframes animate_down {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes animate_up {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes animate_opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

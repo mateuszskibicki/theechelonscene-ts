@@ -7,6 +7,7 @@ interface IProps {
   description?: string;
   children?: any;
   position?: "left" | "right";
+  homepage?: boolean;
   size: "xsmall" | "small" | "medium" | "big";
 }
 
@@ -16,6 +17,7 @@ export const HeaderImage: React.FC<IProps> = ({
   description,
   children,
   position,
+  homepage,
   size
 }: IProps): JSX.Element => {
   let classes = "";
@@ -34,7 +36,7 @@ export const HeaderImage: React.FC<IProps> = ({
         }}
       >
         {children}
-        <DesktopLinks />
+        {homepage ? null : <DesktopLinks />}
       </div>
     );
 
@@ -44,7 +46,7 @@ export const HeaderImage: React.FC<IProps> = ({
       {description && (
         <h2 className="header-img__description">{description}</h2>
       )}
-      <DesktopLinks />
+      {/* <DesktopLinks /> */}
     </div>
   );
 };
