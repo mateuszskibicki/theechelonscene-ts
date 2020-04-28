@@ -5,7 +5,7 @@ import { SEOImgHeaders } from "../../components/common/SEO/SEOImgHeaders";
 import HomepageBG from "../../assets/imgs/rsz_homepage.jpg";
 import {
   OptionsRadioButton,
-  SuccessResponseBlock
+  SuccessResponseBlock,
 } from "../../components/contact-form";
 import axios from "axios";
 
@@ -20,7 +20,7 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
     phone_numbers: "",
     secondary_emails: "",
     country: "",
-    custom_field_197950: "call"
+    custom_field_197950: "call",
   });
 
   // is pending
@@ -49,6 +49,7 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
   // On enquire click
   const onEnquireClick = async (): Promise<void> => {
     let error: string = "";
+    setPending(true);
 
     if (formData.custom_field_197950 === "call") {
       (!formData.phone_numbers || formData.phone_numbers.length === 0) &&
@@ -67,10 +68,9 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
     }
 
     if (error || error.length > 0) {
+      setPending(false);
       return setFormErrors(error);
     }
-
-    setPending(true);
 
     try {
       const res = await axios.post(
@@ -78,8 +78,8 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
         JSON.stringify(formData),
         {
           headers: {
-            "Content-Type": "application/json"
-          }
+            "Content-Type": "application/json",
+          },
         }
       );
       if (res && (res.status === 200 || res.status === 201)) {
@@ -184,7 +184,10 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
                 )}
 
                 {pending ? (
-                  <button className="btn btn-white-outline shadow rounded">
+                  <button
+                    className="btn btn-white-outline shadow rounded"
+                    onClick={() => console.log("Pending...")}
+                  >
                     Please wait...
                   </button>
                 ) : (

@@ -23,32 +23,32 @@ const settings = {
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
-        dots: true
-      }
+        dots: true,
+      },
     },
     {
       breakpoint: 900,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
-        initialSlide: 2
-      }
+        initialSlide: 2,
+      },
     },
     {
       breakpoint: 600,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
-      }
+        slidesToScroll: 1,
+      },
     },
     {
       breakpoint: 0,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };
 
 export const LastArticlesCarousel: React.FC = (): JSX.Element => {
@@ -69,9 +69,9 @@ export const LastArticlesCarousel: React.FC = (): JSX.Element => {
     <div className="container mt-3 mb-5">
       <div className="row justify-content-center">
         <div className="col-12 mb-2">
-          <h3 className="text-white text-center letter-spacing-05">
+          <h4 className="text-white text-center letter-spacing-05">
             Our last articles
-          </h3>
+          </h4>
         </div>
       </div>
       <div className="col-12 px-4 mt-2 mb-3">
