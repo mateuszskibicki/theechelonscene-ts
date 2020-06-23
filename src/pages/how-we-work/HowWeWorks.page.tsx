@@ -20,6 +20,7 @@ const HowWeWorkPage: React.FC<any> = (): JSX.Element | null => {
       loading={loading}
       content={howWeWork.content}
       title="How we work"
+      bgPosition="right"
     />
   );
 };
