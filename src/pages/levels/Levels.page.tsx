@@ -5,7 +5,7 @@ import { Spinner } from "../../components/common/spinner/Spinner";
 import { HeaderImage } from "../../components/header-image/HeaderImage";
 import { HeaderLogo } from "../../components/header-image/HeaderLogo";
 import { SEOImgHeaders } from "../../components/common/SEO/SEOImgHeaders";
-import img_BG from "../../assets/imgs/rsz_homepage.jpg";
+import img_BG from "../../assets/imgs/new1.jpeg";
 import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 

@@ -5,7 +5,7 @@ import { HeaderImage } from "../../components/header-image/HeaderImage";
 import { ImgSEO } from "../../components/common/SEO/ImgSEO";
 import { HeaderLogo } from "../../components/header-image/HeaderLogo";
 import { Spinner } from "../../components/common/spinner/Spinner";
-import bgIMG from "../../assets/imgs/contact.jpg";
+import bgIMG from "../../assets/imgs/new3.jpeg";
 import { fetchTestimonialsSEO, fetchTestimonials } from "../../store/actions";
 import { Link } from "react-router-dom";
 
@@ -49,7 +49,7 @@ const TestimonialsPage: React.FC<any> = (): JSX.Element | null => {
       <Helmet>
         <meta property="og:type" content="website" />
       </Helmet>
-      <HeaderImage img={bgIMG} size="medium" position="left">
+      <HeaderImage img={bgIMG} size="medium" position="center">
         <HeaderLogo />
         <h1 className="text-center text-white letter-spacing-4 mb-4">
           Reviews
