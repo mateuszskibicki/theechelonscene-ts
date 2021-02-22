@@ -191,6 +191,7 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
                     <ReCAPTCHA
                       sitekey="6LfYwWIaAAAAAOErZXPr9k4WDtYsrlwleuw2xEA9"
                       onChange={(captcha) => setKey(captcha)}
+                      theme="dark"
                     />
                   </div>
 
