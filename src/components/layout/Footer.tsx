@@ -94,7 +94,7 @@ export const Footer: React.FC = (): JSX.Element => {
 
           <div className="col-12">
             <p className="text-xs text-white mb-0 text-center">
-              Copyright © 2018 The Echelon Sence
+              Copyright © {new Date().getFullYear()} The Echelon Scene
             </p>
           </div>
         </div>
@@ -193,7 +193,7 @@ export const Footer: React.FC = (): JSX.Element => {
 
               <div className="col-4 text-center">
                 <p className="text-xs text-white mb-0">
-                  Copyright © 2018 The Echelon Sence
+                  Copyright © {new Date().getFullYear()} The Echelon Scene
                 </p>
               </div>
 
