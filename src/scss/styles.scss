@@ -1,19 +1,19 @@
 // 1. Resources
-@import "01_main/mq", "01_main/colors", "01_main/borders", "01_main/zindex",
-  "01_main/shadows", "01_main/fonts", "01_main/base", "01_main/utils";
+@import '01_main/mq', '01_main/colors', '01_main/borders', '01_main/zindex',
+  '01_main/shadows', '01_main/fonts', '01_main/base', '01_main/utils';
 
 // // 2. External Tools
 // @import "02_external/prism";
-@import "02_external/slick";
+@import '02_external/slick';
 
 // // 3. Elements
-@import "03_elements/buttons";
+@import '03_elements/buttons';
 
 // // 4. Components
-@import "04_components/layout/navbar", "04_components/layout/footer",
-  "04_components/header-image/header-image",
-  "04_components/header-image/header-logo", "04_components/rich-text/rich-text",
-  "04_components/contact-form/contact-form";
+@import '04_components/layout/navbar', '04_components/layout/footer',
+  '04_components/header-image/header-image',
+  '04_components/header-image/header-logo', '04_components/rich-text/rich-text',
+  '04_components/image-row/image-row', '04_components/contact-form/contact-form';
 
 // // // 5. Pages
-@import "05_pages/homepage", "05_pages/common", "05_pages/testimonials";
+@import '05_pages/homepage', '05_pages/common', '05_pages/testimonials';
