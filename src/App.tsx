@@ -34,9 +34,6 @@ const ArticleSinglePage = React.lazy(
 const MediaPage = React.lazy(() => import('./pages/media/Media.page'));
 const ContactPage = React.lazy(() => import('./pages/contact/Contact.page'));
 const PressPage = React.lazy(() => import('./pages/press/Press.page'));
-const GQArticlePage = React.lazy(
-  () => import('./pages/custom/GQ-article.page')
-);
 
 const App: React.FC = (): JSX.Element => {
   return (
@@ -63,11 +60,6 @@ const App: React.FC = (): JSX.Element => {
                 <Route path='/reviews' component={TestimonialsPage} exact />
                 <Route path='/press' component={PressPage} exact />
                 <Route path='/contact' component={ContactPage} exact />
-                <Route
-                  path='/press/gq-article-do-elite-gay-matchmakers-put-a-straightjacket-on-love'
-                  component={GQArticlePage}
-                  exact
-                />
               </Suspense>
             </Switch>
           </MainLayout>
