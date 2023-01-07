@@ -33,19 +33,19 @@ export const Homepage: React.FC<any> = (): JSX.Element => {
         />
         <meta
           name="description"
-          content="The Echelon Scene is an offline matchmaking agency for eligible gay men all over the world who are looking for their equal partner in love. The Echelon Scene is headquartered in London, with additional focus on New York and Toronto. Jacqueline travels extensively to meet high-end, genuine, fun, attractive, masculine, and ambitious men."
+          content="The Echelon Scene is a dedicated offline gay matchmaking agency for incredible single men seeking a long-term, monogamous relationship with their equal partner in love."
         />
         <meta
           itemProp="description"
-          content="The Echelon Scene is an offline matchmaking agency for eligible gay men all over the world who are looking for their equal partner in love. The Echelon Scene is headquartered in London, with additional focus on New York and Toronto. Jacqueline travels extensively to meet high-end, genuine, fun, attractive, masculine, and ambitious men."
+          content="The Echelon Scene is a dedicated offline gay matchmaking agency for incredible single men seeking a long-term, monogamous relationship with their equal partner in love."
         />
         <meta
           property="og:description"
-          content="The Echelon Scene is an offline matchmaking agency for eligible gay men all over the world who are looking for their equal partner in love. The Echelon Scene is headquartered in London, with additional focus on New York and Toronto. Jacqueline travels extensively to meet high-end, genuine, fun, attractive, masculine, and ambitious men."
+          content="The Echelon Scene is a dedicated offline gay matchmaking agency for incredible single men seeking a long-term, monogamous relationship with their equal partner in love."
         />
         <meta
           itemProp="description"
-          content="The Echelon Scene is an offline matchmaking agency for eligible gay men all over the world who are looking for their equal partner in love. The Echelon Scene is headquartered in London, with additional focus on New York and Toronto. Jacqueline travels extensively to meet high-end, genuine, fun, attractive, masculine, and ambitious men."
+          content="The Echelon Scene is a dedicated offline gay matchmaking agency for incredible single men seeking a long-term, monogamous relationship with their equal partner in love."
         />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@TheEchelonScene" />
