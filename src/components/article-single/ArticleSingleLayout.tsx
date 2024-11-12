@@ -9,6 +9,7 @@ import bgImg from "../../assets/imgs/clientele.jpg";
 import { BlockAboutFounder } from "./BlockAboutFounder";
 import { CommonPage } from "../../helpers/common-page/commonPageHelpers";
 import { Link } from "react-router-dom";
+import { InstagramEmbed, YouTubeEmbed } from 'react-social-media-embed';
 import { LastArticlesCarousel } from "./LastArticlesCarousel";
 
 interface IProps {
@@ -22,8 +23,11 @@ export const ArticleSingleLayout: React.FC<IProps> = ({
 }): JSX.Element => {
   if (loading.loading || !content) return <Spinner />;
 
-  const { title, description, date } = content;
+  const { title, description, date, media } = content;
   const { content_text } = content.content;
+
+  const isYouTube = media && media.includes('youtube')
+  const isInstagram = media && media.includes('instagram')
 
   return (
     <div className="common-page">
@@ -61,6 +65,12 @@ export const ArticleSingleLayout: React.FC<IProps> = ({
                   <i>{date}</i>
                 </h5>
               )}
+                {isYouTube && media && <div style={{ display: 'flex', justifyContent: 'center' }} className='mb-3'>
+                  <YouTubeEmbed url={media} width={'100%'} height={500} />
+                </div>}
+                {isInstagram && media && <div style={{ display: 'flex', justifyContent: 'center' }} className='mb-3'>
+                  <InstagramEmbed url={media} width={'500px'}/>
+                </div>}
               <RichTextComponent
                 content={content_text}
                 color="white"

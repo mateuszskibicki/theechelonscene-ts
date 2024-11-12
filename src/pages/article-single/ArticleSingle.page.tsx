@@ -8,7 +8,7 @@ const ArticleSinglePage: React.FC<any> = (): JSX.Element | null => {
   // get state
   const { loading, articleSingle } = useSelector((state: any) => state);
   const dispatch = useDispatch();
-  const { uid } = useParams();
+  const { uid } = useParams<{uid: string}>();
 
   const data = uid ? articleSingle[uid] : null;
 
