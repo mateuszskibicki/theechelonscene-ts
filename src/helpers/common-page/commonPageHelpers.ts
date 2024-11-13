@@ -18,6 +18,7 @@ export interface CommonPage {
   title?: string | null;
   description?: string | null;
   date?: string | null;
+  media?: string | null;
   levels?: { title: string; description: string }[];
   locations?: {
     name: string;
@@ -57,7 +58,8 @@ export const commonPageHelper = (
       ...content,
       title: TextHelper(payload.title),
       description: TextHelper(payload.description),
-      date: SmallTextHelper(payload.date)
+      date: SmallTextHelper(payload.date),
+      media: payload.media.url
     };
   }
 
