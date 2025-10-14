@@ -59,15 +59,9 @@ export const Footer: React.FC = (): JSX.Element => {
           </div>
 
           <div className="col-12 text-center my-4">
-            <Link to="/contact" className="btn btn--xsmall btn-white-outline mr-3">
+            <Link to="/contact" className="btn btn--small btn-white-outline">
               ENQUIRE
             </Link>
-            <button
-              onClick={openModal}
-              className="btn btn--xsmall btn-white-outline newsletter-trigger"
-            >
-              JOIN THE INNER CIRCLE
-            </button>
           </div>
 
           <div className="col-12">
@@ -108,7 +102,7 @@ export const Footer: React.FC = (): JSX.Element => {
               </div>
               <div className="col-4 px-1 text-center mb-4">
                 <Link to="/blog" className="text-white text-xs footer__link ">
-                  Media
+                  Blog
                 </Link>
               </div>
               <div className="col-4 px-1 text-center mb-4">
@@ -133,6 +127,15 @@ export const Footer: React.FC = (): JSX.Element => {
                 </Link>
               </div>
             </div>
+          </div>
+
+          <div className="col-12 text-center mb-3">
+                     <button
+              onClick={openModal}
+              className="btn btn--xsmall btn-white-outline newsletter-trigger"
+            >
+              JOIN THE NEWSLETTER
+            </button>
           </div>
 
           <div className="col-12 text-center mb-3">
@@ -200,7 +203,7 @@ export const Footer: React.FC = (): JSX.Element => {
                 </div>
                 <div className="col-2 col-xl-1 text-center">
                   <Link to="/blog" className="text-white text-xs footer__link">
-                    Media
+                    Blog
                   </Link>
                 </div>
                 <div className="col-2 col-xl-1 text-center">
@@ -229,34 +232,38 @@ export const Footer: React.FC = (): JSX.Element => {
           )}
 
           <div className="col-12 mb-4 text-center">
-            <Link to="/contact" className="btn btn--xsmall btn-white-outline mr-3">
+            <Link to="/contact" className="btn btn--small btn-white-outline">
               ENQUIRE
             </Link>
-            <button
-              onClick={openModal}
-              className="btn btn--xsmall btn-white-outline newsletter-trigger"
-            >
-              JOIN THE INNER CIRCLE
-            </button>
           </div>
 
           <div className="col-12 mb-3">
             <div className="row justify-content-around align-items-center">
-              <div className="col-4">
+              <div className="col-3">
                 <FooterSocialIcons margin={"small"} />
               </div>
 
-              <div className="col-4 text-center">
+              <div className="col-3 text-center">
+                                         <button
+              onClick={openModal}
+              className="btn btn--xsmall btn-white-outline newsletter-trigger"
+            >
+              NEWSLETTER
+            </button>
+              </div>
+
+              <div className="col-3 text-center">
+                <Link to="/tc" className="text-white text-xs">
+                  Terms and conditions
+                </Link>
+              </div>
+
+              <div className="col-3 text-right">
                 <p className="text-xs text-white mb-0">
                   Copyright © {new Date().getFullYear()} The Echelon Scene
                 </p>
               </div>
 
-              <div className="col-4 text-right">
-                <Link to="/tc" className="text-white text-xs ">
-                  Terms and conditions
-                </Link>
-              </div>
             </div>
           </div>
         </div>

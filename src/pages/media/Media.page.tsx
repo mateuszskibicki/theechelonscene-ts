@@ -30,7 +30,7 @@ const MediaPage: React.FC<any> = (): JSX.Element | null => {
       {/* SEO ends */}
       <HeaderImage img={img_BG} size="medium">
         <HeaderLogo />
-        <h1 className="text-center text-white letter-spacing-4 mb-4">Media</h1>
+        <h1 className="text-center text-white letter-spacing-4 mb-4">Blog</h1>
         <Link to="/contact" className="btn btn--small btn-white-outline">
           CONTACT
         </Link>

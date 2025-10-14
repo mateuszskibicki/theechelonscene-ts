@@ -52,7 +52,7 @@ export const Navbar: React.FC = (): JSX.Element => {
             onClick={onClickMenuButton}
           />
           <NavbarLink url="/levels" name="Levels" onClick={onClickMenuButton} />
-          <NavbarLink url="/blog" name="Media" onClick={onClickMenuButton} />
+          <NavbarLink url="/blog" name="Blog" onClick={onClickMenuButton} />
           <NavbarLink
             url="/reviews"
             name="Reviews"
@@ -78,7 +78,7 @@ export const Navbar: React.FC = (): JSX.Element => {
             }}
             className="btn btn--small btn-white-outline shadow w-auto navbar-mobile__contact-button mt-3 newsletter-trigger"
           >
-            JOIN THE INNER CIRCLE
+            JOIN THE NEWSLETTER
           </button>
         </ul>
       </div>

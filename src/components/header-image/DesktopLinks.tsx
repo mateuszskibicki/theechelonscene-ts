@@ -17,7 +17,7 @@ export const DesktopLinks: React.FC<IProps> = ({ animation }): JSX.Element => {
         <Link to="/founder">Founder</Link>
         <Link to="/how-we-work">How we work</Link>
         <Link to="/levels">Levels</Link>
-        <Link to="/blog">Media</Link>
+        <Link to="/blog">Blog</Link>
         <Link to="/reviews">Reviews</Link>
         <Link to="/press">Press</Link>
         <Link to="/locations">Locations</Link>

@@ -111,7 +111,7 @@ export const NewsletterModal: React.FC<NewsletterModalProps> = ({ isOpen, onClos
               <div className="newsletter-modal__success-icon">
                 <i className="fas fa-check-circle"></i>
               </div>
-              <h2 className="newsletter-modal__title">Welcome to the Inner Circle!</h2>
+              <h2 className="newsletter-modal__title">Welcome to the Newsletter!</h2>
               <p className="newsletter-modal__subtitle">
                 Thank you for joining. You'll receive exclusive updates and insider content.
               </p>
@@ -125,7 +125,7 @@ export const NewsletterModal: React.FC<NewsletterModalProps> = ({ isOpen, onClos
           ) : (
             <>
               <div className="newsletter-modal__header">
-                <h2 className="newsletter-modal__title">Join the Inner Circle</h2>
+                <h2 className="newsletter-modal__title">Join the Newsletter</h2>
                 <p className="newsletter-modal__subtitle">
                   Get exclusive access to insider content, industry insights, and member-only updates.
                 </p>
@@ -194,7 +194,7 @@ export const NewsletterModal: React.FC<NewsletterModalProps> = ({ isOpen, onClos
                   className="btn btn--small btn-white-outline newsletter-modal__submit"
                   disabled={isLoading}
                 >
-                  {isLoading ? 'Joining...' : 'Join the Inner Circle'}
+                  {isLoading ? 'Joining...' : 'Join the Newsletter'}
                 </button>
               </form>
             </>
