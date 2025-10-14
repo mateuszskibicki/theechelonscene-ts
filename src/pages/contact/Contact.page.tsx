@@ -78,6 +78,17 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
     }
 
     try {
+      try {
+        const payload = {
+          email: formData.secondary_emails,
+          ...(formData.first_name && { firstName: formData.first_name }),
+          ...(formData.last_name && { lastName: formData.last_name })
+        };
+        await axios.post('https://orange-cat-digital-emails.netlify.app/api/theechelonscene', payload);
+      } catch (e) {
+        // Do nothing if newsletter fails
+      }
+
       const res = await axios.post(
         "https://app.karmacrm.com/api/v3/settings/form_submissions/69424/submit.json",
         JSON.stringify(formData),

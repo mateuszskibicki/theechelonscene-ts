@@ -1,14 +1,57 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { NewsletterModal } from "../newsletter-modal";
+import { useNewsletterModal } from "../../hooks/useNewsletterModal";
+
+const FooterSocialIcons: React.FC<{ margin?: string }> = ({
+  margin
+}): JSX.Element => (
+  <>
+    <a
+      className={`footer__icon ${margin === "small" ? "mr-4" : "mr-5"}`}
+      href="https://www.facebook.com/theechelonscene"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className="fab fa-facebook"></i>
+    </a>
+    <a
+      className={`footer__icon ${margin === "small" ? "mr-4" : "mr-5"}`}
+      href="https://twitter.com/TheEchelonScene"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className="fab fa-twitter"></i>
+    </a>
+    <a
+      className={`footer__icon ${margin === "small" ? "mr-4" : "mr-5"}`}
+      href="https://www.linkedin.com/company/theechelonscene/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className="fab fa-linkedin"></i>
+    </a>
+    <a
+      className="footer__icon"
+      href="https://www.instagram.com/TheEchelonScene/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className="fab fa-instagram"></i>
+    </a>
+  </>
+);
 
 export const Footer: React.FC = (): JSX.Element => {
   const location = useLocation();
+  const { isOpen, openModal, closeModal } = useNewsletterModal();
 
   return (
-    <div className="footer py-4">
-      <div className="container">
-        {/* Mobile only */}
-        <div className="row d-md-none">
+    <>
+      <div className="footer py-4">
+        <div className="container">
+          {/* Mobile only */}
+          <div className="row d-md-none">
           <div className="col-12">
             <div className="row d-flex flex-row justify-content-center">
               <FooterSocialIcons />
@@ -16,9 +59,15 @@ export const Footer: React.FC = (): JSX.Element => {
           </div>
 
           <div className="col-12 text-center my-4">
-            <Link to="/contact" className="btn btn--xsmall btn-white-outline">
+            <Link to="/contact" className="btn btn--xsmall btn-white-outline mr-3">
               ENQUIRE
             </Link>
+            <button
+              onClick={openModal}
+              className="btn btn--xsmall btn-white-outline newsletter-trigger"
+            >
+              JOIN THE INNER CIRCLE
+            </button>
           </div>
 
           <div className="col-12">
@@ -180,9 +229,15 @@ export const Footer: React.FC = (): JSX.Element => {
           )}
 
           <div className="col-12 mb-4 text-center">
-            <Link to="/contact" className="btn btn--xsmall btn-white-outline">
+            <Link to="/contact" className="btn btn--xsmall btn-white-outline mr-3">
               ENQUIRE
             </Link>
+            <button
+              onClick={openModal}
+              className="btn btn--xsmall btn-white-outline newsletter-trigger"
+            >
+              JOIN THE INNER CIRCLE
+            </button>
           </div>
 
           <div className="col-12 mb-3">
@@ -206,45 +261,9 @@ export const Footer: React.FC = (): JSX.Element => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+
+      <NewsletterModal isOpen={isOpen} onClose={closeModal} />
+    </>
   );
 };
-
-const FooterSocialIcons: React.FC<{ margin?: string }> = ({
-  margin
-}): JSX.Element => (
-  <>
-    <a
-      className={`footer__icon ${margin === "small" ? "mr-4" : "mr-5"}`}
-      href="https://www.facebook.com/theechelonscene"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <i className="fab fa-facebook"></i>
-    </a>
-    <a
-      className={`footer__icon ${margin === "small" ? "mr-4" : "mr-5"}`}
-      href="https://twitter.com/TheEchelonScene"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <i className="fab fa-twitter"></i>
-    </a>
-    <a
-      className={`footer__icon ${margin === "small" ? "mr-4" : "mr-5"}`}
-      href="https://www.linkedin.com/company/theechelonscene/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <i className="fab fa-linkedin"></i>
-    </a>
-    <a
-      className="footer__icon"
-      href="https://www.instagram.com/TheEchelonScene/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <i className="fab fa-instagram"></i>
-    </a>
-  </>
-);

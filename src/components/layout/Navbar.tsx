@@ -2,26 +2,30 @@ import React, { useState } from "react";
 import { NavbarLink } from "./NavbarLink";
 import { MenuIcon, MenuCloseIcon } from "../common/icons/Icons";
 import { Link } from "react-router-dom";
+import { NewsletterModal } from "../newsletter-modal";
+import { useNewsletterModal } from "../../hooks/useNewsletterModal";
 
 export const Navbar: React.FC = (): JSX.Element => {
   const [visible, setVisible] = useState<boolean>(false);
+  const { isOpen, openModal, closeModal } = useNewsletterModal();
 
   const onClickMenuButton = (): void => {
     setVisible(!visible);
   };
 
   return (
-    <nav className="navbar-mobile">
-      <button
-        className="navbar-mobile__button shadow"
-        type="button"
-        data-toggle="collapse"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        onClick={onClickMenuButton}
-      >
-        {visible ? <MenuCloseIcon /> : <MenuIcon />}
-      </button>
+    <>
+      <nav className="navbar-mobile">
+        <button
+          className="navbar-mobile__button shadow"
+          type="button"
+          data-toggle="collapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          onClick={onClickMenuButton}
+        >
+          {visible ? <MenuCloseIcon /> : <MenuIcon />}
+        </button>
 
       <div
         className={
@@ -67,8 +71,20 @@ export const Navbar: React.FC = (): JSX.Element => {
           >
             CONTACT
           </Link>
+          <button
+            onClick={() => {
+              openModal();
+              onClickMenuButton();
+            }}
+            className="btn btn--small btn-white-outline shadow w-auto navbar-mobile__contact-button mt-3 newsletter-trigger"
+          >
+            JOIN THE INNER CIRCLE
+          </button>
         </ul>
       </div>
+
+      <NewsletterModal isOpen={isOpen} onClose={closeModal} />
     </nav>
+    </>
   );
 };
