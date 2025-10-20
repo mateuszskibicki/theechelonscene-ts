@@ -69,7 +69,7 @@ export const Navbar: React.FC = (): JSX.Element => {
               style={{ cursor: "pointer" }}
               onClick={() => openModal()}
             >
-              <a href='#'>Newsletter</a>
+              <a href='/#'>Newsletter</a>
             </li>
             <Link
               to="/contact"
