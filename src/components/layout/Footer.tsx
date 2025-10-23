@@ -130,12 +130,13 @@ export const Footer: React.FC = (): JSX.Element => {
             </div>
 
             <div className="col-12 text-center mb-3">
-              <button
-                onClick={openModal}
-                className="btn btn--xsmall btn-white-outline newsletter-trigger"
-              >
-                JOIN THE INNER CIRCLE
-              </button>
+                  <button
+                    onClick={openModal}
+                    className="text-white text-xs newsletter-trigger"
+                    style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+                  >
+                    Newsletter
+                  </button>
             </div>
 
             <div className="col-12 text-center mb-3">
