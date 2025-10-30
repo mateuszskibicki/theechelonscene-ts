@@ -2,30 +2,28 @@ import React, { useState } from "react";
 import { NavbarLink } from "./NavbarLink";
 import { MenuIcon, MenuCloseIcon } from "../common/icons/Icons";
 import { Link } from "react-router-dom";
-import { NewsletterModal } from "../newsletter-modal";
-import { useNewsletterModal } from "../../hooks/useNewsletterModal";
+import { useNewsletterModalContext } from "../newsletter-modal";
 
 export const Navbar: React.FC = (): JSX.Element => {
   const [visible, setVisible] = useState<boolean>(false);
-  const { isOpen, openModal, closeModal } = useNewsletterModal();
+  const { openModal } = useNewsletterModalContext();
 
   const onClickMenuButton = (): void => {
     setVisible(!visible);
   };
 
   return (
-    <>
-      <nav className="navbar-mobile">
-        <button
-          className="navbar-mobile__button shadow"
-          type="button"
-          data-toggle="collapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          onClick={onClickMenuButton}
-        >
-          {visible ? <MenuCloseIcon /> : <MenuIcon />}
-        </button>
+    <nav className="navbar-mobile">
+      <button
+        className="navbar-mobile__button shadow"
+        type="button"
+        data-toggle="collapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        onClick={onClickMenuButton}
+      >
+        {visible ? <MenuCloseIcon /> : <MenuIcon />}
+      </button>
 
         <div
           className={
@@ -80,9 +78,6 @@ export const Navbar: React.FC = (): JSX.Element => {
             </Link>
           </ul>
         </div>
-
-        <NewsletterModal isOpen={isOpen} onClose={closeModal} />
       </nav>
-    </>
   );
 };

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { NewsletterModal } from "../newsletter-modal";
-import { useNewsletterModal } from "../../hooks/useNewsletterModal";
+import { useNewsletterModalContext } from "../newsletter-modal";
 
 const FooterSocialIcons: React.FC<{ margin?: string }> = ({
   margin
@@ -44,14 +43,13 @@ const FooterSocialIcons: React.FC<{ margin?: string }> = ({
 
 export const Footer: React.FC = (): JSX.Element => {
   const location = useLocation();
-  const { isOpen, openModal, closeModal } = useNewsletterModal();
+  const { openModal } = useNewsletterModalContext();
 
   return (
-    <>
-      <div className="footer py-4">
-        <div className="container">
-          {/* Mobile only */}
-          <div className="row d-md-none">
+    <div className="footer py-4">
+      <div className="container">
+        {/* Mobile only */}
+        <div className="row d-md-none">
             <div className="col-12">
               <div className="row d-flex flex-row justify-content-center">
                 <FooterSocialIcons />
@@ -271,8 +269,5 @@ export const Footer: React.FC = (): JSX.Element => {
           </div>
         </div>
       </div>
-
-      <NewsletterModal isOpen={isOpen} onClose={closeModal} />
-    </>
   );
 };
