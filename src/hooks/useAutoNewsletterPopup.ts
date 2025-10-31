@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 const STORAGE_KEY = 'newsletter_auto_popup_last_shown';
-const AUTO_POPUP_DELAY = 60000; // 1 minute in milliseconds
+const AUTO_POPUP_DELAY = 40000; // 40 seconds in milliseconds
 const POPUP_COOLDOWN = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
 
 export const useAutoNewsletterPopup = (onShowModal: () => void) => {
