@@ -99,9 +99,16 @@ const Contact: React.FC<any> = (): JSX.Element | null => {
         }
       );
       if (res && (res.status === 200 || res.status === 201)) {
-        setPending(false);
-        setSuccess(true);
-      }
+  (window as any).dataLayer = (window as any).dataLayer || [];
+  (window as any).dataLayer.push({
+    event: "contact_form_submit",
+    form_name: "The Echelon Scene Contact Form",
+    enquiry_type: formData.custom_field_197950,
+  });
+
+  setPending(false);
+  setSuccess(true);
+}
     } catch (e) {
       setPending(false);
       setFormErrors("Something went wrong, try again please.");
